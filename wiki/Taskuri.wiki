@@ -26,3 +26,9 @@ Aici am pus in evidenta o descompunere a proiectului in taskuri mai simple.
       - validare care sa tina cont de corelatii. 
 
       - validare istorica. 
+
+  * DEzvoltare ontologie. 
+
+  * Dezvoltare framework de operatori asupra data-streamului. 
+
+  * 
