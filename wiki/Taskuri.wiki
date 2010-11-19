@@ -18,3 +18,11 @@ Aici am pus in evidenta o descompunere a proiectului in taskuri mai simple.
   * Construirea agentului pentru tratarea senzorului.
 
   * Speificarea formatului de data-stream. 
+
+  * Validarea datelor: 
+  
+      - pentru fiecare categorie de senzori. 
+     
+      - validare care sa tina cont de corelatii. 
+
+      - validare istorica. 
