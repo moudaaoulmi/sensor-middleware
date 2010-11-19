@@ -1,11 +1,11 @@
 #summary To-Do List
 
-= Taskuri=
+=Taskuri=
 
 Aici am pus in evidenta o descompunere a proiectului in taskuri mai simple. 
 
 
-= Lista taskuri =
+=Lista taskuri=
 
 * Modelarea fisierului sensorFormats.xml; introducere / modificare / stergere de inregistrari din sensorFormats.xml. 
 
