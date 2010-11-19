@@ -6,11 +6,18 @@ Aici vor fi prezentate principalele categorii de senzori pentru care trebuie se 
 
   * Senzor de tip current-cost. 
   * Senzori de ambient: 
+
      - de lumina. 
+
      - de prezenta. 
-     - de umiditate. 
+
+     - de umiditate.
+ 
      - de temperatura. 
+
      - de prezena metan / CO2 / GPL. 
+
      - de presiune. 
+
   * Senzori optici: gaz, apa. 
   * RFID. 
