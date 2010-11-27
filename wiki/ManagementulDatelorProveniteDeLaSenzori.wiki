@@ -1,0 +1,16 @@
+
+  *Data Management in Sensor Networks . Jinbao Li, Zhipeng Cai , and Jianzhong Li (cap. 12 )
+
+  *Managing Uncertainty in Sensor Databases 
+
+  *Scoop: a hybrid, adaptive storage policy for sensor networks 
+
+  *Minos: A Generic Tool for  Sensor Data Acquisition and Storage 
+
+  *ORION: Managing Uncertain (Sensor) Data 
+  
+  *A Semantics for a Query Language over Sensors, Streams and Relations 
+
+  *The Design of an Acquisitional Query Processor For Sensor Networks
+
+  *Towards Robust Data Storage in Wireless Sensor Networks 
