@@ -2,7 +2,7 @@
 
 *Prima etapa consta in dezvoltarea arhitecturii blackboard*. In cadrul acestei etape, este necesar sa se construiasca un „miniprototip” care sa functioneze doar pe baza data-stream-ului provenit de la senzorul current-cost. 
 
-  *T1. Dezvoltare dispatcher-sensor agent (vezi sectiunea 3.4 „Dispatcher Sensor-Stream Agent” din articol). Rolul agentului DSSA ete de a lectura fluxul de date care intra prin intermediul portului USB. Acest agent citeste toate mesajele primite, dupa care creeaza pachete de tip sensor-record pe care le depune in bufferul sau. Agentii-senzor lectureaza periodic acest buffer, si preiau de acolo inregistrarile care ii intereseaza. (Preluarea se face intr-un mod brutal, inregistrarea fiind apoi stearsa).  
-  *T2. Modelarea fisierului sensorFormats.xml; introducere / modificare / stergere de inregistrari din sensorFormats.xml. 
-  *T3. Management-ul retelei de senzori se va realiza tot la nivelul DSSA. Va trebui construita o tabela in care se vor inregistra toti senzorii fizici. 
-  *T4. SocketProxyAgent vs Jess pentru realizarea conexiunii. (+ teste / studiu pentru a determina care este solutia optima).   
+  *Dezvoltare dispatcher-sensor agent (vezi sectiunea 3.4 „Dispatcher Sensor-Stream Agent” din articol). Rolul agentului DSSA ete de a lectura fluxul de date care intra prin intermediul portului USB. Acest agent citeste toate mesajele primite, dupa care creeaza pachete de tip sensor-record pe care le depune in bufferul sau. Agentii-senzor lectureaza periodic acest buffer, si preiau de acolo inregistrarile care ii intereseaza. (Preluarea se face intr-un mod brutal, inregistrarea fiind apoi stearsa).  
+  *Modelarea fisierului sensorFormats.xml; introducere / modificare / stergere de inregistrari din sensorFormats.xml. 
+  *Management-ul retelei de senzori se va realiza tot la nivelul DSSA. Va trebui construita o tabela in care se vor inregistra toti senzorii fizici. 
+  *SocketProxyAgent vs Jess pentru realizarea conexiunii. (+ teste / studiu pentru a determina care este solutia optima).   
