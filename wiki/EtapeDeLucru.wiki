@@ -39,5 +39,6 @@ Interpretari se vor efectua asupra:
 [https://sites.google.com/site/ambientallearning]
  
 [http://code.google.com/p/ambientallearning] 
- 
+
+In cadrul celei de-a cincea etape se vor efectua teste asupra prototipului dezvoltat. 
  
