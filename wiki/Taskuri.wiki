@@ -7,9 +7,8 @@ Aici am pus in evidenta o descompunere a proiectului in taskuri mai simple.
 
 =Lista taskuri=
 
- * Modelarea fisierului sensorFormats.xml; introducere / modificare / stergere de inregistrari din sensorFormats.xml. 
-
-  * Verificarea faptului ca un pachet de date nu este corupt. 
+ *T1. 
+ *Verificarea faptului ca un pachet de date nu este corupt. 
 
   * Expandarea datelor / arhivarea lor in pachete. 
 
