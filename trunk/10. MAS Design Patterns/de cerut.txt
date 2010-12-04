@@ -1,0 +1,21 @@
+a. Design patterns for the development of multiagent systems 
+https://springerlink3.metapress.com/content/w284405n50310744/resource-secured/?target=fulltext.pdf&sid=auq4meukqxmu52uh4schjd55&sh=www.springerlink.com
+
+b. Agent system development method based on agent patterns 
+http://www.computer.org/portal/web/csdl/doi/10.1109/ICSE.1999.841026 
+
+c. Agent design patterns: elements of agent application desig 
+http://portal.acm.org/citation.cfm?id=280765.280784 
+
+d. Patterns in Agent-Oriented Software Engineering 
+http://www.springerlink.com/content/27clxj83j2e9l95l/ 
+
+e. Patterns of intelligent and mobile agents 
+http://portal.acm.org/citation.cfm?id=280781 
+
+f. An agent design pattern classification scheme: capturing the notions of agency in agent design patterns
+http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=1371949
+
+
+Patterns for Motivating an Agent-Based Approach
+http://www.springerlink.com/content/ppv10x8kn34hf9xn/ 
