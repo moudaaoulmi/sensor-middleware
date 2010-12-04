@@ -1,0 +1,13 @@
+
+* Structura 
+
+1. Ingineria Sistemelor Ambientale Inteligente 
+2. Metode de dezvoltare a sistemelor multi-agent 
+3. Arhitectura sistemului 
+ - aici vei prezenta modelul arhitectural al sistemului: 
+Concluzii 
+* Redactare 
+Miktex 
+Lyx 
+Scrierea se va face cu diacritice romanesti. 
+Figurile se vor realiza in format vectorial, eps. 
