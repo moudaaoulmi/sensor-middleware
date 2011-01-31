@@ -1,0 +1,632 @@
+#LyX 1.6.8 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Ingineria software a sistemelor ambientale inteligente
+\end_layout
+
+\begin_layout Author
+Manate Bogdan, master IS, an 2
+\end_layout
+
+\begin_layout Date
+30 ianuarie 2011
+\end_layout
+
+\begin_layout Abstract
+Inteligenţa ambientală implică sintetizarea datelor dintr-o largă gamă de
+ surse pentru a prezenta un comportament adaptiv relevant, fără implicarea
+ directă a utilizatorului.
+ Sintetizarea se face pe date provenite de la dispozitive de masură independente
+ sau alte surse de date.
+ În zilele noastre sistemele inteligente sunt omniprezente în toate domeniile,
+ fiind prezente chiar şi în viaţa nostră de zi cu zi.
+ Mediile inteligente se pot integra peste tot, de la case de locuit prevăzute
+ cu dispozitive automate de control, la birouri sau hoteluri care au din
+ ce în ce mai multe dispozitive inteligente pentru a asista muncitorii în
+ activităţiile pe care le desfăşoară, pentru a economisii energie sau pentru
+ a satisface preferinţele clienţilor.
+ 
+\end_layout
+
+\begin_layout Section
+Introducere
+\end_layout
+
+\begin_layout Standard
+Putem defini un mediu inteligent ca unul care este capabil să dobândească
+ şi să aplice cunoştinţele despre mediu şi locuitorii săi, în scopul de
+ a îmbunătăţi experienţa lor în acest mediu.
+ 
+\end_layout
+
+\begin_layout Standard
+Sistemele ambientale inteligente se pot clasifica în două categorii: sisteme
+ contruite din reţele independente şi dispozitive programabile, care au
+ functionalităţi restrânse şi sisteme care trebuie să producă un comportament
+ centrat pe utilizator şi care trebuie să reacţioneze la scenarii complexe
+ într-un mod care păstrează un accent clar pe activităţiile desfăşurate
+ de utilizatori zi de zi.
+ Deşi suntem atraşi să credem că un comportament centrat pe utilizator va
+ reieşii din interacţiunea dintre diverse dispozitive, exstă motive puternice
+ care sugerează o abordare mai directă în cele mai multe cazuri.
+ În timp ce numeroase aplicaţii la scară mică şi-au doveditimplică utilitatea,
+ aplicaţiile mari rămân încă evazive, deoarece este foarte greu să se anticipeze
+ ce se întâmplă în lumea reală şi cu atât mai puţin să se traducă aceste
+ lucruri într-un comportament adaptiv relevant, de asemenea este foarte
+ greu să se administreze greşelile inevitabile care intervin în timpo viziune
+ de ansamblu a răspunsurilor sistemului la mediul său în schimbare ce se
+ execută acţiuni complexe, fără intervenţia utilizatorului.
+ 
+\end_layout
+
+\begin_layout Standard
+În general sistemele ambientale inteligente ridică următoarele întrebări:
+\end_layout
+
+\begin_layout Enumerate
+Ce impact are calitatea scăzută, natura difuză şi eterogenă a datelor provenite
+ de la senzori şi operaţia de inferenţă în programare ?
+\end_layout
+
+\begin_layout Enumerate
+Ce implicaţii au atributele de la punctul 1 în creare de software middleware
+ sau cadre de programare pentru inteligenţa ambientală ? 
+\end_layout
+
+\begin_layout Standard
+Sistemele ambientale inteligente nu se bazează doar pe de detectarea stimulilor
+ interni sau externi mai degrabă se bazează pe valorificarea informaţiilor
+ dintr-o gamă diversă de surse interconectate.
+ Acest lucru schimbă percepţia de abordare, care parea a fi o problemă de
+ detectare şi de raţionament la una de management al informaţiei şi mentenanţă:
+ o viziune de ansamblu a răspunsurilor sistemului la mediul său în schimbare.
+\end_layout
+
+\begin_layout Section
+Incertitudinea datelor provenite de la senzori
+\end_layout
+
+\begin_layout Standard
+Aplicaţiile tradiţionale oferă un anumit context în cadrul căruia pot să
+ apară diferite interacţiuni.
+ Pentru majoritatea sistemelor există un grad scăzut de incertitudine în
+ cadrul acestor interacţiuni.
+ Un utilizator poate selecta sau nu un meniu sau apăsa o anumită tastă.
+ În cadrul anumitor sisteme pot exista erori datorită mesajelor pierdute,
+ care conţin erori sau care sunt trimise repetitiv, aceste erori fiind tratate
+ în majoritatea cazurilor in cadrul middlewareului.
+ În majoritatea sistemelor există de asemenea erori de operare care trebuie
+ corectate într-un fel sau altul, deobicei cu un impact minim asupra sistemului.
+ Cu toate că unele interacţiuni pot genera erori în cadrul acestor sisteme,
+ aceste erori sunt definite în prealabil.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename matchSensorToTask.jpg
+	width 15cm
+	height 20cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Module de mapare a datelor provenite de la senzori pe un anumit comportament
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Interacţiunile ambientale prezintă caracteristici complet diferite.
+ Interacţiunile apar, în cea mai mare parte, în urma observării de către
+ senzori a acţiunilor de zi cu zi.
+ Chiar şi în cadrul unei singure categorii de senzori, cum ar fi cei de
+ locaţie, fiecare categorie de senzori are de cele mai multe ori caracteristici
+ radical diferite.
+ De exemplu, un sistem Wifi de localizare, cum ar fi PlaceLab, poate raporta
+ în general poziţia unui dispozitiv cu precizie de 10 m, dar s-ar putea
+ din cauza reflexie ca senzorul să raporteze o locaţie diferită faţă de
+ locaţia fizică în care se află dispozitivul.
+ Aceste condiţii se pot aplica analog şi la celalalte tipuri de senzori.
+ O aplicaţie proiectată după modelul din Figura 1 ar putea să execute următoare
+ instrucţiune: 
+\begin_inset Quotes eld
+\end_inset
+
+Când A şi B sunt în camera X execută acţiunea 1 
+\begin_inset Quotes erd
+\end_inset
+
+, nici un senzor nu poate să ofere informaţii precise despre locaţie pentru
+ a fi luată o decizie cu încredere.
+\end_layout
+
+\begin_layout Standard
+Problema de bază este că nu putem atribui instrucţiuni la o singură acţiune,
+ ci doar la un anumit număr de acţiuni intreprinse în context.
+\end_layout
+
+\begin_layout Section
+Detectare şi acţiune
+\end_layout
+
+\begin_layout Standard
+Sistemele orientate pe evenimente rezolvă această problemă prin oferirea
+ unui model de sarcini care este implementat de aplicaţie.
+ Evenimentele primite sunt folosite pentru a executa diferite sarcini.
+ Lucrurile devin şi mai complicate când luăm în considerare sistemele ambientale
+ care conţin mai multe aplicaţii sau servicii.
+ O anumită acţiune poate fi interpretată de mai multe aplicaţii simultan,
+ fiecare dintre care poate prezenta apoi un comportament.
+ Aceste comportamente sunt independente, cu toate acestea comportamentele
+ pot fi şi dependente, un anumit comportament fiind afectat negativ de alt
+ comportament al aplicaţiei.
+\end_layout
+
+\begin_layout Section
+Proiectarea si programarea sistemelor având în vedere incertitudinea datelor
+\end_layout
+
+\begin_layout Standard
+Toate datele folosite într-un sistem ambiental inteligent pot fi considerate
+ nesigure, acestea ridicând probleme pe care tehnologia actuală de construire
+ a senzorilor nu le poate rezolva.
+ Relaţiile dintr datele provenite de la senzori şi scenariile suportate
+ de sistemele ambientale nu pot fi definite exact, deoarece de cele mai
+ multe ori unei acţiuni nu îi poate fi atribuit fără echivoc, un rol particular
+ într-un proces care face obiectul incertitudinilor acţiunilor de zi cu
+ zi ale utilizatorilor.
+ Acest lucru implică faptul că orice decizie luată în timpul execuţiei unei
+ sarcini poate fi greşită, în măsura în care datele au fost greşit interpretate.
+\end_layout
+
+\begin_layout Standard
+Cu toate că senzorii sunt imprecişi individual, un mediu care dispune de
+ un număr mare de senzori poate compensa aceste deficienţe individuale şi
+ poate realiza o estimare apropiată de valoarea reală sau chiar exactă.
+ Acest lucru poate ridica o problemă legată de numărul de senzori, existenţi
+ într-un mediu.
+\end_layout
+
+\begin_layout Standard
+Sistemele ambientale pot îmbunătăţii estimările datelor, folosindu-se de
+ date citite în trecut, de valorile implicite şi de datele citite de la
+ senzori.
+ Un punct important care trebuie luat în considerare este decuplarea comportamen
+tului de observaţiile făcute izolat şi de a folosi în schimb un model global
+ al mediului, care poate fi determint de toate aspectele mediului care pot
+ fi detectate de senzori.
+ Pentru a evita ca datele eronate să fie propagate în sistem, trebuie luate
+ în considerare următoarele:
+\end_layout
+
+\begin_layout Itemize
+Evenimentele pot propaga erori, drept urmare nu pot servi ca bază pentru
+ programare.
+ Un eveniment provenit de la un senzor, cum ar fi poziţia unui individ într-un
+ anumit spaţiu, poate fi eronat.
+ Aplicaţia va reacţiona la acest eveniment declanşat de date eronate, lucru
+ care nu se doreşte, drept urmare aplicaţia trebuie să identifice datele
+ eronate local, înainte de a executa acţiuni.
+\end_layout
+
+\begin_layout Itemize
+Evitarea acţiunilor asupra datelor provenite de la un singur senzor.
+ Pentru a evita datele eronate, acţiunile trebuie luate pe baza datelor
+ preluate de la mai multe surse.
+\end_layout
+
+\begin_layout Itemize
+Interconectarea este mai importantă decât datele.
+ Nu putem considera un sistem ambiental inteligent în cazul în care este
+ pur şi simplu condus de evenimente provenite de la senzori, neţinând cont
+ şi de alţi factori.
+ Modelul, relaţiile sale şi capacitatea de a extrage informaţii prin intermediul
+ fuziunii caracterizează sistemul mai mult decât disponibilitatea senzorilor.
+\end_layout
+
+\begin_layout Itemize
+Orice decizie are nevoie de o strategie de atenuare.
+ Este inevitabilă apariţia erorilor, iar aceste erori pot cauza probleme
+ majore pentru aplicaţie dacă nu sunt luate în calcul la proiectarea sistemului.
+\end_layout
+
+\begin_layout Itemize
+Lucrurile intersante vin din compoziţie.
+ Compunerea aplicaţiilor şi serviciilor au impact asupra întregului sistem,
+ de aceea rezultatele compoziţiei trebuie să fie definite din timp.
+\end_layout
+
+\begin_layout Standard
+În proiectarea unui sistem abiental inteligent ar trebui să se ţină cont
+ de următoarele procese: percepţie, raţionament şi actiune.
+ Aceste trei procese trebuie să interacţioneze continuu pentru a realiza
+ un sistem ambiental complet.
+\end_layout
+
+\begin_layout Section
+Percepţia
+\end_layout
+
+\begin_layout Standard
+Procesul de percepţie ar trebui să fie împărţit în diferite sarcini, în
+ scopul de a oferi o percepţie corectă asupra lumii reale.
+ Acesta trebuie să se ocupe cu detalii low-level pentru a prelua datele
+ de la lumea reală şi să le adapteze la o bază de cunoştinţe.
+ Acest proces trebuie să şteargă datele eronate, nesemnificative sau valorile
+ redundante în scopul de a obţine acurateţea necesară proceselor următoare.
+ Procesul de percepţie este împărţit în 5 etape: colectarea datelor, verificarea
+ datelor, corectarea datelor, filtrarea datelor şi ontologizarea datelor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename perceptie.jpg
+	width 10cm
+	height 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Procesul de percepţie
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Colectarea datelor
+\end_layout
+
+\begin_layout Standard
+Colectarea datelor este o sarcină de nivel scăzut, obictivul său principal
+ fiind colectarea datelor de la dispozitivele fizice.
+ Această sarcină va interacţiona în general cu toate dispozitivele plasate
+ în mediu monitorizat de sistemului ambiental inteligent.
+ Pentru ca sarcina de colectare a datelor să ruleze cât mai eficient senzorii
+ trebuie amplasaţi cât mai organizat pentru a se evita informaţia redundantă
+ sau nesemnificativă şi pentru a reduce costurile.
+ De asemenea trebuie luat în calcul şi tipurile de dispozitive folosite,
+ aceastea putând fi programabile sau nu.
+ Datorită faptului că majoritatea dispozitivelor fiind programate de către
+ producător, sarcina de colectare a datelor trebuie să fie realizată ţinând
+ cont de diferitele implementări ale dispozitivelor.
+\end_layout
+
+\begin_layout Subsection
+Verificarea datelor 
+\end_layout
+
+\begin_layout Standard
+Scopul principal al acestei sarcini este de a verifica datele colectate
+ în etapa de colectare a datelor.
+ În această etapă se poate verifica dacă datele sunt corecte sau nu.
+ Adevărata provocare din parte programatorului este să verifice corectitudinea
+ datelor.
+ Datorită faptului că nu există o soluţie universală pentru toate mediile
+ existente, sarcina de verificare trebuie să se adapteze în mod dinamic
+ la fiecare mediu.
+ 
+\end_layout
+
+\begin_layout Standard
+În cadru acestei sarcini se poate introduce un motor de reguli, care poate
+ rula reguli de verificare pentru a determina dacă datele sunt corecte sau
+ nu pentru mediul curent.
+ Motorul de reguli trebuie să le ofere programatorilor o modalitate flexibila
+ de a adăuga, modifica sau şterge reguli.
+\end_layout
+
+\begin_layout Standard
+Această sarcină trebuie să ruleze în strânsă legătură cu sarcina de verificare
+ a datelor.
+ Sarcina de verificare a datelor trebuie să poată invoca în mod direct sarcina
+ de corectare.
+ 
+\end_layout
+
+\begin_layout Standard
+Verificarea datelor poate fi privită ca un filtru aplicat asupra datelor
+ primite care poate fi folosit să accepte date sau să le respingă din diferite
+ motive (incorecte, redundante sau alte motive adăugate de programatori.
+\end_layout
+
+\begin_layout Subsection
+Corectarea datelor
+\end_layout
+
+\begin_layout Standard
+Scopul acestei sarcini este de a corecta datele incorecte raportate în etapa
+ de verificare a datelor.
+ Datele pot fi corectate în diferite moduri:
+\end_layout
+
+\begin_layout Itemize
+Ignorarea datelor - acest lucru presupune setarea unei valori implicite
+ ( ex: valoarea null pentru SQL).
+\end_layout
+
+\begin_layout Itemize
+Ajustarea datelor - se poate modifica datele atribuindu-le ultima valoare
+ corectă înregistrată.
+\end_layout
+
+\begin_layout Itemize
+Respingerea datelor - dacă nu se poate poate aplica nici una dintre metodele
+ de mai sus datele pot fi respinse.
+\end_layout
+
+\begin_layout Subsection
+Ontologizarea datelor
+\end_layout
+
+\begin_layout Standard
+Algoritmi de inteligenţă artificială au nevoie de o bază solidă de cunoştiinţe
+ pentru a funcţiona.
+ Scopul acestei sarcini este acela de a organiza datele conform unui model
+ din lumea reală.
+ Această sarcină va trebui să sincronizeze toate datele care provin dintr-un
+ mediu populat cu dispozitive şi evenimente asincrone.
+ Sistemele ambientale inteligente au nevoie uneori de seturi de date compuse
+ din valorile citite de la mai multe dispozitive.
+ Implementarea unui proces de sincronizare poate varia, dar majoritatea
+ sistemelor inteligente au în comun următoarele elemente:
+\end_layout
+
+\begin_layout Itemize
+Un buffer de date.
+\end_layout
+
+\begin_layout Itemize
+Un garbage collector.
+\end_layout
+
+\begin_layout Standard
+După ce datele sunt agregate acestea pot fi stocate într-o bază de cunoştiinţe
+ care va fi accesată de sarcina care se ocupă de raţionament sau chiar sarcina
+ care se ocupă de procesul de învăţare.
+\end_layout
+
+\begin_layout Section
+Raţionamentul
+\end_layout
+
+\begin_layout Standard
+În cadrul sistemelor inteligente procesul de raţionament poate fi împărţit
+ în trei sarcini distincte: învăţare, raţionament şi predicţie.
+ Procesul de învăţare poate fi privit ca un liant pentru celălalte sarcini
+ care au ca scop procesul de raţionament.
+ Pentru realizarea procesului de învăţare se pot folosi două familii de
+ algoritmi specifici pentru sistemele inteligente care integrează acest
+ proces.
+ Cele două familii de algoritmi sunt SVM (support vector machine) şi NN
+ (neutral networks).
+ Cel mai mare avantaj al acestor algoritmi este că acestia returnează tot
+ timpul date la sfărşitul execuţiei, pe de altă parte aceste date sunt greu
+ de înteles.
+ Procesul de învăţare se poate baza de asemenea pe data mining, proces care
+ se ocupă cu extragerea informaţiilor şi găsirea anumitor tipare din datele
+ salvate în baza de cunoştiinţe.
+\end_layout
+
+\begin_layout Subsection
+Recunoaşterea situaţiilor
+\end_layout
+
+\begin_layout Standard
+O situaţie este definită ca un set de stări care au valori similare.
+ Un set poate fi definit de: 
+\end_layout
+
+\begin_layout Itemize
+o stare canonică reprezentativă pentru toate stările din set.
+\end_layout
+
+\begin_layout Itemize
+o funcţie care defineşte cum se pot măsura diferenţele dintre două stări.
+\end_layout
+
+\begin_layout Itemize
+un prag care defineşte diferenţa maximă dintre starea canonică şi celălalte
+ stări din set.
+\end_layout
+
+\begin_layout Itemize
+o valoare pentru fiecare element al unei stări din intervalul [0,1].
+ Valoarea 0 indicând faptul că starea respectivă poate fi ignorată.
+\end_layout
+
+\begin_layout Subsection
+Predicţia situaţiilor
+\end_layout
+
+\begin_layout Standard
+Cunoştiinţele dobândite în urma procesului de învăţare sunt utile pentru
+ a face predicţii despre următoarele acţiuni care pot fi luate în calcul
+ pentru a îndeplini automat unele obiective.
+ Aceste acţiuni pot fi executate pe baza datelor de ieşire de la algoritmi
+ specifici sistemelor inteligente.
+ Exemplu de predicţii:
+\end_layout
+
+\begin_layout Itemize
+Prezicerea evenimentelor şi stărilor sistemului.
+\end_layout
+
+\begin_layout Itemize
+Prezicerea acţiunilor locuitorilor mediului.
+\end_layout
+
+\begin_layout Itemize
+Prezicerea anomaliilor.
+\end_layout
+
+\begin_layout Subsection
+Detectarea erorilor
+\end_layout
+
+\begin_layout Standard
+Scopul principal al acestei sarcini este de a supraveghea acţiunile luate
+ de locuitori, pentru a detecta decizii opuse între sistemul ambiental şi
+ locuitori.
+ Prin urmare ultimele acţiuni luate de sistemul inteligent trebuie memorate
+ şi comparate cu acţiunile luate de locuitori.
+ Compararea acestor acţiuni presupune de obicei operaţiuni complexe la care
+ iau parte multe elemente componente ale sistemului şi de asemenea trebuie
+ luat în considerare felul în care aceste acţiuni sunt comparate, durata
+ de timp alocată pentru comparare, sau dacă acţiuni asupra diferitelor component
+e pot fi considerate opuse.
+ Toate aceste aspecte fac detectarea acţiunilor opuse mult mai provocatoare.
+\end_layout
+
+\begin_layout Section
+Acţiuni
+\end_layout
+
+\begin_layout Standard
+Sistemele ambientale inteligente trebuie să acţioneze independente pentru
+ a fi considerate sistemel inteligente.
+ Deciziile şi sarcinile ordonate de procesul de raţionament, trebuie să
+ treacă prin trei sarcini principale ale acestui proces:
+\end_layout
+
+\begin_layout Standard
+Policy manager - decizia executării unei sarcini trebuie supervizată de
+ acest proces.
+ Un sistem inteligent trebuie să definească parametrii pentru economisirea
+ energiei, securitate şi comfort.
+ Acest proces trebuie să poată modifica parametrii în timpul execuţiei,
+ deoarece preferinţele locuitorilor pot varia.
+\end_layout
+
+\begin_layout Standard
+Planificatorul de sarcini - acest proces trebuie să poată planifica sarcinile
+ în funcţie de timpul de execuţie sau de prioritate.
+\end_layout
+
+\begin_layout Standard
+Procesul care execută sarcini - acest proces trebuie să interacţioneze cu
+ protocoale low level pentru a trimite instrucţiuni dispozitivelor.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "1"
+key "1"
+
+\end_inset
+
+ Smart Environment Software Reference Architecture, A.
+ Fernandez-Montes, J.
+ A.
+ Ortega, J.
+ A.
+ Alvarez, L.
+ Gonzalez-Abril.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2"
+key "2"
+
+\end_inset
+
+Whole-System Programming of Adaptive Ambient Intelligence, Simon Dobson,
+ Paddy Nixon.
+\end_layout
+
+\end_body
+\end_document
