@@ -1,0 +1,316 @@
+#LyX 1.6.8 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic true
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Administrarea datelor provenite de la senzori folosind agenţi JADE
+\end_layout
+
+\begin_layout Author
+Manaţe Bogdan, IS an 2.
+\end_layout
+
+\begin_layout Section
+Cerinţele proiectului
+\end_layout
+
+\begin_layout Standard
+Proiectul trebuie să implementeze citirea datelor provenite de la senzorii
+ Owl Energy Meter şi să salveze datele citite într-o bază de date MySQL.
+ 
+\end_layout
+
+\begin_layout Section
+Tehnologii folosite
+\end_layout
+
+\begin_layout Standard
+Implementarea aplicaţiei s-a realizat folosind limbajul de programae JAVA
+ (JDK 1.6), JADE framework 4.0.1, C#, iar stocarea datelor se face într-o bază
+ de date MySQL versiunea 5.1.41.
+\end_layout
+
+\begin_layout Section
+Descrierea proiectului
+\end_layout
+
+\begin_layout Standard
+Senzorii se conectează pe sursa de curent, la care sunt conectaţi consumatorii
+ pentru care se doreşte stocarea datelor referitoare la consumul de energie
+ electrică.
+ Senzorii (Figura 1) citesc datele referitoare la consumul de energie electrică
+ şi transmit datele către un adaptor wireless care se conectează la portul
+ USB al unui calculator pe care rulează aplicaţia.
+ Citirea datelor de pe portul serial se face cu o aplicatie server realizată
+ in C# care transmite mai departe datele pe portul 12745.
+ Aplicaţia conţine două tipuri de agenţi: SensorManagerAgent, care se ocupă
+ de citirea datelor de la aplicaţia server şi DatabaseManagerAgent care
+ se ocupă de inserarea datelor care le primeşte de la agenţii de tipul SensorMan
+agerAgent.
+ Fiecare agent de tipul DatabaseManagerAgent se ocupă de o singură bază
+ de date.
+ Figura 2 prezintă modul în care agenţii interacţionează.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename TheOwlSystem.jpg
+	width 15cm
+	height 20cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Senzorii OWL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename AgentUseCase.jpg
+	width 15cm
+	height 20cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagrama de utilizare
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+SensorManagerAgent
+\end_layout
+
+\begin_layout Standard
+Agenţii de acest tip se conecteză la adaptorul wireless folosind o aplicaţie
+ C# lansată in execuţie la iniţializarea agenţilor, care face citirea propriu-zi
+să a datelor, iar datele sunt făcute publice utilizând o conexiune pe socket.
+\end_layout
+
+\begin_layout Standard
+Datele primite de la senzori au următorul format:
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+DATA=adresă_senzor,amperi,amperi_acumulaţi,data.
+\end_layout
+
+\begin_layout Standard
+adresă_senzor - reprezintă adresa senzorului conectat la adaptorul wireless;
+\end_layout
+
+\begin_layout Standard
+amperi - numărul de amperi citiţi la momentul actual.
+\end_layout
+
+\begin_layout Standard
+amperi_acumulaţi - numărul de amperi acumulaţi de la pornirea aplicaţiei
+\end_layout
+
+\begin_layout Standard
+data - data la care a fost facută citirea.
+\end_layout
+
+\begin_layout Standard
+Acestui tip de agenţi li se adugă la iniţializare un comportament de tipul
+ ReadDataBehaviour.
+ Clasa care descrie acest tip de comportament moşteneşte proprietăţiile
+ clasei CyclicBehaviour, deoarece citirea datelor trebuie facută continuu.
+ Comportamentul ReadDataBehaviour agreghează datele provenite de la server
+ prin intermediul aplicaţiei C#, iar după ce datele sunt validate şi procesate
+ acestea sunt trimise către un agent de tipul DatabaseManagerAgent.
+\end_layout
+
+\begin_layout Subsection
+DatabaseManagerAgent
+\end_layout
+
+\begin_layout Standard
+\align left
+Aplicaţia instanţiază un singur agent de acest tip pentru fiecare bază de
+ date folosită.
+ Acestui tip de agent i se adaugă la iniţializare un comportament de tipul
+ SaveDataBehaviour.
+ Acest tip de comportament extinde de asemenea comportamentul de tip CyclicBehav
+iour care se ocupă de salvarea datele primite de la agenţii de tip SensorManager
+Agent.
+\end_layout
+
+\begin_layout Standard
+Obiectele folosite sunt prezentate în Figura 3.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename AgentsClass.jpg
+	width 15cm
+	height 20cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagrama de clase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Developing multi-agent systems with JADE, 2007"
+key "1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "JADE tutorial and Primer, http://www.iro.umontreal.ca/~vaucher/Agents/Jade/JadePrimer.html"
+key "2"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "JADE Homepage, http://jade.tilab.com/"
+key "3"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
