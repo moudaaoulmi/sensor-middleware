@@ -1,0 +1,64 @@
+<!--
+	The manager agent for starting the application.
+-->
+
+<agent xmlns="http://jadex.sourceforge.net/jadex"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jadex.sourceforge.net/jadex 
+	                    http://jadex.sourceforge.net/jadex-0.96.xsd"
+	name="Manager"
+	package="com.andrzejborowczyk.bdihospitalization">
+
+	<imports>
+		<import>jadex.*</import>
+		<import>jadex.planlib.*</import>
+	</imports>
+
+	<capabilities>
+		<capability name="startcap" file="StartAgents"/>
+		<capability name="amscap" file="jadex.planlib.AMS"/>
+	</capabilities>
+
+	<goals>
+		<achievegoalref name="start_agents">
+			<concrete ref="startcap.start_agents"/>
+			<deliberation>
+				<!-- Wait for all agents being started before destroying the manager. -->
+				<inhibits ref="ams_destroy_agent"/>
+			</deliberation>
+		</achievegoalref>
+		<!-- Goal used to kill manager after startup. -->
+		<achievegoalref name="ams_destroy_agent">
+			<concrete ref="amscap.ams_destroy_agent"/>
+		</achievegoalref>
+	</goals>
+
+	<configurations>	
+		<configuration name="default">
+			<goals>
+				<initialgoal ref="start_agents">
+					<parameterset ref="agentinfos">
+						<!-- Launch Air Conditioning agent at start point. -->
+						<value>new StartAgentInfo("com.andrzejborowczyk.bdihospitalization.AirConditioning", "AirConditioning", 0, null)</value>
+						
+						<value>new StartAgentInfo("com.andrzejborowczyk.bdihospitalization.HeartBeatMeasure", "HeartBeatMeasure", 0, null)</value>
+						
+						<value>new StartAgentInfo("com.andrzejborowczyk.bdihospitalization.Injection", "Injection", 0, null)</value>
+						
+						<value>new StartAgentInfo("com.andrzejborowczyk.bdihospitalization.Emergency", "Emergency", 0, null)</value>
+						
+						<value>new StartAgentInfo("com.andrzejborowczyk.bdihospitalization.Assistant", "Assistant", 0, null)</value>
+					</parameterset>
+				</initialgoal>
+				<!-- Specifies goal of destoying this agent by AMS -->
+				<initialgoal ref="ams_destroy_agent">
+					<parameter ref="agentidentifier">
+						<value>$agent.getAgentIdentifier()</value>
+					</parameter>
+				</initialgoal>
+			</goals>
+		</configuration>
+	</configurations>
+
+
+</agent>
