@@ -1,0 +1,149 @@
+<!--
+The heart beate measure agent.
+<br>
+The agent measures the heart beat.
+
+-->
+<agent xmlns="http://jadex.sourceforge.net/jadex"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jadex.sourceforge.net/jadex 
+	                    http://jadex.sourceforge.net/jadex-0.96.xsd"
+	name="HeartBeatMeasure" package="com.andrzejborowczyk.bdihospitalization">
+	
+	<imports>
+		<import>jadex.adapter.fipa.*</import>
+		<import>jadex.runtime.*</import>
+		<import>jadex.planlib.*</import>
+		<import>jadex.util.*</import>
+		<import>jadex.*</import>
+		<import>java.util.logging.*</import>
+	</imports>
+	
+	<capabilities>
+		<capability name="dfcap" file="jadex.planlib.DF"/>
+	</capabilities>
+	
+	<beliefs>
+		<belief name="patient" class="Patient">
+			<fact>new Patient(90)</fact>
+		</belief>
+		
+		<belief name="heart_beat" class="int"  updaterate="1500"> 
+			<fact>$beliefbase.patient.getPressure()</fact>
+	    </belief>
+		
+		<belief name="heart_beat_high" class="int">
+			<fact>100</fact>
+		</belief>
+	
+		<belief name="heart_beat_much_too_high" class="int">
+			<fact>120</fact>
+		</belief>
+
+		
+		<belief name="heart_beat_low" class="int">
+			<fact>50</fact>
+		</belief>
+		
+		<belief name="heart_beat_much_too_low" class="int">
+			<fact>40</fact>
+		</belief>
+		
+		<belief name="dose_limit" class="int"><fact>10</fact></belief>
+		<belief name="dose_target" class="int"><fact>3</fact></belief>
+		<belief name="current_dose" class="int"><fact>0</fact></belief>
+		
+		<!-- The connection to the Injection Agent. -->
+		<belief name="injection" class="AgentIdentifier"/>
+		<!-- The connection to the Emergency Agent -->
+		<belief name="emergency" class="AgentIdentifier"/>
+		
+	</beliefs>
+	
+	<goals>
+		<!--Search in the DF-->
+		<achievegoalref name="df_search">
+			<concrete ref="dfcap.df_search"/>
+		</achievegoalref>
+		<!-- Protect the patient from overdosing -->
+		<maintaingoal name="prevent_overdose" exclude="never" retry="true" retrydelay="1500">
+			<deliberation>
+				<inhibits ref="fix_patient" inhibit="when_in_process"></inhibits>
+			</deliberation>
+			<maintaincondition>$beliefbase.current_dose &lt; $beliefbase.dose_limit</maintaincondition>
+			<targetcondition> $beliefbase.current_dose &lt; $beliefbase.dose_target</targetcondition>
+		</maintaingoal>
+		<!-- Observe the patient and send injection request to injection agent-->
+		<maintaingoal name="fix_patient" exclude="never" retry="true" retrydelay="2000"> 			
+
+			<maintaincondition>false</maintaincondition>
+			
+		</maintaingoal>
+	</goals>
+	
+	<plans>
+		<plan name="wait_till_dose_declines">
+			<body>new WaitTillDoseDeclinesPlan()</body>
+			<trigger>
+				<goal ref="prevent_overdose">					
+				</goal>
+			</trigger>
+		</plan>
+		<plan name="observe">
+			<body>new HeartBeatMeasurePlan()</body>
+			<trigger>
+				<goal ref="fix_patient">					
+				</goal>
+			</trigger>
+		</plan>
+		<plan name="gui">
+			<body>new HeartBeatMeasureGUIPlan()</body>		
+		</plan>
+
+	</plans>
+	
+	<events>	
+		<internalevent name="gui_update">
+			<parameter name="content" class="String[]"/>
+		</internalevent>	
+	
+		<!-- Sends and performative inform about a heart beat -->
+		<messageevent name="inform_heart_beat" direction="send" type="fipa">
+			<parameter name="performative" class="String">
+				<value>SFipa.INFORM</value>
+			</parameter>
+			<parameter name="conversation-id" class="String">
+				<value>SFipa.createUniqueId($scope.getAgentName())</value>
+			</parameter>
+			<parameter name="language" class="String">
+				<value>SFipa.JAVA_XML</value>
+			</parameter>
+		</messageevent>
+			
+	</events>
+	
+	<properties>
+		<!-- Speficifies the service description an Injection Agent can provide -->
+		<property name="service_injection"> SFipa.createAgentDescription(null,
+			SFipa.createServiceDescription(null, "service_injection", null))
+		</property>
+		<!-- Speficifies the service description an Emergency Agent can provide -->
+		<property name="service_emergency"> SFipa.createAgentDescription(null,
+			SFipa.createServiceDescription(null, "service_emergency", null))
+		</property>
+	</properties>
+	
+	<configurations>
+		<configuration name="default">
+			<goals>
+				<initialgoal ref="fix_patient"></initialgoal>
+				<initialgoal ref="prevent_overdose"></initialgoal>				
+			</goals>
+			<plans>
+				<initialplan ref="gui"/>
+			</plans>
+			
+		</configuration>
+	</configurations>
+
+</agent>
