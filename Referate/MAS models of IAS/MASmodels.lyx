@@ -1,0 +1,331 @@
+#LyX 1.6.8 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Modele multi-agent pentru sisteme ambientale inteligente 
+\end_layout
+
+\begin_layout Author
+Manaţe Bogdan, master IS, an 2
+\end_layout
+
+\begin_layout Date
+31 ianuarie 2011
+\end_layout
+
+\begin_layout Abstract
+Proiectarea şi dezvoltarea de software pentru sistemele abientale inteligente
+ implică provocări dificile în funcţie de diversitatea dispozitivelor şi
+ canalele de comunicaţie.
+ Deoarece sistemele ambientale au cerinţe imprevizibile şi sunt senzitive
+ la context, sistemele software trebuie să suporte schimbări dinamice.
+ Caracteristicile unui sistem ambiental multi-agent orientat pe aspecte
+ sunt prezentate ca un mecanism de raţionament pentru comportamente interdepende
+nte.
+ 
+\end_layout
+
+\begin_layout Section
+Introducere
+\end_layout
+
+\begin_layout Standard
+Sistemele ambientale inteligente vizionare se bazează pe maşini de calcul
+ prevăzute cu un număr mare de procesoare şi senzori de mici dimensiuni
+ integraţi în obiectele utilizate în viaţa de zi cu zi, acest lucru ducând
+ la dispariţia dispozitivelor tradiţionale şi a modului de prelucrare a
+ informaţiei.
+ În cadrul sistemelor ambientale inteligente există un grad ridicat de partajare
+ a datelor între unităţi larg distribuite, structurate pentru a promova
+ colaborarea, auto-sincronizarea, răspunsuri rapide la informaţii noi, adaptabil
+itate şi sustenabilitate.
+\end_layout
+
+\begin_layout Standard
+Proiectarea sistemelor ambientale inteligente reprezintă o provocare pentru
+ arhitecţii software.
+ Sistemele de acest tip implică participarea dispozitivelor heterogene,
+ care formează un sistem deschis, dinamic în cadrul căruia resursele disponibile
+, contextul şi activităţiile se schimbă continuu.
+ Sistemele multi-agent prezintă o abordare naturală şi puternică pentru
+ a proiecta sisteme abientale inteligente care să funcţioneze în medii complexe.
+ 
+\end_layout
+
+\begin_layout Standard
+Cele mai importante caracteristicii ale agenţilor inteligenţi sunt anticiparea
+ evenimentelor şi adaptarea la schimbările mediului în care aceştia rulează.
+ Agenţii pot executa acţiuni proactive pentru a-şi găsi scopurile şi pentru
+ a-şi urma crezurile care ţin de situaţiile pe care le întâlnesc.
+ De asemenea agenţii pot comunica activ cu alţi agenţi pentru a atinge obiective
+ mai ample.
+\end_layout
+
+\begin_layout Standard
+În cadrul sistemelor ambientale există o nevoie clară de suport decizional
+ pentru agenţii, pentru a forma echipe de agenţi şi să-şi asume roluri în
+ cadrul echipelor.
+\end_layout
+
+\begin_layout Section
+Sisteme multi-agent
+\end_layout
+
+\begin_layout Standard
+Un agent software reprezintă un sistem software incapsulat situat într-un
+ mediu unde poate executa acţiuni flexibile şi autonome pentru a-şi atinge
+ obiectivele de design.
+ Scopul unui agent poate fi comun sau privat.
+ Caracteristica cheie a unui agent software care este distinctivă faţă de
+ alte paradigme de programare, este că într-un context, agenţii evaluează
+ persistent o suită de opţiuni care le sunt disponibile, apoi selectează
+ una dintre acţiuni pe care o execută.
+ În schimb, alte paradigme de programare sunt mult mai prescrise.
+\end_layout
+
+\begin_layout Standard
+Într-un sistem ambiental, agenţii sunt definiţi pentru diferite roluri,
+ cum ar fi monitorizarea activităţiilor şi intenţiile utilizatorilor, monitoriza
+rea stării în care se află alţi agenţi sau dispozitive, distribuirea sarcinilor
+ computaţionale între resursele disponibile şi care reprezintă preferinţele
+ utilizatorilor şi a altor agenţi.
+\end_layout
+
+\begin_layout Standard
+Agenţii pot fi omogeni sau heterogeni şi pot coopera sau pot fi competitivi.
+ Agenţii care reprezintă un sistem ambiental inteligent sunt heterogeni
+ şi cooperativi.
+ Heterogenitatea rezultă din dispozitivele care simt diferite lucruri, activând
+ diverse controllere, negocind terminarea diferitelor sarcini, şi găsirea
+ soluţiilor acceptabile pentru diferite modele.
+ Aceştia sunt cooperativi in sensul că toţi contribuie la realizarea scopului
+ global.
+\end_layout
+
+\begin_layout Standard
+Modelul BDI ( crez-dorinţă-intenţie ) se poate ocupa flexibil de modelare
+ întregului sistem bazat pe agenţi într-un sistem ambiental inteligent.
+ În acest model credinţele corespund stării în care se află agentul, inclusiv
+ caracteristicile curente ale agentului în mediul în care funcţionează.
+ Dorinţele corespund efectelor pe care agentul încearcă să le producă în
+ mediul în care funcţionează.
+ Intenţiile reprezintă planurile pe care agentul le are disponibile şi pe
+ care le urmează pentru a produce efecte.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Multi-Agent_systems.JPG
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Relaţiile organizaţionale între agenţi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Unii agenţi pot fi compuşi din subagenţi, aceştia pot fi agenţi negociatori,
+ brokeri sau agenţi care se folosesc de serviciile altor agenţi.
+ Agenţii care au capabilităţi de comunicare, specifică modul de lucru în
+ cadrul reţelei de comunicare şi se ocupă de asemenea de dispozitivele care
+ se află în raza lor de ascultare şi care pot comunica cu succes.
+ Problemele de protocol, cum ar fi responsabilitatea pentru agenţii logici
+ să expedieze anumite pachete de date, sunt manipulate de către agenţi însărcina
+ţi cu alegerea, aplicarea şi modificarea protocoalelor după cum este necesar.
+ Agenţii trebuie să înteleagă sintaxa, să parcurgă şi să proceseze mesajul
+ pentru a acţiona conform informaţiei primite.
+ 
+\end_layout
+
+\begin_layout Standard
+Agenţii pot fi mobili, având posibilitatea să se deplaseze în cadrul platformelo
+r suportate.
+ În cadrul unui sistem ambiental inteligent, agenţii mobili pot modela preferinţ
+ele agenţilor brokeri, utilizatorilor şi agenţilor care se ocupa cu furnizarea
+ datelor.
+ Acesti agenţi pot răspunde adaptiv la condiţiile dinamice, folosind mai
+ multe opţiuni disponibile pentru a realiza o comandă sau o cerere.
+\end_layout
+
+\begin_layout Standard
+Mobilitatea este o preocupare intersectorială care nu este prezentă în majoritat
+ea sistemelor multi-agent, dar poate fi o unealtă puternică sau chiar necesară
+ în domeniu sistemelor ambientale inteligente.
+\end_layout
+
+\begin_layout Section
+Probleme intersectoriale
+\end_layout
+
+\begin_layout Standard
+Necesitatea de a gestiona problemele complexe, în timp ce se doreşte crearea
+ unui sistem software care să fie flexibil, adaptabil şi care să evolueze,
+ este esenţială în sistemele ambientale inteligente.
+ Cu toate că modularitatea este esenţială, unele cerinţe şi proprietăţi
+ nu pot fi modularizate deoarece acestea sunt legate de unele probleme intersect
+oriale.
+ Problemele intersectoriale sunt dificile, deoarece sunt distribuite în
+ mod inerent şi fac celălalte componente software să fie mai puţin independente.
+ Într-un sistem multi-agent, de exemplu, comunicarea securizată între agenţii
+ care reprezintă entităţi decizionale reprezintă o preocupare importantă
+ privind funcţiile lor specifice.
+ În ingineria software, este cunoscut faptul că, problemele intersectoriale
+ pot duce cu uşurinţă la duplificarea codului în cadrul mai multor componente.
+ De astfel duplificare codului duce la scăderea calităţii software, aceasta
+ fiind dificil de rezolvat la nivelul arhitectural.
+\end_layout
+
+\begin_layout Standard
+O aplicaţie cu numeroase probleme intersectoriale, are ca rezultat un soft
+ care este dificil de modularizat, înţeles, reutilizat sau dezvoltat.
+ Pentru rezolvarea acestor probleme, este util să se folosească un nivel
+ ridicat de abstractizare pentru a face designul softului mult mai uşor
+ de gestionat.
+ Utilizarea unui nivel ridicat de abstractizare poate scoate în evidenţă
+ unele probleme şi poate oferi o perspectivă asupra modului de incapsulare
+ ale acestora în componente separate.
+ Astfel este posibil să se descrie cu precizie modul în care componentele
+ interacţionează şi dacă sistemul se comportă conform scopului propus.
+\end_layout
+
+\begin_layout Standard
+Unele sisteme multi-agent gestionează complexitatea prin separarea problemelor
+ în agenţi, obiecte şi mediul în care aceştia interacţionează.
+ Unele probleme ale sistemelor, cum ar fi securitatea, nu se pot rezolva
+ prin modularizare.
+\end_layout
+
+\begin_layout Standard
+Dezvoltarea orientată pe aspecte (ASOD) abordează modularizarea problemelor
+ intersectoriale, prin separarea problemelor în module aspect.
+ Codul care adresează o problemă intersectorială este numit înştiinţare
+ şi este menţinut în interiorul aspectului.
+ Aspectul cataloghează locurile din interiorul sistemului care au nevoie
+ de o înştiinţare şi trimite o înştiinţare la locaţiile repective.
+ Într-un sistem ambiental inteligent problemele sunt asociate cu interacţiunea,
+ adaptarea, autonomia agenţilor, mobilitatea, capcitatea de a învăţa şi
+ colaborarea.
+\end_layout
+
+\begin_layout Section
+Modele formale şi agenţi
+\end_layout
+
+\begin_layout Standard
+Agenţii dintr-un sistem multi-agent trebuie să prezinte atât comportamente
+ reactive cât şi comportamente proactive.
+ De exemplu, un agent care monitorizează proactiv şi care prezice locaţia
+ şi disponibilitatea resurselor prescrise, ar putea suspenda monitorizarea
+ dacă i se cere să aloce cât mai repede resurse reactiv, ca răspuns la o
+ schimbare percepută în preferinţele şi planurile utilizatorului.
+ De asemenea unii agenţi trebuie să rezolve conflicte între obiective multiple.
+ Suspendarea activităţiilor poate duce la pierderea unor schimbări critice
+ în cadrul informaţiilor, care la rândul lor pot produce acţiuni care nu
+ au fost solicitate.
+\end_layout
+
+\begin_layout Section
+Suport decizional
+\end_layout
+
+\begin_layout Standard
+Alocarea de sarcini este o funcţionalitatea critică într-o arhitectură orientată
+ agent pentru sisteme ambinentale inteligente.
+ Din punct de vedere cooperativ şi executare a deciziilor inteligente este
+ necesar un cadru de modelare.
+ Modelele disponibile sunt reguli de decizie fuzzy, reţele neuronale, plase
+ de contract şi seturi rough.
+ În continuare voi descrie un model de optimizare distribuit.
+ Se presupune că există o colecţie de obiective care trebuiesc îndeplinite
+ şi mediul în care acţionează agenţii care trebuie să indeplinească obiectivele
+ este în continuă mişcare.
+ Scopurile sunt îndeplinite prin formarea de echipe de agenţi cooperativi
+ care sunt capabili să îndeplinească obiectivele la un nivel măsurabil de
+ calitate.
+ Agenţii dintr-o oarecare echipă îndeplinesc un rol care contribuie la realizare
+a obiectivului global.
+ Scopul modeluli este de a specifica deciziile optime privind crearea echipelor
+ şi includerea agenţilor în echipe.
+ Echipele pot avea un număr diferit de roluri, iar agenţii sunt asociaţi
+ doar rolurilor la care aceştia pot contribui.
+\end_layout
+
+\begin_layout Section
+Concluzii
+\end_layout
+
+\begin_layout Standard
+Utilizarea metodelor formale are avantaje datorită suportului pentru specificaţi
+i, design, validare şi verificare.
+ Designul cuprinde nevoia de adaptare dinamică şi non-determinismul sistemelor
+ ambientale inteligente.
+ Utilizarea conceptelor orientate obiect şi metodelor formale în cadrul
+ sistemelor multi-agent promite gestionarea facilă a complexităţii software.
+\end_layout
+
+\end_body
+\end_document
