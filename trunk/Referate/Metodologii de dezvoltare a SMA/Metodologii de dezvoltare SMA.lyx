@@ -523,9 +523,168 @@ Specificarea interacţiunilor
  agent.
  Interacţiunile pot fi prezentate sub formă de tabel în care se specifică
  interacţiunea, responsabilitatea, protocolul folosit, rolul ( iniţiator
- sau participant), agentul cu care se interacţionează şi momentul în care
+ sau participant ), agentul cu care se interacţionează şi momentul în care
  interacţiunea trebuie să aibă loc.
  
+\end_layout
+
+\begin_layout Subsection
+Şabloane de mesaje
+\end_layout
+
+\begin_layout Standard
+La acest pas se specifică formatul obiectelor de tipul MessageTemplate care
+ vor fi folosite pentru a se realiza interacţiunile.
+ Obiectele de tipul MessageTemplate vor fi adăugate la comportamentele care
+ se ocupă de comunicarea cu ceilalţi agenţi.
+ Pentru a realiza cât mai eficient şabloanele de mesaje, se poate ţine cont
+ de următoarele reguli:
+\end_layout
+
+\begin_layout Itemize
+ID-urile asignate agenţilor trebuie să fie unice.
+\end_layout
+
+\begin_layout Itemize
+Comportamentele care se ocupă de comunicare şi care folosesc acelaşi şablon,
+ ar trebui să formeze un singur comportament.
+ 
+\end_layout
+
+\begin_layout Itemize
+Analizarea conflictelor şi modificarea clasei MessageTemplate folosită de
+ comportamentul care se ocupă de comunicare.
+\end_layout
+
+\begin_layout Standard
+De asemenea în cazul în care şabloanele create nu acoperă toate cazurile
+ posibile de comunicare, se pot folosi şi şabloane dinamice, care pot fi
+ modificate în timpul execuţiei.
+\end_layout
+
+\begin_layout Subsection
+Identificator unic pentru serviciile de căutare/înregistrare
+\end_layout
+
+\begin_layout Standard
+Pentru ca agenţii să se poată înregistra la serviciul Yellow Pages oferit
+ de platforma JADE, aceştia trebuie să aibă un identificator unic.
+ În general convenţiile de nume depind de domeniul pe care rulează platforma
+ JADE, fiind indicat să se folosească şi o notare folosind limbajul natural.
+\end_layout
+
+\begin_layout Subsection
+Accesare resurselor de către agenţi
+\end_layout
+
+\begin_layout Standard
+În unele cazuri agenţii trebuie să interacţioneze cu resurse externe cum
+ ar fi baze de date, fişiere sau alte sisteme software.
+ Resursele pot fi împărţite în două categorii:
+\end_layout
+
+\begin_layout Itemize
+Resurse pasive: resurse care îşi schimbă starea doar când sunt accesate
+ de agentul care le controlează.
+ Resursele pasive pot fi accesate folosind pachetul java.io.* în cazul fişierelor,
+ în cazul librăriilor C se poate folosi JNI, iar în cazul bazelor de date
+ se poate folosi JDBC.
+\end_layout
+
+\begin_layout Itemize
+Resurse active: resurse care îşi pot schimba starea independent de agentul
+ care le controlează.
+ Resursele active pot reprezenta o bază de date în care se introduc date
+ de un operator uman sau de o altă aplicaţie software.
+\end_layout
+
+\begin_layout Subsection
+Comportamentele interne ale agenţilor
+\end_layout
+
+\begin_layout Standard
+Sarcina pe care un agent trebuie să o execute este executată în cadrul unui
+ 
+\begin_inset Quotes eld
+\end_inset
+
+comportament
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Platforma JADE oferă un pachet de clase specializate, care oferă suport
+ pentru majoritatea comportamentelor.
+ În cazul în care comportamentele deja existente nu satisfac cerinţele,
+ acestea se pot extinde.
+\end_layout
+
+\begin_layout Itemize
+OneShotBehaviour - implementează o sarcină atomică, care rulează o singură
+ dată şi se termină imediat.
+\end_layout
+
+\begin_layout Itemize
+CyclicBehaviour - implementează o sarcină care este tot timpul activă şi
+ care realizează aceeaşi sarcină de fiecare dată cănd este programată.
+\end_layout
+
+\begin_layout Itemize
+TickerBehaviour - implementează o sarcină care execută periodic aceeaşi
+ operaţie.
+\end_layout
+
+\begin_layout Itemize
+WakerBehaviour - implementează o sarcină care rulează o singură dată după
+ un anumit interval de timp.
+\end_layout
+
+\begin_layout Standard
+În cazul în care se operează cu responsabilităţi complexe, este indicat
+ ca acestea să fie împărţite în mai multe sarcini simple care pot fi combinate
+ mai apoi folosind una dintre clasele JADE care oferă suport pentru comportament
+e compuse:
+\end_layout
+
+\begin_layout Itemize
+SequentialBehaviour - implementează o sarcină compusă, care îşi programează
+ sub-sarcinile secvenţial.
+\end_layout
+
+\begin_layout Itemize
+FSMBehaviour - implementează o sarcină compusă, care îşi programează sub-sarcini
+le în funcţie de rezultatele pe care acestea le returnează la sfărşitul
+ execuţiei.
+\end_layout
+
+\begin_layout Subsection
+Definirea de ontologii
+\end_layout
+
+\begin_layout Standard
+Când agenţii din sistem interacţionează, schimbă informaţii care se referă
+ la entităţi abstracte sau concrete şi care există în mediul în care se
+ află agentul.
+ Aceste entităţi pot fi reprezentate prin tipuri primitive de date, cum
+ ar fi String sau Int, sau pot avea o structură complexă.
+ Entităţile complexe pot fi referite prin termenul de concepte.
+ Entităţile sunt legate prin intermediul unor relaţii, care pot fi adevărate
+ sau false.
+ La fel ca entităţile complexe, relaţile pot avea de asemenea structuri
+ complexe.
+ Relaţile complexe pot fi referite ca predicate.
+\end_layout
+
+\begin_layout Standard
+Un caz particular de entităţi complexe este reprezentat de acţiunile pe
+ care agenţii le pot realiza.
+ Acţiunile agenţilor pot fi descrise folosind clasa AgentActions disponibilă
+ în librăria JADE.
+\end_layout
+
+\begin_layout Standard
+O ontologie reprezintă un set de concepte, predicate şi acţiuni ale agenţilor
+ care au o legătură cu un anume domeniu.
 \end_layout
 
 \begin_layout Bibliography
