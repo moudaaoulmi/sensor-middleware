@@ -1,0 +1,157 @@
+#LyX 1.6.8 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass scrartcl
+\use_default_options false
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 0
+\use_esint 0
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Agenţi BDI
+\end_layout
+
+\begin_layout Date
+April 2, 2011 
+\end_layout
+
+\begin_layout Author
+\begin_inset Flex Element:Firstname
+status collapsed
+
+\begin_layout Plain Layout
+Bogdan
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Flex Element:Surname
+status collapsed
+
+\begin_layout Plain Layout
+Manaţe
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introducere
+\end_layout
+
+\begin_layout Standard
+BDI este unul din modelele folosite în dezvoltarea sistemelor bazate pe
+ agenţi.
+ Acest model se bazează pe capacitatea agenţilor de a-şi selecta planurile
+ dinamic pentru a duce la sfârşit un scop.
+ De asemenea agenţii trebuie să se adapteze la schimbări dinamice şi neprevăzute.
+ Fără o schema de programare a activităţilor corespunzătoare, agenţii pot
+ repeta activităţi care nu sunt necesare, pot folosi resurse într-un mod
+ nejustificat sau chiar pot să nu îndeplinească cerinţele utilizatorului.
+\end_layout
+
+\begin_layout Standard
+În general un agent raţional are următoarele proprietăţi: autonomie, abilităţi
+ sociale, reactivitate şi iniţiativă.
+ Printre alte arhitecturi orientate pe agenţi, modelul BDI, care este acronimul
+ de la 
+\begin_inset Quotes eld
+\end_inset
+
+Belief
+\begin_inset Quotes erd
+\end_inset
+
+ - opinie, 
+\begin_inset Quotes eld
+\end_inset
+
+Desire
+\begin_inset Quotes erd
+\end_inset
+
+ - dorinţă, 
+\begin_inset Quotes eld
+\end_inset
+
+Intention
+\begin_inset Quotes erd
+\end_inset
+
+ - intenţie, fiecare termen reprezentând o stare mentală care este folosită
+ în procesul de raţionament, este un model foarte bine dezvoltat şi care
+ este adoptat în numeroase aplicaţii academice sau industriale.
+\end_layout
+
+\begin_layout Standard
+Datorită dezvoltării sistemelor multi-agent, a rezultat faptul că agenţii
+ trebuie să se adapteze la schimbările survenite în mediul în care rulează.
+ O schemă de planificare a intenţilor poate fi folosită pentru a îmbunătăţii
+ performanţele agenţilor BDI prin exploatarea interacţiunilor dintre sarcini
+ şi evitarea eventualelor conflicte.
+ Agentul poate salva astfel resursele sistemului prin executarea unei sarcini
+ pe care altă dată nu va mai trebui să o execute.
+ 
+\end_layout
+
+\begin_layout Standard
+Teoria modelului BDI este bazată pe teoria propusă de filozoful Michael
+ Bratman.
+ Intenţia este dorinţa pe care un agent doreşte să o indeplinească.
+ Un agent poate să aibă mai multe dorinţe pe care poate să le realizeze
+ sau nu.
+ Un agent BDI are un set de planuri, pe care doreşte să le execute.
+ Intenţile pot fi de asemenea tratate ca planuri pentru o eventuală execuţie.
+ Modelul BDI este eficace, fiind folosit într-o gamă largă de domenii, cum
+ ar fi controlul traficului aerian sau controlul navetelor spaţiale NASA.
+\end_layout
+
+\begin_layout Section
+Descoperirea dinamică a scopurilor
+\end_layout
+
+\begin_layout Standard
+Padgham şi Thangarajah prezintă proiectul la care au lucrat pentru a descoperii
+ dinamic scopurile unui agent BDI.
+\end_layout
+
+\end_body
+\end_document
