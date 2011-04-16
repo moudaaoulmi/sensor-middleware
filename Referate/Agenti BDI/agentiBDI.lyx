@@ -343,7 +343,306 @@ Arborele de intenţie
 
 Arborii de decizie sunt folosiţi pentru problemelor care bazează pe alcătuirea
  unui plan.
+ În Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig:agentIntention"
+
+\end_inset
+
+ este prezentată o structură de intenţie a unui agent bazat pe arhitectura
+ JAM, în timpul execuţiei.
+ Intenţile care nu au fost încă executate sunt reprezentate ca dreptunghiuri
+ desenate cu linie întreruptă.
+ Când agentul execută activitatea 
+\begin_inset Quotes eld
+\end_inset
+
+Mută-te la poziţia A
+\begin_inset Quotes erd
+\end_inset
+
+ din cadrul firului de intenţie A, nu ţine cont de faptul că firul de intenţie
+ B poate conţine o activitate 
+\begin_inset Quotes eld
+\end_inset
+
+Mută-te la poziţia B
+\begin_inset Quotes erd
+\end_inset
+
+, deoarece scopul 
+\begin_inset Quotes eld
+\end_inset
+
+Cumpără pantofi
+\begin_inset Quotes erd
+\end_inset
+
+ nu a ales ce plan să fie executat.
+ Interacţiunea nu apare până când agentul nu decide care plan să-l execute.
+ Pe de altă parte, când această decizie a fost luată acţiunea 
+\begin_inset Quotes eld
+\end_inset
+
+Mută-te la poziţia A
+\begin_inset Quotes erd
+\end_inset
+
+ poate să fie de mult executată.
+ Situaţia se complică atunci când acţiunea 
+\begin_inset Quotes eld
+\end_inset
+
+Mută-te la poziţia B
+\begin_inset Quotes erd
+\end_inset
+
+ se află pe un nivel mult mai jos.
+\end_layout
+
+\begin_layout Standard
+Problemele care trebuie să aleagă un plan pot bloca calcularea timpului
+ de execuţie sau calcularea gradului de completitudine.
+ Arborele de intenţie este aplicat pentru a modela comportamentele posibile
+ ale unui agent.
+ Nodurile arborelui înregistrează nu doar structura statică agentului, ci
+ şi informaţile din timpul execuţiei.
+ Un arbore de intenţie poate să aibă două tipuri de noduri: noduri pentru
+ stocarea planurilor şi noduri pentru stocarea scopurilor.
  
+\end_layout
+
+\begin_layout Standard
+Modul de construire a unui arbore de intenţie este recursiv pornind de la
+ frunze spre rădăcină.
+ Informaţia este actualizată în momentul execuţiei, îndeplinirii unui scop,
+ adăugării unui nou plan sau în momentul eşuării unui plan.
+ Cu toate acestea, un agent poate să preconizeze acţiunile pe care le poate
+ executa.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename structura de intentie.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Structura de intenţie a unui agent
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:agentIntention"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+În Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig:agentRuntimeIntention"
+
+\end_inset
+
+ scopul 
+\begin_inset Quotes eld
+\end_inset
+
+Cumpără pantofi
+\begin_inset Quotes erd
+\end_inset
+
+ nu a selectat planul pe care să-l execute, dar agentul are cunoştinţă despre
+ existenţa acţiunii 
+\begin_inset Quotes eld
+\end_inset
+
+Mută-te la poziţia B
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Abilitatea unui agent de a prevede lucrurile pe care le poate realiza reprezint
+ă un beneficiu pentru alegerea unui plan în cadrul arhitecturii BDI.
+ De exemplu agentul poate alege un plan care nu generează conflicte cu planul
+ care este în execuţie, sau să evite un plan care nu îndeplineşte termenul
+ limită al scopului.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename structura intentie runtime.jpg
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Structura de intenţie în timpul execuţiei
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:agentRuntimeIntention"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Procesul de planificare
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+După încărcarea planurilor agenţii trebuie să-şi construiască arborele de
+ intenţie.
+ Actualizarea arborelui de intenţie şi ciclul de execuţie (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig:executarea activitati"
+
+\end_inset
+
+) fac parte din acelaşi fir de execuţie, acest lucru indicând faptul că
+ arborele de intenţie este tot timpul actualizat.
+ Procedura de actualizare poate fi apelată din cadrul oricări proceduri.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename executarea activitati.jpg
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Executarea activităţilor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:executarea activitati"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Procesul de selectare al intenţilor este alcătuit din patru paşi:
+\end_layout
+
+\begin_layout Itemize
+Agentul calculează pentru fiecare arbore de intenţie prioritatea de bază.
+\end_layout
+
+\begin_layout Itemize
+Agentul verifică dacă intenţia se apropie de termenul limită.
+\end_layout
+
+\begin_layout Itemize
+Agentul ia in considerare interacţile dintre intenţii.
+ Pentru acest pas se realizează un graf, fiecare node din graf reprezentând
+ un arbore de intenţie, iar legăturile reprezintă interacţiunile.
+\end_layout
+
+\begin_layout Itemize
+Agentul selectează nodul care are cea mai mare prioritate.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Bibliography
