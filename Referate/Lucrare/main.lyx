@@ -1,0 +1,5296 @@
+#LyX 1.6.8 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+
+\usepackage[bookmarks=true,bookmarksopen=true,bookmarksnumbered=true,
+           pdfborder={0 0 0},colorlinks=true,linkcolor=blue]{hyperref}\usepackage{wrapfig}\usepackage{lastpage}\usepackage{fancyhdr}
+
+\cfoot{\thepage}
+\lhead{Modele multi agent senzitive la context}
+\rhead{Mana\c{t}e Bogdan}
+\rightmark
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+\end_preamble
+\use_default_options false
+\language romanian
+\inputencoding latin1
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language polish
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Upper part of the page
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Screenshot.png
+	width 50text%
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+[1cm]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size largest
+Manaţe Bogdan
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+[0.5cm]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace vfill
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+HRule
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+[0.4cm]
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+\size huge
+Modele multi agent senzitive la context
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+[0.4cm]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+HRule
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+[1.5cm]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\size large
+\emph on
+Coordonator:
+\emph default
+ 
+\shape smallcaps
+Prof.
+ Dr.
+ Viorel Negru
+\shape default
+ 
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\shape smallcaps
+\size large
+\begin_inset space \qquad{}
+\end_inset
+
+ 
+\begin_inset space \qquad{}
+\end_inset
+
+ 
+\begin_inset space \quad{}
+\end_inset
+
+ Asist.
+ Drd.
+ Ovidiu Aritoni
+\shape default
+ 
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\size large
+\emph on
+Available at:
+\emph default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+htmladdnormallink
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+http://web.info.uvt.ro/
+\begin_inset Formula $\sim$
+\end_inset
+
+numesite
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+http://web.info.uvt.ro/
+\begin_inset space ~
+\end_inset
+
+oaritoni
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+\begin_inset VSpace vfill
+\end_inset
+
+ Universitatea de Vest din Timişoara 
+\begin_inset Newline newline
+\end_inset
+
+ 2011
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\series bold
+Abstract
+\end_layout
+
+\begin_layout Standard
+Here a short resume.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newpage newpage
+\end_inset
+
+ 
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+ 
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+ 
+\begin_inset FloatList table
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Modele multi-agent pentru sisteme ambientale inteligente 
+\end_layout
+
+\begin_layout Chapter
+Ingineria sistemelor ambientale inteligente
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Putem defini un mediu inteligent ca unul care este capabil să dobândească
+ şi să aplice cunoştinţele despre mediu şi locuitorii săi, în scopul de
+ a îmbunătăţi experienţa lor în acest mediu.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Sistemele ambientale inteligente se pot clasifica în două categorii: sisteme
+ contruite din reţele independente şi dispozitive programabile, care au
+ functionalităţi restrânse şi sisteme care trebuie să producă un comportament
+ centrat pe utilizator şi care trebuie să reacţioneze la scenarii complexe
+ într-un mod care păstrează un accent clar pe activităţiile desfăşurate
+ de utilizatori zi de zi.
+ Deşi suntem atraşi să credem că un comportament centrat pe utilizator va
+ reieşii din interacţiunea dintre diverse dispozitive, există motive puternice
+ care sugerează o abordare mai directă în cele mai multe cazuri.
+ În timp ce numeroase aplicaţii la scară mică şi-au doveditimplică utilitatea,
+ aplicaţiile mari rămân încă evazive, deoarece este foarte greu să se anticipeze
+ ce se întâmplă în lumea reală şi cu atât mai puţin să se traducă aceste
+ lucruri într-un comportament adaptiv relevant, de asemenea este foarte
+ greu să se administreze greşelile inevitabile care intervin în timp o viziune
+ de ansamblu a răspunsurilor sistemului la mediul său în schimbare ce se
+ execută acţiuni complexe, fără intervenţia utilizatorului.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+În general sistemele ambientale inteligente ridică următoarele întrebări:
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+Ce impact are calitatea scăzută, natura difuză şi eterogenă a datelor provenite
+ de la senzori şi operaţia de inferenţă în programare ?
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+Ce implicaţii au atributele de la punctul 1 în creare de software middleware
+ sau cadre de programare pentru inteligenţa ambientală ? 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Sistemele ambientale inteligente nu se bazează doar pe de detectarea stimulilor
+ interni sau externi mai degrabă se bazează pe valorificarea informaţiilor
+ dintr-o gamă diversă de surse interconectate.
+ Acest lucru schimbă percepţia de abordare, care parea a fi o problemă de
+ detectare şi de raţionament la una de management al informaţiei şi mentenanţă:
+ o viziune de ansamblu a răspunsurilor sistemului la mediul său în schimbare.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Incertitudinea datelor provenite de la senzori
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Aplicaţiile tradiţionale oferă un anumit context în cadrul căruia pot să
+ apară diferite interacţiuni.
+ Pentru majoritatea sistemelor există un grad scăzut de incertitudine în
+ cadrul acestor interacţiuni.
+ Un utilizator poate selecta sau nu un meniu sau apăsa o anumită tastă.
+ În cadrul anumitor sisteme pot exista erori datorită mesajelor pierdute,
+ care conţin erori sau care sunt trimise repetitiv, aceste erori fiind tratate
+ în majoritatea cazurilor in cadrul middlewareului.
+ În majoritatea sistemelor există de asemenea erori de operare care trebuie
+ corectate într-un fel sau altul, deobicei cu un impact minim asupra sistemului.
+ Cu toate că unele interacţiuni pot genera erori în cadrul acestor sisteme,
+ aceste erori sunt definite în prealabil.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kephart2003"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename matchSensorToTask.jpg
+	width 15cm
+	height 20cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Module de mapare a datelor provenite de la senzori pe un anumit comportament
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Interacţiunile ambientale prezintă caracteristici complet diferite.
+ Interacţiunile apar, în cea mai mare parte, în urma observării de către
+ senzori a acţiunilor de zi cu zi.
+ Chiar şi în cadrul unei singure categorii de senzori, cum ar fi cei de
+ locaţie, fiecare categorie de senzori are de cele mai multe ori caracteristici
+ radical diferite.
+ De exemplu, un sistem Wifi de localizare, cum ar fi PlaceLab, poate raporta
+ în general poziţia unui dispozitiv cu precizie de 10 m, dar s-ar putea
+ din cauza reflexie ca senzorul să raporteze o locaţie diferită faţă de
+ locaţia fizică în care se află dispozitivul.
+ Aceste condiţii se pot aplica analog şi la celalalte tipuri de senzori.
+ O aplicaţie proiectată după modelul din Figura 1 ar putea să execute următoare
+ instrucţiune: 
+\begin_inset Quotes eld
+\end_inset
+
+Când A şi B sunt în camera X execută acţiunea 1 
+\begin_inset Quotes erd
+\end_inset
+
+, nici un senzor nu poate să ofere informaţii precise despre locaţie pentru
+ a fi luată o decizie sigură.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Problema de bază este că nu putem atribui instrucţiuni la o singură acţiune,
+ ci doar la un anumit număr de acţiuni intreprinse în context.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Detectare şi acţiune
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Sistemele orientate pe evenimente rezolvă această problemă prin oferirea
+ unui model de sarcini care este implementat de aplicaţie.
+ Evenimentele primite sunt folosite pentru a executa diferite sarcini.
+ Lucrurile devin şi mai complicate când luăm în considerare sistemele ambientale
+ care conţin mai multe aplicaţii sau servicii.
+ O anumită acţiune poate fi interpretată de mai multe aplicaţii simultan,
+ fiecare dintre care poate prezenta apoi un comportament.
+ Aceste comportamente sunt independente, cu toate acestea comportamentele
+ pot fi şi dependente, un anumit comportament fiind afectat negativ de alt
+ comportament al aplicaţiei.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Proiectarea si programarea sistemelor având în vedere incertitudinea datelor
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Toate datele folosite într-un sistem ambiental inteligent pot fi considerate
+ nesigure, acestea ridicând probleme pe care tehnologia actuală de construire
+ a senzorilor nu le poate rezolva.
+ Relaţiile dintr datele provenite de la senzori şi scenariile suportate
+ de sistemele ambientale nu pot fi definite exact, deoarece de cele mai
+ multe ori unei acţiuni nu îi poate fi atribuit fără echivoc, un rol particular
+ într-un proces care face obiectul incertitudinilor acţiunilor de zi cu
+ zi ale utilizatorilor.
+ Acest lucru implică faptul că orice decizie luată în timpul execuţiei unei
+ sarcini poate fi greşită, în măsura în care datele au fost greşit interpretate.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Cu toate că senzorii sunt imprecişi individual, un mediu care dispune de
+ un număr mare de senzori poate compensa aceste deficienţe individuale şi
+ poate realiza o estimare apropiată de valoarea reală sau chiar exactă.
+ Acest lucru poate ridica o problemă legată de numărul de senzori, existenţi
+ într-un mediu.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Sistemele ambientale pot îmbunătăţii estimările datelor, folosindu-se de
+ date citite în trecut, de valorile implicite şi de datele citite de la
+ senzori.
+ Un punct important care trebuie luat în considerare este decuplarea comportamen
+tului de observaţiile făcute izolat şi de a folosi în schimb un model global
+ al mediului, care poate fi determint de toate aspectele mediului care pot
+ fi detectate de senzori.
+ Pentru a evita ca datele eronate să fie propagate în sistem, trebuie luate
+ în considerare următoarele:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Evenimentele pot propaga erori, drept urmare nu pot servi ca bază pentru
+ programare.
+ Un eveniment provenit de la un senzor, cum ar fi poziţia unui individ într-un
+ anumit spaţiu, poate fi eronat.
+ Aplicaţia va reacţiona la acest eveniment declanşat de date eronate, lucru
+ care nu se doreşte, drept urmare aplicaţia trebuie să identifice datele
+ eronate local, înainte de a executa acţiuni.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Evitarea acţiunilor asupra datelor provenite de la un singur senzor.
+ Pentru a evita datele eronate, acţiunile trebuie luate pe baza datelor
+ preluate de la mai multe surse.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Interconectarea este mai importantă decât datele.
+ Nu putem considera un sistem ambiental inteligent în cazul în care este
+ pur şi simplu condus de evenimente provenite de la senzori, neţinând cont
+ şi de alţi factori.
+ Modelul, relaţiile sale şi capacitatea de a extrage informaţii prin intermediul
+ fuziunii caracterizează sistemul mai mult decât disponibilitatea senzorilor.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Orice decizie are nevoie de o strategie de atenuare.
+ Este inevitabilă apariţia erorilor, iar aceste erori pot cauza probleme
+ majore pentru aplicaţie dacă nu sunt luate în calcul la proiectarea sistemului.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Lucrurile intersante vin din compoziţie.
+ Compunerea aplicaţiilor şi serviciilor au impact asupra întregului sistem,
+ de aceea rezultatele compoziţiei trebuie să fie definite din timp.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+În proiectarea unui sistem abiental inteligent ar trebui să se ţină cont
+ de următoarele procese: percepţie, raţionament şi actiune.
+ Aceste trei procese trebuie să interacţioneze continuu pentru a realiza
+ un sistem ambiental complet.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Percepţia
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Procesul de percepţie ar trebui să fie împărţit în diferite sarcini, în
+ scopul de a oferi o percepţie corectă asupra lumii reale.
+ Acesta trebuie să se ocupe cu detalii low-level pentru a prelua datele
+ de la lumea reală şi să le adapteze la o bază de cunoştinţe.
+ Acest proces trebuie să şteargă datele eronate, nesemnificative sau valorile
+ redundante în scopul de a obţine acurateţea necesară proceselor următoare.
+ Procesul de percepţie este împărţit în 5 etape: colectarea datelor, verificarea
+ datelor, corectarea datelor, filtrarea datelor şi ontologizarea datelor.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename perceptie.jpg
+	width 10cm
+	height 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Procesul de percepţie
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Colectarea datelor
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Colectarea datelor este o sarcină de nivel scăzut, obictivul său principal
+ fiind colectarea datelor de la dispozitivele fizice.
+ Această sarcină va interacţiona în general cu toate dispozitivele plasate
+ în mediu monitorizat de sistemului ambiental inteligent.
+ Pentru ca sarcina de colectare a datelor să ruleze cât mai eficient senzorii
+ trebuie amplasaţi cât mai organizat pentru a se evita informaţia redundantă
+ sau nesemnificativă şi pentru a reduce costurile.
+ De asemenea trebuie luat în calcul şi tipurile de dispozitive folosite,
+ aceastea putând fi programabile sau nu.
+ Datorită faptului că majoritatea dispozitivelor fiind programate de către
+ producător, sarcina de colectare a datelor trebuie să fie realizată ţinând
+ cont de diferitele implementări ale dispozitivelor.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Verificarea datelor 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Scopul principal al acestei sarcini este de a verifica datele colectate
+ în etapa de colectare a datelor.
+ În această etapă se poate verifica dacă datele sunt corecte sau nu.
+ Adevărata provocare din parte programatorului este să verifice corectitudinea
+ datelor.
+ Datorită faptului că nu există o soluţie universală pentru toate mediile
+ existente, sarcina de verificare trebuie să se adapteze în mod dinamic
+ la fiecare mediu.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+În cadru acestei sarcini se poate introduce un motor de reguli, care poate
+ rula reguli de verificare pentru a determina dacă datele sunt corecte sau
+ nu pentru mediul curent.
+ Motorul de reguli trebuie să le ofere programatorilor o modalitate flexibila
+ de a adăuga, modifica sau şterge reguli.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Această sarcină trebuie să ruleze în strânsă legătură cu sarcina de verificare
+ a datelor.
+ Sarcina de verificare a datelor trebuie să poată invoca în mod direct sarcina
+ de corectare.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Verificarea datelor poate fi privită ca un filtru aplicat asupra datelor
+ primite care poate fi folosit să accepte date sau să le respingă din diferite
+ motive (incorecte, redundante sau alte motive adăugate de programatori.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Corectarea datelor
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Scopul acestei sarcini este de a corecta datele incorecte raportate în etapa
+ de verificare a datelor.
+ Datele pot fi corectate în diferite moduri:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Ignorarea datelor - acest lucru presupune setarea unei valori implicite
+ ( ex: valoarea null pentru SQL).
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Ajustarea datelor - se pot modifica datele atribuindu-le ultima valoare
+ corectă înregistrată.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Respingerea datelor - dacă nu se poate poate aplica nici una dintre metodele
+ de mai sus datele pot fi respinse.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Ontologizarea datelor
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Algoritmi de inteligenţă artificială au nevoie de o bază solidă de cunoştiinţe
+ pentru a funcţiona.
+ Scopul acestei sarcini este acela de a organiza datele conform unui model
+ din lumea reală.
+ Această sarcină va trebui să sincronizeze toate datele care provin dintr-un
+ mediu populat cu dispozitive şi evenimente asincrone.
+ Sistemele ambientale inteligente au nevoie uneori de seturi de date compuse
+ din valorile citite de la mai multe dispozitive.
+ Implementarea unui proces de sincronizare poate varia, dar majoritatea
+ sistemelor inteligente au în comun următoarele elemente:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Un buffer de date.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Un garbage collector.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+După ce datele sunt agregate acestea pot fi stocate într-o bază de cunoştiinţe
+ care va fi accesată de sarcina care se ocupă de raţionament sau chiar sarcina
+ care se ocupă de procesul de învăţare.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Raţionamentul
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+În cadrul sistemelor inteligente procesul de raţionament poate fi împărţit
+ în trei sarcini distincte: învăţare, raţionament şi predicţie.
+ Procesul de învăţare poate fi privit ca un liant pentru celălalte sarcini
+ care au ca scop procesul de raţionament.
+ Pentru realizarea procesului de învăţare se pot folosi două familii de
+ algoritmi specifici pentru sistemele inteligente care integrează acest
+ proces.
+ Cele două familii de algoritmi sunt SVM (support vector machine) şi NN
+ (neutral networks).
+ Cel mai mare avantaj al acestor algoritmi este că acestia returnează tot
+ timpul date la sfărşitul execuţiei, pe de altă parte aceste date sunt greu
+ de înteles.
+ Procesul de învăţare se poate baza de asemenea pe data mining, proces care
+ se ocupă cu extragerea informaţiilor şi găsirea anumitor tipare din datele
+ salvate în baza de cunoştiinţe.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Recunoaşterea situaţiilor
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+O situaţie este definită ca un set de stări care au valori similare.
+ Un set poate fi definit de: 
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+o stare canonică reprezentativă pentru toate stările din set.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+o funcţie care defineşte cum se pot măsura diferenţele dintre două stări.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+un prag care defineşte diferenţa maximă dintre starea canonică şi celălalte
+ stări din set.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+o valoare pentru fiecare element al unei stări din intervalul [0,1].
+ Valoarea 0 indicând faptul că starea respectivă poate fi ignorată.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Predicţia situaţiilor
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Cunoştiinţele dobândite în urma procesului de învăţare sunt utile pentru
+ a face predicţii despre următoarele acţiuni care pot fi luate în calcul
+ pentru a îndeplini automat unele obiective.
+ Aceste acţiuni pot fi executate pe baza datelor de ieşire de la algoritmi
+ specifici sistemelor inteligente.
+ Exemplu de predicţii:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Prezicerea evenimentelor şi stărilor sistemului.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Prezicerea acţiunilor locuitorilor mediului.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Prezicerea anomaliilor.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Detectarea erorilor
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Scopul principal al acestei sarcini este de a supraveghea acţiunile luate
+ de locuitori, pentru a detecta decizii opuse între sistemul ambiental şi
+ locuitori.
+ Prin urmare ultimele acţiuni luate de sistemul inteligent trebuie memorate
+ şi comparate cu acţiunile luate de locuitori.
+ Compararea acestor acţiuni presupune de obicei operaţiuni complexe la care
+ iau parte multe elemente componente ale sistemului şi de asemenea trebuie
+ luat în considerare felul în care aceste acţiuni sunt comparate, durata
+ de timp alocată pentru comparare, sau dacă acţiuni asupra diferitelor component
+e pot fi considerate opuse.
+ Toate aceste aspecte fac detectarea acţiunilor opuse mult mai provocatoare.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Acţiuni
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Sistemele ambientale inteligente trebuie să acţioneze independente pentru
+ a fi considerate sisteme inteligente.
+ Deciziile şi sarcinile ordonate de procesul de raţionament, trebuie să
+ treacă prin trei sarcini principale ale acestui proces:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Policy manager - decizia executării unei sarcini trebuie supervizată de
+ acest proces.
+ Un sistem inteligent trebuie să definească parametrii pentru economisirea
+ energiei, securitate şi comfort.
+ Acest proces trebuie să poată modifica parametrii în timpul execuţiei,
+ deoarece preferinţele locuitorilor pot varia.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Planificatorul de sarcini - acest proces trebuie să poată planifica sarcinile
+ în funcţie de timpul de execuţie sau de prioritate.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Procesul care execută sarcini - acest proces trebuie să interacţioneze cu
+ protocoale low level pentru a trimite instrucţiuni dispozitivelor.
+\end_layout
+
+\begin_layout Chapter
+
+\lang english
+Modele multi-agent pentru sisteme ambientale inteligente 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Sistemele ambientale inteligente vizionare se bazează pe maşini de calcul
+ prevăzute cu un număr mare de procesoare şi senzori de mici dimensiuni
+ integraţi în obiectele utilizate în viaţa de zi cu zi, acest lucru ducând
+ la dispariţia dispozitivelor tradiţionale şi a modului de prelucrare a
+ informaţiei.
+ În cadrul sistemelor ambientale inteligente există un grad ridicat de partajare
+ a datelor între unităţi larg distribuite, structurate pentru a promova
+ colaborarea, auto-sincronizarea, răspunsuri rapide la informaţii noi, adaptabil
+itate şi sustenabilitate.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Proiectarea sistemelor ambientale inteligente reprezintă o provocare pentru
+ arhitecţii software.
+ Sistemele de acest tip implică participarea dispozitivelor heterogene,
+ care formează un sistem deschis, dinamic în cadrul căruia resursele disponibile
+, contextul şi activităţiile se schimbă continuu.
+ Sistemele multi-agent prezintă o abordare naturală şi puternică pentru
+ a proiecta sisteme abientale inteligente care să funcţioneze în medii complexe.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Cele mai importante caracteristicii ale agenţilor inteligenţi sunt anticiparea
+ evenimentelor şi adaptarea la schimbările mediului în care aceştia rulează.
+ Agenţii pot executa acţiuni proactive pentru a-şi găsi scopurile şi pentru
+ a-şi urma crezurile care ţin de situaţiile pe care le întâlnesc.
+ De asemenea agenţii pot comunica activ cu alţi agenţi pentru a atinge obiective
+ mai ample.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+În cadrul sistemelor ambientale există o nevoie clară de suport decizional
+ pentru agenţii, pentru a forma echipe de agenţi şi să-şi asume roluri în
+ cadrul echipelor.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Sisteme multi-agent
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Un agent software reprezintă un sistem software incapsulat situat într-un
+ mediu unde poate executa acţiuni flexibile şi autonome pentru a-şi atinge
+ obiectivele de design.
+ Scopul unui agent poate fi comun sau privat.
+ Caracteristica cheie a unui agent software care este distinctivă faţă de
+ alte paradigme de programare, este că într-un context, agenţii evaluează
+ persistent o suită de opţiuni care le sunt disponibile, apoi selectează
+ una dintre acţiuni pe care o execută.
+ În schimb, alte paradigme de programare sunt mult mai prescrise.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Într-un sistem ambiental, agenţii sunt definiţi pentru diferite roluri,
+ cum ar fi monitorizarea activităţiilor şi intenţiile utilizatorilor, monitoriza
+rea stării în care se află alţi agenţi sau dispozitive, distribuirea sarcinilor
+ computaţionale între resursele disponibile şi care reprezintă preferinţele
+ utilizatorilor şi a altor agenţi.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Agenţii pot fi omogeni sau heterogeni şi pot coopera sau pot fi competitivi.
+ Agenţii care reprezintă un sistem ambiental inteligent sunt heterogeni
+ şi cooperativi.
+ Heterogenitatea rezultă din dispozitivele care simt diferite lucruri, activând
+ diverse controllere, negocind terminarea diferitelor sarcini, şi găsirea
+ soluţiilor acceptabile pentru diferite modele.
+ Aceştia sunt cooperativi in sensul că toţi contribuie la realizarea scopului
+ global.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Modelul BDI ( crez-dorinţă-intenţie ) se poate ocupa flexibil de modelare
+ întregului sistem bazat pe agenţi într-un sistem ambiental inteligent.
+ În acest model credinţele corespund stării în care se află agentul, inclusiv
+ caracteristicile curente ale agentului în mediul în care funcţionează.
+ Dorinţele corespund efectelor pe care agentul încearcă să le producă în
+ mediul în care funcţionează.
+ Intenţiile reprezintă planurile pe care agentul le are disponibile şi pe
+ care le urmează pentru a produce efecte.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename Multi-Agent_systems.JPG
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Relaţiile organizaţionale între agenţi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Unii agenţi pot fi compuşi din subagenţi, aceştia pot fi agenţi negociatori,
+ brokeri sau agenţi care se folosesc de serviciile altor agenţi.
+ Agenţii care au capabilităţi de comunicare, specifică modul de lucru în
+ cadrul reţelei de comunicare şi se ocupă de asemenea de dispozitivele care
+ se află în raza lor de ascultare şi care pot comunica cu succes.
+ Problemele de protocol, cum ar fi responsabilitatea pentru agenţii logici
+ să expedieze anumite pachete de date, sunt manipulate de către agenţi însărcina
+ţi cu alegerea, aplicarea şi modificarea protocoalelor după cum este necesar.
+ Agenţii trebuie să înteleagă sintaxa, să parcurgă şi să proceseze mesajul
+ pentru a acţiona conform informaţiei primite.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Agenţii pot fi mobili, având posibilitatea să se deplaseze în cadrul platformelo
+r suportate.
+ În cadrul unui sistem ambiental inteligent, agenţii mobili pot modela preferinţ
+ele agenţilor brokeri, utilizatorilor şi agenţilor care se ocupa cu furnizarea
+ datelor.
+ Acesti agenţi pot răspunde adaptiv la condiţiile dinamice, folosind mai
+ multe opţiuni disponibile pentru a realiza o comandă sau o cerere.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Mobilitatea este o preocupare intersectorială care nu este prezentă în majoritat
+ea sistemelor multi-agent, dar poate fi o unealtă puternică sau chiar necesară
+ în domeniu sistemelor ambientale inteligente.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Probleme intersectoriale
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Necesitatea de a gestiona problemele complexe, în timp ce se doreşte crearea
+ unui sistem software care să fie flexibil, adaptabil şi care să evolueze,
+ este esenţială în sistemele ambientale inteligente.
+ Cu toate că modularitatea este esenţială, unele cerinţe şi proprietăţi
+ nu pot fi modularizate deoarece acestea sunt legate de unele probleme intersect
+oriale.
+ Problemele intersectoriale sunt dificile, deoarece sunt distribuite în
+ mod inerent şi fac celălalte componente software să fie mai puţin independente.
+ Într-un sistem multi-agent, de exemplu, comunicarea securizată între agenţii
+ care reprezintă entităţi decizionale reprezintă o preocupare importantă
+ privind funcţiile lor specifice.
+ În ingineria software, este cunoscut faptul că, problemele intersectoriale
+ pot duce cu uşurinţă la duplificarea codului în cadrul mai multor componente.
+ De astfel duplificare codului duce la scăderea calităţii software, aceasta
+ fiind dificil de rezolvat la nivelul arhitectural.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+O aplicaţie cu numeroase probleme intersectoriale, are ca rezultat un soft
+ care este dificil de modularizat, înţeles, reutilizat sau dezvoltat.
+ Pentru rezolvarea acestor probleme, este util să se folosească un nivel
+ ridicat de abstractizare pentru a face designul softului mult mai uşor
+ de gestionat.
+ Utilizarea unui nivel ridicat de abstractizare poate scoate în evidenţă
+ unele probleme şi poate oferi o perspectivă asupra modului de incapsulare
+ ale acestora în componente separate.
+ Astfel este posibil să se descrie cu precizie modul în care componentele
+ interacţionează şi dacă sistemul se comportă conform scopului propus.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Unele sisteme multi-agent gestionează complexitatea prin separarea problemelor
+ în agenţi, obiecte şi mediul în care aceştia interacţionează.
+ Unele probleme ale sistemelor, cum ar fi securitatea, nu se pot rezolva
+ prin modularizare.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Dezvoltarea orientată pe aspecte (ASOD) abordează modularizarea problemelor
+ intersectoriale, prin separarea problemelor în module aspect.
+ Codul care adresează o problemă intersectorială este numit înştiinţare
+ şi este menţinut în interiorul aspectului.
+ Aspectul cataloghează locurile din interiorul sistemului care au nevoie
+ de o înştiinţare şi trimite o înştiinţare la locaţiile repective.
+ Într-un sistem ambiental inteligent problemele sunt asociate cu interacţiunea,
+ adaptarea, autonomia agenţilor, mobilitatea, capcitatea de a învăţa şi
+ colaborarea.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Modele formale şi agenţi
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Agenţii dintr-un sistem multi-agent trebuie să prezinte atât comportamente
+ reactive cât şi comportamente proactive.
+ De exemplu, un agent care monitorizează proactiv şi care prezice locaţia
+ şi disponibilitatea resurselor prescrise, ar putea suspenda monitorizarea
+ dacă i se cere să aloce cât mai repede resurse reactiv, ca răspuns la o
+ schimbare percepută în preferinţele şi planurile utilizatorului.
+ De asemenea unii agenţi trebuie să rezolve conflicte între obiective multiple.
+ Suspendarea activităţiilor poate duce la pierderea unor schimbări critice
+ în cadrul informaţiilor, care la rândul lor pot produce acţiuni care nu
+ au fost solicitate.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Suport decizional
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Alocarea de sarcini este o funcţionalitatea critică într-o arhitectură orientată
+ agent pentru sisteme ambinentale inteligente.
+ Din punct de vedere cooperativ şi executare a deciziilor inteligente este
+ necesar un cadru de modelare.
+ Modelele disponibile sunt reguli de decizie fuzzy, reţele neuronale, plase
+ de contract şi seturi rough.
+ În continuare voi descrie un model de optimizare distribuit.
+ Se presupune că există o colecţie de obiective care trebuiesc îndeplinite
+ şi mediul în care acţionează agenţii care trebuie să indeplinească obiectivele
+ este în continuă mişcare.
+ Scopurile sunt îndeplinite prin formarea de echipe de agenţi cooperativi
+ care sunt capabili să îndeplinească obiectivele la un nivel măsurabil de
+ calitate.
+ Agenţii dintr-o oarecare echipă îndeplinesc un rol care contribuie la realizare
+a obiectivului global.
+ Scopul modeluli este de a specifica deciziile optime privind crearea echipelor
+ şi includerea agenţilor în echipe.
+ Echipele pot avea un număr diferit de roluri, iar agenţii sunt asociaţi
+ doar rolurilor la care aceştia pot contribui.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Concluzii
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Utilizarea metodelor formale are avantaje datorită suportului pentru specificaţi
+i, design, validare şi verificare.
+ Designul cuprinde nevoia de adaptare dinamică şi non-determinismul sistemelor
+ ambientale inteligente.
+ Utilizarea conceptelor orientate obiect şi metodelor formale în cadrul
+ sistemelor multi-agent promite gestionarea facilă a complexităţii software.
+\end_layout
+
+\begin_layout Chapter
+
+\lang english
+Metodologii de dezvoltare a sistemelor multi-agent
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+În dezvoltarea software există patru faze fundamentale: planificare, analiza,
+ design şi implementare.
+ În cadrul etapei de implementare este util să se folosească o listă de
+ paşi.
+ Această listă de paşi reprezintă metodologia de dezvoltare.
+ Folosirea unei metodologii reduce din timpul şi efortul necesar, prin cristaliz
+area paşilor importanţi pe care dezvoltatorul trebuie să-i urmărească.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Ingineria produselor software bazate pe agenţi, este un câmp relativ nou
+ care poate fi gândit ca o evoluţie a programării orientate-obiect.
+ Cu toate că tehnologia orientată pe agenţi oferă metode eficiente de rezolvare
+ a anumitor probleme, în momentul de faţă nu există prea multe metodologii
+ de dezvoltare.
+ Metodologia propusă nu încearcă să extindă tehnicile orientate obiect,
+ în schimb este orientată pe agenţi şi pe abstractizarea oferită de paradigma
+ orientată pe agenţi.
+ Formalizarea fazelor de planificare şi implementare din ciclul de viaţă
+ software nu vor fi prezentate în cadrul acestei metodologii.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Faza de design este orientată pe platforma JADE şi asupra conceptelor oferite
+ de aceasta.
+ JADE este un cadru de programare scris în limbajul de programare JAVA,
+ care simplifică implementarea sistemelor multi-agent şi care oferă un set
+ de unelte pentru fazele de depanare şi lansare.
+ Prin concentrarea specifică asupra platformei JADE în faza de design, dezvoltat
+orul poate trece peste partea de analiză direct la faza de implementare.
+ Acest lucru va reduce semnificativ timpul necesar dezvoltării aplicaţiei.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Prezentare generală a metodologiei
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+În general o metodologie de dezvoltare software poate fi compusă din:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Un proces, adică o secvenţă de paşi sau faze care ghidează dezvoltatorul
+ în construirea sistemului.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Un set de reguli euristice, care ajută dezvoltatorul să facă alegeri relevante.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Diagrame, scheme sau documente reprezentând unul sau mai multe modele ale
+ sistemului.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+O notare potrivită.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Un set de şabloane care pot fi aplicate pentru rezolvarea situaţiilor comune.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Unu sau mai multe unelte care automatizează cât mai mult posibil fazele
+ şi paşii specificaţi în proces.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Observând figura 1 se observă că nu există o graniţă strictă între faza
+ de analiză şi faza de design.
+ În plus metodologia este de natură iterativă, permiţându-i dezvoltatorului
+ să se mute între fazele de analiză şi design.
+ La sfârşitul fazei de design dezvoltatorul poate să treacă direct la faza
+ de implementare, partea în care intervine scrierea de cod.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename Metodologies overview.jpg
+	width 15cm
+	height 20cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Prezenare generală a metodologiei
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+În cadrul acestei metodologii se vor face următoarele presupuneri:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Platforma JADE este aleasă pentru implementare.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Se vor folosi un număr relativ redus de agenţi.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Structura organizaţională este statică, nu se asteaptă un comportament non-emerg
+ent în timpul rulării.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Securitatea nu este importantă.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Cum se defineşte un agent ?
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Un agent poate fi văzut ca o aplicaţie software care rezidă pe o platformă,
+ care îi oferă agentului posibilitatea de a comunica în funcţie de complexitatea
+ mediului în care se află.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Agenţii pot avea următoarele seturi de proprietăţi:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Autonomie - agenţii pot opera fără intervenţia utilizatorului, având control
+ asupra acţiunilor lor şi stării interne.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Abilităţi sociale - agenţii pot interacţiona cu alţi agenţi sau cu utilizatorii
+ folosind un limbaj de comunicare.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Reactivitate - agenţii percep mediul în care se află şi răspund adecvat
+ schimbărilor survenite.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Proactivitate - agenţii pot lua iniţiativă, prezentând comportamente orientate
+ pe îndeplinirea unui anumit scop.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Scenariu
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Scenariul asupra căruia se va aplica această metodologie presupune crearea
+ unuei aplicaţii care să permită organizarea ieşirilor la cinema.
+ Această metodologie va fi de asemenea aplicată analog şi în dezvoltarea
+ middleware-ului.
+ Pentru scenariul mentionat se presupune că un operator de telefonie mobilă,
+ doreşte să le ofere abonaţilor săi posiblitatea să organizeze evenimente
+ la cinema.
+ Serviciul ar trebui să le permită abonaţilor să-şi invite prietenii să
+ vadă un film, să colecteze preferinţele fiecăruia şi să ofere cea mai bună
+ opţiune pe baza preferinţelor.
+ Sistemul va oferii informaţii doar despre cinematografele locale în funcţie
+ de poziţia utilizatorului.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Analiza
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+În partea de analiză se clarifică toate aspectele legate de soluţie.
+ În cadrul acestei metodologii, faza de analiză este împărţită în şase paşi,
+ definiţi in secţiunile următoare.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Cazuri de utilizare
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Cazurile de utilizare reprezintă o metodă efectivă de capturare a potenţialelor
+ cerinţe funcţionale ale unui nou sistem.
+ Fiecare caz de utilizare prezintă unul sau mai multe scenarii care demonstrează
+ cum ar trebui sistemul să reacţioneze când interacţionează cu utilizatorul
+ sau alt sistem.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Pe baza descrierii aplicaţiei şi dupa chestionarea potenţialilor utilizatori
+ este posibil să se construiască o listă preliminară cu scenarile posibile.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Identificarea tipurilor de agenţi
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Acest pas presupune identificarea tipurilor iniţiale de agenţi şi construirea
+ unei diagrame de agenţi.
+ În această fază se pot aplica următoarele reguli:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Adăugarea unui tip de agent pentru fiecare utilizator sau dispozitiv.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Adăugarea unui tip de agent pentru fiecare resursă.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename Agent diagram.eps
+	width 10cm
+	height 3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Diagrama agenţilor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Diagrama agenţor conţine patru tipuri de elemente:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Tipurile de agenţi - reprezentate prin cerc.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Utilizatorii - oamenii care interacţionează cu sistemul.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Resursele - sisteme externe care interacţionează cu sistemul.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Cunoştiinţele - reprezentate prin săgeţi care unesc instanţele elementelor
+ de mai sus, specificând ca elementele legate vor trebui să interacţioneze
+ într-un anumit fel.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+În diagramele agenţilor, spre deosebire de diagramele de utilizare UML,
+ se face distincţie între utilizatorii umani şi sistemele externe.
+ Înteracţiunea cu utilizatorii printr-o interfaţă grafică ridică probleme
+ adiţionale faţă de interacţiunea cu alte sisteme.
+ Modul în care sistemele externe/sistemele vechi şi utilizatorii interacţionează
+ prezintă o importantă consideraţie.
+ Pentru a realiza interacţiunea dintre sisteme, respectiv utilizatori şi
+ agenţi se poate folosi una dintre tehnicile de mai jos [10]:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Folosirea unui agent traducător.
+ Agentul traducător serveşte ca interfaţă între sisteme şi alţi agenţi din
+ sistem.
+ Agentul traducător primeşte mesaje de la agenţii din sistem pe care le
+ traduce în limbaj nativ al sistemului pe care il accesează.
+ Similar se întamplă pentru cerinţele sistemelor, agentul traducător traduce
+ cerinţele în mesaje şi le trimite celorlalţi agenţi din sistem.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Introducerea unui adaptor.
+ Această metodă presupune injectarea de cod nou în sistem.
+ Codul inserat va permite sistemului să comunice folosind ACL (agent communicati
+on language).
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Rescrierea codului.
+ Această metodă este cea mai extremă şi presupune scrierea de cod care să
+ mimeze sau chiar să extindă operaţiunile şi capabilităţiile sistemului
+ existent, adăugânduse şi cod care să permită comunicarea folosind ACL.
+ Această metodă se alege doar când celălalte metode nu sunt viabile.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Identificarea responsabilităţilor
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+În cadrul acestei etape, pentru fiecare agent identificat se crează o listă
+ care conţine principalele responsabilităţi scrise într-un mod formal şi
+ intuitiv.
+ În această etapă se pot aplica următoarele reguli:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Găsirea seturilor principale de responsabilităţi se realizează utilizând
+ cazurile de utilizare.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Se vor considera doar agenţii pentru care responsabilităţile sunt clare,
+ identificare responsabilităţilor pentru ceilalţi agenţi se va face în fazele
+ următoare.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Unele metodologii existente, cum ar fi GAIA[11] sau MESSAGE[4] propun o
+ abordare diferită, care presupune găsirea rolurilor atomice, care apoi
+ vor fi transformate în tipuri de agenţi.
+ Aceste abordări sunt considerate mai puţin intuitive, deoarece în anumite
+ cazuri este dificil să se determine cum se vor transforma rolurile atomice
+ în tipuri de agenţi.
+ Definirea tipurilor de agenţi şi apoi a responsabilităţilor înlătură această
+ ambiguitate.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Identificarea cunoştiinţelor
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+În această fază se vor identifica entităţile care interacţionează, iar diagrama
+ agenţilor va fi actualizată adăugându-se noi relaţii pentru agenţii care
+ trebuie sa interacţioneze.
+ O relaţie evidentă în acest caz este între agenţii organizatori şi agenţii
+ învitaţi.
+ Deoarece un agent organizator trebuie să prezinte programul cinematografelor
+ utilizatorului, iar programul cinematografelor este stocat în baza de date
+ a cinematografelor, care este administrată de un alt agent, rezultă că
+ între cei doi agenţi ar trebui să existe o legătură.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Rafinarea tipurilor de agenţi
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+În faza de rafinare a agenţilor se au în vedere următoarele:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Suportul: de ce informaţii au nevoie agenţii pentru a-şi îndeplini responsabilit
+ăţile, şi cum, unde şi când această informaţie este stocată.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Descoperirea: cum agenţii legaţi direct de aceeaşi cunoştiinţă se pot descoperi.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Management şi monitorizare: sistemul trebuie să fie capabil să monitorizeze
+ agenţii existenţi şi să-i poată oprii sau pornii la comandă.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Design
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+O dată ce problema a fost clarificată pentru un nivel suficient de detalii,
+ se trece de la faza de analiză la faza de design a cărei ţintă este specificare
+a soluţiei.
+ Nu există o definire exactă între aceste două faze, iar pe durata dezvoltării
+ se poate face de mai multe ori tranziţie între cele două faze.
+ Similar cu faza de analiză, faza de design este alcătuită din mai mulţi
+ paşi care se pot intercala.
+ 
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Gestionarea tipurilor de agenţi
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Acest pas presupune observarea artefactelor produse în faza de design şi
+ luarea deciziilor în privinţa tipurilor de agenţi din diagrama de agenţi.
+ Se poate decide împărţirea tipurilor existente în subtipuri sau unirea
+ unora dintre tipurile existente într-un singur tip.
+ În această fază trebuie să se ţină cont de următoarele:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Evitarea duplicării datelor.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Evitarea duplicării codului care accesează resurse.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Împărţirea agenţilor trebuie făcută, doar dacă este necesar.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Fiecare agent trebuie să se afle pe o singură maşină-
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Evitarea agenţilor care au prea mult cod şi sunt complecşi.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+În cadrul proiectelor care au un număr mic de tipuri de agenţi, operaţiile
+ asupra tipurilor de agenţi nu sunt considerate problematice.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Specificarea interacţiunilor
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+În cadrul acestui pas se specifică interacţiunile pentru fiecare tip de
+ agent.
+ Interacţiunile pot fi prezentate sub formă de tabel în care se specifică
+ interacţiunea, responsabilitatea, protocolul folosit, rolul ( iniţiator
+ sau participant ), agentul cu care se interacţionează şi momentul în care
+ interacţiunea trebuie să aibă loc.
+ 
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Şabloane de mesaje
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+La acest pas se specifică formatul obiectelor de tipul MessageTemplate care
+ vor fi folosite pentru a se realiza interacţiunile.
+ Obiectele de tipul MessageTemplate vor fi adăugate la comportamentele care
+ se ocupă de comunicarea cu ceilalţi agenţi.
+ Pentru a realiza cât mai eficient şabloanele de mesaje, se poate ţine cont
+ de următoarele reguli:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+ID-urile asignate agenţilor trebuie să fie unice.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Comportamentele care se ocupă de comunicare şi care folosesc acelaşi şablon,
+ ar trebui să formeze un singur comportament.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Analizarea conflictelor şi modificarea clasei MessageTemplate folosită de
+ comportamentul care se ocupă de comunicare.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+De asemenea în cazul în care şabloanele create nu acoperă toate cazurile
+ posibile de comunicare, se pot folosi şi şabloane dinamice, care pot fi
+ modificate în timpul execuţiei.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Identificator unic pentru serviciile de căutare/înregistrare
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Pentru ca agenţii să se poată înregistra la serviciul Yellow Pages oferit
+ de platforma JADE, aceştia trebuie să aibă un identificator unic.
+ În general convenţiile de nume depind de domeniul pe care rulează platforma
+ JADE, fiind indicat să se folosească şi o notare folosind limbajul natural.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Accesare resurselor de către agenţi
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+În unele cazuri agenţii trebuie să interacţioneze cu resurse externe cum
+ ar fi baze de date, fişiere sau alte sisteme software.
+ Resursele pot fi împărţite în două categorii:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Resurse pasive: resurse care îşi schimbă starea doar când sunt accesate
+ de agentul care le controlează.
+ Resursele pasive pot fi accesate folosind pachetul java.io.* în cazul fişierelor,
+ în cazul librăriilor C se poate folosi JNI, iar în cazul bazelor de date
+ se poate folosi JDBC.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Resurse active: resurse care îşi pot schimba starea independent de agentul
+ care le controlează.
+ Resursele active pot reprezenta o bază de date în care se introduc date
+ de un operator uman sau de o altă aplicaţie software.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Comportamentele interne ale agenţilor
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Sarcina pe care un agent trebuie să o execute este executată în cadrul unui
+ 
+\begin_inset Quotes eld
+\end_inset
+
+comportament
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Platforma JADE oferă un pachet de clase specializate, care oferă suport
+ pentru majoritatea comportamentelor.
+ În cazul în care comportamentele deja existente nu satisfac cerinţele,
+ acestea se pot extinde.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+OneShotBehaviour - implementează o sarcină atomică, care rulează o singură
+ dată şi se termină imediat.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+CyclicBehaviour - implementează o sarcină care este tot timpul activă şi
+ care realizează aceeaşi sarcină de fiecare dată cănd este programată.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+TickerBehaviour - implementează o sarcină care execută periodic aceeaşi
+ operaţie.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+WakerBehaviour - implementează o sarcină care rulează o singură dată după
+ un anumit interval de timp.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+În cazul în care se operează cu responsabilităţi complexe, este indicat
+ ca acestea să fie împărţite în mai multe sarcini simple care pot fi combinate
+ mai apoi folosind una dintre clasele JADE care oferă suport pentru comportament
+e compuse:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+SequentialBehaviour - implementează o sarcină compusă, care îşi programează
+ sub-sarcinile secvenţial.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+FSMBehaviour - implementează o sarcină compusă, care îşi programează sub-sarcini
+le în funcţie de rezultatele pe care acestea le returnează la sfărşitul
+ execuţiei.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Definirea de ontologii
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Când agenţii din sistem interacţionează, schimbă informaţii care se referă
+ la entităţi abstracte sau concrete şi care există în mediul în care se
+ află agentul.
+ Aceste entităţi pot fi reprezentate prin tipuri primitive de date, cum
+ ar fi String sau Int, sau pot avea o structură complexă.
+ Entităţile complexe pot fi referite prin termenul de concepte.
+ Entităţile sunt legate prin intermediul unor relaţii, care pot fi adevărate
+ sau false.
+ La fel ca entităţile complexe, relaţile pot avea de asemenea structuri
+ complexe.
+ Relaţile complexe pot fi referite ca predicate.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Un caz particular de entităţi complexe este reprezentat de acţiunile pe
+ care agenţii le pot realiza.
+ Acţiunile agenţilor pot fi descrise folosind clasa AgentActions disponibilă
+ în librăria JADE.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+O ontologie reprezintă un set de concepte, predicate şi acţiuni ale agenţilor
+ care au o legătură cu un anume domeniu.
+\end_layout
+
+\begin_layout Part
+
+\lang english
+Arhitecturi multi-agent
+\end_layout
+
+\begin_layout Chapter
+
+\lang english
+Modelul arhitectural blackboard
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Dezvoltarea sistemelor multi-agent mari este o sarcină complexă care implică
+ mai multe procese, cum ar fi realizarea cerinţelor, arhitectura, designul
+ şi implementarea acestor sisteme.
+ În particular, designul arhitecturii este critic pentru a face faţă dimensiunii
+ şi complexităţii în continuă creştere a acestor sisteme.
+ Sistemele multi-agent care accesează un depozit central de date sunt de
+ obicei bazate pe şablonul arhitectural blackboard.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Sistemele software construite ca un grup de agenţi inteligenţi şi autonomi
+ promit să ofere putere de calcul pentru a rezolva probleme dificile.
+ Cu toate acestea, sistemele multi-agent complexe sunt dificil de realizat.
+ În unele sisteme agenţii pot rezolva probleme intensive, dar pentru acest
+ lucru toţi agenţii trebuie să fie cunoscuţi de la începutul execuţiei programul
+ui.
+ În alte sisteme, agenţii nu se cunosc de la început, iar pentru a putea
+ interacţiona, aceştia trebuie să se înregistreze la un serviciu de descoperire.
+ O dată ce un agent are cunoştiinţă existenţa altor agenţi în acelaşi mediu
+ cu el, el poate să folosească serviciile sau cunoştiinţele dobândite de
+ acei agenţi.
+ În sistemele de acest gen, un agent îşi poate asuma un rol de control,
+ pentru a administra ceilalţi agenţi prezenţi în sistem.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+În dezvoltarea sistemelor multi-agent mari, trebuie să se ţină cont şi de
+ caracteristicile sistemului, cum ar fi performanţa, reutilizabilitatea,
+ adaptibilitatea, securitatea şi mobilitatea.
+ Aceste proprietăţi care au nevoie de strategii pentru controlul logicii
+ şi datelor, trebuie să fie luate în considerare la începutul proiectării
+ arhitecturii.
+ În general, folosirea şabloanelor software arhitecturale poate facilita
+ dezvoltarea sistemelor multi-agent complexe.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Invocarea implicită este un şablon arhitectural des întâlnit, care are ca
+ avantaj decuplarea componentelor, care pot fi în acest caz obiecte care
+ reprezintă agenţi.
+ Acest şablon este potrivit pentru aplicaţile care folosesc colecţii de
+ componente slab cuplate, fiecare dintre componente execută anumite operaţii
+ sau fac parte dintr-un proces amplu care are ca rezultat o operaţiune.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Obiectele şi agenţii au multe caracteristici comune fiind de asemenea diferite.
+ Din perspectiva tradiţională orientată obiect, un obiect nu este autonom.
+ Comportamentul său interior putând fi modificat din exterior.
+ Un obiect nu este capabil să decidă ce trebuie să facă într-o anumită situaţie.
+ În aplicaţiile tradiţionale dezvoltate pe principiul OOP, mediul nu este
+ specificat explicit şi poate fi incapsulat ca atribute interne.
+ Din perspectiva sistemelor multi-agent poate avea o stare activă şi poate
+ integra fire de execuţie permiţându-i să execute diverse sarcini computaţionale.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Arhitectura blackboard bazată pe evenimente
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Arhitectura blackboard este contruită prin integrarea a două şabloane arhitectur
+ale: şablonul blackboard şi şablonul invocării implicite.
+ În această arhitectură metodele de control sunt separate de agenţii cu
+ rol de control pentru ca aceste metode să se poată schimba independent.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Modelul arhitectural blackboard este utilizat pentru aplicaţiile care trebuie
+ să gestioneze probleme non-deterministe.
+ Pentru majoritatea acestor probleme nu există o soluţie bazată pe un anume
+ algoritm, iar o soluţie aproximativă este acceptată.
+ Acest model arhitectural este folosit în cadrul diferitelor sisteme software
+ folosite în majoritatea domenilor.
+ Acest model este format din trei componente: componenta de control, blackboard-
+ul şi surse de cunoştinţe.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Sursele de cunoştinţe pot fi alcătuite din agenţi specializaţi în rezolvarea
+ anumitor probleme.
+ Aceştia procează cunoştinţele de care au nevoie şi le fac publice componentei
+ blackboard fără a avea nevoie de interacţiunea altor agenţi.
+ Sursele de cunoştinţe sunt alcătuite din două subcomponente majore: condiţii
+ şi acţiuni.
+ Condiţile sunt folosite pentru a determina când agentul poate contribui
+ cu ceva.
+ Când condiţile sunt îndeplinite se invocă acţiunile specifice.
+ Acţiunile includ modificarea sau plasarea noilor date în cadrul componentei
+ blackboard.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Componenta blackboard este sursa tuturor datelor asupra cărora va opera
+ o sursă de cunoştinţe fiind de asemenea şi destinaţie pentru datele generate
+ de sursele de cunoştinţe.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Componenta de control este reprezentată de un manager care administrează
+ accesul surselor de cunoştinţe la componenta blackboard.
+ Rolul componentei de control poate fi luat de un agent care este specializat
+ în administrarea şi planificarea resurselor.
+ Controlul se poate realiza prin invocarea directă a surselor de cunoştinţe
+ sau prin apelarea de la distanţă a metodelor.
+ Schimbarea dinamică a controlului presupune ca toţi agenţii care substituie
+ componenta de control să transmită succesorilor metodele de control, pentru
+ a evita rezultatele eronate datorate schimbării de control.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Sistemele complexe multi-agent se doresc a fi stabile şi să aibă o durată
+ de viaţă considerabilă.
+ Componenta de control este o parte critică a sistemului.
+ În cazul în care unul dintr agenţi generează o eroare în timpul rulării,
+ sistemul trebuie să ruleze în continuare.
+ Rolul de componentei trebuie să poată fi luat de agenţii specializaţi făra
+ a genera erori în sistem.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+După definirea sistemului, trebuie avută în vedere şi mentenanţa sistemului.
+ Arhitectura sistemul trebuie să suporte schimbările intervenite la nivelul
+ agenţilor.
+ De asemenea, arhitectura sistemelor multi-agent, trebuie să facă faţă evoluţiei
+ astfel încât impactul asupra componentelor sistemului să fie minim.
+ Noi agenţi trebuie să poată fi adăugaţi în sistem ca surse de cunoştinţe
+ sau componente de control, iar agenţii deja existenţi în sistem trebuie
+ să poată să-şi încheie activitatea fără să afecteze funcţionalitatea sistemului.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Invocarea implicită
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Şablonul arhitectural care se bazează pe invocarea implicită este potrivit
+ pentru aplicaţii care sunt alcătuite din componente care se doresc a fi
+ slab cuplate.
+ În cadrul acestui şablon fiecare agent se înregistrează la anumite evenimente
+ care sunt declanşate de alţi agenţi.
+ Când evenimentul se declanşează, toţi agenţii care sunt înregistraţi la
+ acest eveniment vor fi notificaţi.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+În cadrul invocării implicite, agentul care anunţă evenimentul nu cunoaşte
+ agenţii înregistraţi la acest eveniment.
+ De asemenea agentul nu cunoaşte nici ordinea procesării evenimentului.
+ Invocarea implicită are mai multe avantaje:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+agenţii sunt independenţi unul faţă de celălalt.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+interacţiunea este separată.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+nu există referinţe directe la ceilalţi agenţi.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+un nou agent se poate introduce în sistem prin înregistrarea la evenimentele
+ dorite.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+se pot introduce noi tipuri de agenţi fără a modifica restul agenţilor.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+De asemenea invocarea implicită prezintă şi unele dezavantaje:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+nu există control asupra secvenţei de declanşare a evenimentelor.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+necesitatea unei componente centrale de control care trebuie să administreze
+ evenimentele şi agenţii înregistraţi la evenimente.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+folosirea evenimentelor poate genera erori dacă folosite fire de execuţie.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Compunerea
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Şabloanele arhitecturale sunt folosite pentru rezolvarea celor mai frecvente
+ probleme.
+ În cadrul arhitecturii unui sistem este posibil să se folosească mai multe
+ şabloane pentru rezolvarea cerinţelor sistemului.
+ Compunerea mai multor şabloane arhitecturale are ca rezultat un nou şablon
+ arhitectural.
+ Din compunerea şablonului blackboard şi a şablonului invocării implicite
+ rezultă şablonul arhitectural blackboard bazat pe evenimente.
+ Figura 1 prezintă diagrama arhitecturii blackboard bazată pe evenimente.
+ Datele conţinute de blackboard sunt alcătuite din baza de cunoştinţe şi
+ protocolalele de control.
+ Protocoalele de control pot fi accesate numai de agenţii care au rol de
+ control, pe când baza de cunoştinţe poate fi accesată şi de agenţii care
+ joacă rolul de surselor de cunoştinţe.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename diagrama blackboard.jpg
+	width 10cm
+	height 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Diagrama arhitecturi blackboard bazată pe evenimente
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Dacă se consideră un sistem online de licitaţii cu agenţi înregistraţi ca
+ licitatori şi vânzători.
+ Licitatorii pot intra sau ieşi din sistem când doresc, iar vănzătorii pot
+ fi înlocuiţi de către alţi vânzători.
+ În acest exemplu blackboard-ul conţine informaţii despre produsele care
+ sunt licitate şi regulile licitaţiei.
+ Vânzătorul este reprezentat de un agent cu rol de control, acesta putând
+ fi înlocuit în cazul unei erori fără a avea consecinţe asupra funcţionării
+ sistemului.
+ Cumpărătorii sunt reprezentaţi de agenţi cu rol de surse de cunoştinţe,
+ aceştia se pot înregistra pentru a vizualiza anumite produse şi pentru
+ a urmării desfăşurarea licitaţiei pentru produsele care prezintă interes.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Invocarea implicită este potrivită pentru aplicaţii care folosesc un număr
+ mare de agenţi şi pentru care se doreşte decuplarea acestora.
+ Prin incorporarea acestui şablon arhitectural cu şablonul blackboard, agenţii
+ sunt decuplaţi, comunicarea realizându-se prin evenimente.
+ Agentul vânzător şi agentul cumpărător nu se cunosc, dar agentul vânzător
+ poate controla licitaţia prin evenimente.
+ 
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Consecinţe
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Implementarea sistemelor multi-agent folosind arhitectura blackboard bazată
+ pe evenimente promovează decuplarea componentelor.
+ Metodele de control sunt separate atât de agentul cu rol de control cât
+ şi de datele şi logica sistemului.
+ Această separare este importantă deoarece permite metodelor de control
+ să fie independente de agentul cu rol de control.
+ Combinarea lor ar face sistemul mai complex şi mai dificil de implementat.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Fiecare agent trebuie să se înregistreze în sistem ca o sursă de cunoştinţe.
+ Înregistrarea îi permite sistemului să verifice identitatea agentului şi
+ să-i permită accesul doar la anumite părţi din sistem.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Mai mulţi agenţi cu rol de control pot să ruleze în paralel, acest lucru
+ ducând la eliminarea blocajelor şi îmbunătăţeşte stabilitatea sistemului.
+ Arhitectura blackboard bazată pe evenimente permite configurarea dinamică
+ a agenţilor din sistem.
+ Atât agenţii cu rol de control, cât şi agenţii cu rol de surse de cunoştinţe
+ pot fi adăugaţi sau eliminaţi din sistem, iar datorită faptului că aceştia
+ nu au referinţă directă unul către celălalt sistemul este reutilizabil
+ şi uşor de menţinut.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Această arhitectură prezintă şi unele dezavantaje, cum ar fi probleme de
+ performanţă introduse de manipularea evenimentelor şi dificultatea de depanare.
+ Din cauza nondeterminismului şi mediului concurent controlul procesării
+ evenimentelor este greu de controlat.
+\end_layout
+
+\begin_layout Chapter
+
+\lang english
+Agenţi BDI
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+BDI este unul din modelele folosite în dezvoltarea sistemelor bazate pe
+ agenţi.
+ Acest model se bazează pe capacitatea agenţilor de a-şi selecta planurile
+ dinamic pentru a duce la sfârşit un scop.
+ De asemenea agenţii trebuie să se adapteze la schimbări dinamice şi neprevăzute.
+ Fără o schema de programare a activităţilor corespunzătoare, agenţii pot
+ repeta activităţi care nu sunt necesare, pot folosi resurse într-un mod
+ nejustificat sau chiar pot să nu îndeplinească cerinţele utilizatorului.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+În general un agent raţional are următoarele proprietăţi: autonomie, abilităţi
+ sociale, reactivitate şi iniţiativă.
+ Printre alte arhitecturi orientate pe agenţi, modelul BDI, care este acronimul
+ de la 
+\begin_inset Quotes eld
+\end_inset
+
+Belief
+\begin_inset Quotes erd
+\end_inset
+
+ - opinie, 
+\begin_inset Quotes eld
+\end_inset
+
+Desire
+\begin_inset Quotes erd
+\end_inset
+
+ - dorinţă, 
+\begin_inset Quotes eld
+\end_inset
+
+Intention
+\begin_inset Quotes erd
+\end_inset
+
+ - intenţie, fiecare termen reprezentând o stare mentală care este folosită
+ în procesul de raţionament, este un model foarte bine dezvoltat şi care
+ este adoptat în numeroase aplicaţii academice sau industriale.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Datorită dezvoltării sistemelor multi-agent, a rezultat faptul că agenţii
+ trebuie să se adapteze la schimbările survenite în mediul în care rulează.
+ O schemă de planificare a intenţilor poate fi folosită pentru a îmbunătăţii
+ performanţele agenţilor BDI prin exploatarea interacţiunilor dintre sarcini
+ şi evitarea eventualelor conflicte.
+ Agentul poate salva astfel resursele sistemului prin executarea unei sarcini
+ pe care altă dată nu va mai trebui să o execute.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Teoria modelului BDI este bazată pe teoria propusă de filozoful Michael
+ Bratman.
+ Intenţia este dorinţa pe care un agent doreşte să o indeplinească.
+ Un agent poate să aibă mai multe dorinţe pe care poate să le realizeze
+ sau nu.
+ Un agent BDI are un set de planuri, pe care doreşte să le execute.
+ Intenţile pot fi de asemenea tratate ca planuri pentru o eventuală execuţie.
+ Modelul BDI este eficace, fiind folosit într-o gamă largă de domenii, cum
+ ar fi controlul traficului aerian sau controlul navetelor spaţiale NASA.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Descoperirea dinamică a scopurilor
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Padgham şi Thangarajah au lucrat la un proiect destinat descoperii dinamice
+ a scopurilor unui agent BDI.
+ Rezultatele lor includ reprezentarea şi raţionarea scopurilor [1], detectarea
+ conflictelor între resurse [2], detectarea scopurilor similare [3] şi interfere
+nţele între scopuri [4].
+ Ei au creat o structură arborescentă de tipul scop-plan, pentru a detecta
+ interacţiunile dintre scopuri.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Intenţile pot fi tratate într-un mod diferit.
+ Intenţile pot fi definite ca scopuri realizate.
+ Tehnicile de mai sus vor fi aplicate pentru a descoperii interacţiunile
+ dintre intenţii, care vor fi definite ca factori în procesul de planificare
+ dinamică.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Planificarea intenţilor
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Sarcinile care sunt cele mai importante trebuie să li se ofere o prioritate
+ mai mare şi mai mult timp pentru execuţie.
+ JAM [5] foloseşte utilitatea pentru a descrie importanţa unui scop şi o
+ foloseşte ca singur factor pentru selectarea intenţilor.
+ Pentru a reprezenta utilitatea unui scop pentru utilizator, se foloseşte
+ o variabilă denumită I-utility.
+ Această variabilă poate să reprezinte un număr real sau o funcţie simplă,
+ a cărei valori poate fi modificată dinamic.
+ Variabila I-applicability reprezintă măsura în care un plan poate îndeplini
+ un scop, aceasta se poate determina dinamic.
+ Priorităţile indică gradul de întâietate al unei intenţii.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Pentru a evita depăşirea unui termen limită, priorităţile unei sarcini trebui
+ incrementate când acest termen se apropie.
+ Agentul responsabil de o sarcină trebuie să ştie când se apropie termenul
+ limită al unui scop, cât timp durează executarea intenţilor şi funcţia
+ responsabilă cu incrementarea priorităţii.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Calculul timpului necesar rulării unei intenţii este complicat, deoarece
+ se ţine cont de două probleme.
+ Prima dată trebuie să se ţină cont de planul asociat, care la rândul său
+ mai poate să conţină subscopuri.
+ Timpul de execuţie al unui scop nu poate fi calculat dacă planul nu este
+ ales.
+ Această problemă este cunoscută sub numele de problema planului indecis.
+ În afară de subscopuri, fiecare pas poate fi rulat la un interval diferit
+ de timp, în funcţie de maşina pe care rulează sau chiar de viteza reţelei.
+ În acest caz se va folosi timpul de rulare estimativ ( ERT estimated running
+ time ).
+ Împreună cu arborele de intenţii, ERT poate ajuta agentul să calculeze
+ minimul sau maximul posibil de timp pentru rularea intenţilor.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Executarea unei intenţii poate modifica opiniile unui agent sau alte intenţii.
+ Interacţiunile dintre intenţii, atunci când acestea se ajută reciproc,
+ se numesc interacţiuni pozitive.
+ Un agent poate să-şi planifice intenţile pentru a evita conflicte sau pentru
+ a salva din resursele sistemului.
+ Relaţile de interacţiune pot indica relaţile dintre sarcini şi amploare
+ influenţei reciproce.
+ Totuşi, interacţiunile nu sunt tot timpul utile.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Interacţiunile pot fi specificate explicit în cadrul unui plan, cu toate
+ acestea pot apărea instrucţiuni nespecificate.
+ De exemplu, în timpul îndeplinirii unui scop, pot apărea efecte secundare
+ care pot afecta opinile.
+ Unele pre-condiţii, care trebuie păstrate în timpul execuţiei pot de asemenea
+ cauza interacţiuni între intenţii.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+În cazul în care este întreruptă o intenţie, un agent poate să-şi piardă
+ datele.
+ De exemplu costul întreruperii unei intenţii realizată în proporţie de
+ 80% cu prioritatea de 90, este mai mare decăt costul întreruperii unei
+ intenţii realizate în proporţie de 20% având prioritate 100.
+ Prin urmare, gradul de completitudine al unei intenţii trebuie luat în
+ considerare când există interacţiuni negative între intenţii.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Cea mai simplă metodă de calcularea a gradului de completitudine este numărarea
+ linilor de cod dintr-un plan care au fost executatea pentru o intenţie.
+ Această metodă nu este însă şi cea mai sigură metodă de calculare a gradului
+ de completitudine, deoarece fiecare linie de cod poate să aibă un anumit
+ nivel de contribuţie.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+În afară de eficienţă, mai trebuie luată în calcul şi corectitudinea.
+ Intenţile care au o utilitate redusă pot să nu fie executate atunci când
+ intenţile care au o utilitate ridicată se execută continuu.
+ Pentru a evita acest lucru, priorităţile intenţilor care nu au fost executate
+ trebuie incrementate.
+ Daca intenţile cu utilitate redusă au interacţiuni negative cu alte intenţii,
+ atunci incrementarea priorităţilor pentru aceste intenţi poate genera erori.
+ Corectitudinea poate fi considerată doar pentru intenţile care nu interacţionea
+ză cu altele.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Arborele de intenţie
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Arborii de decizie sunt folosiţi pentru problemelor care bazează pe alcătuirea
+ unui plan.
+ În Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig:agentIntention"
+
+\end_inset
+
+ este prezentată o structură de intenţie a unui agent bazat pe arhitectura
+ JAM, în timpul execuţiei.
+ Intenţile care nu au fost încă executate sunt reprezentate ca dreptunghiuri
+ desenate cu linie întreruptă.
+ Când agentul execută activitatea 
+\begin_inset Quotes eld
+\end_inset
+
+Mută-te la poziţia A
+\begin_inset Quotes erd
+\end_inset
+
+ din cadrul firului de intenţie A, nu ţine cont de faptul că firul de intenţie
+ B poate conţine o activitate 
+\begin_inset Quotes eld
+\end_inset
+
+Mută-te la poziţia B
+\begin_inset Quotes erd
+\end_inset
+
+, deoarece scopul 
+\begin_inset Quotes eld
+\end_inset
+
+Cumpără pantofi
+\begin_inset Quotes erd
+\end_inset
+
+ nu a ales ce plan să fie executat.
+ Interacţiunea nu apare până când agentul nu decide care plan să-l execute.
+ Pe de altă parte, când această decizie a fost luată acţiunea 
+\begin_inset Quotes eld
+\end_inset
+
+Mută-te la poziţia A
+\begin_inset Quotes erd
+\end_inset
+
+ poate să fie de mult executată.
+ Situaţia se complică atunci când acţiunea 
+\begin_inset Quotes eld
+\end_inset
+
+Mută-te la poziţia B
+\begin_inset Quotes erd
+\end_inset
+
+ se află pe un nivel mult mai jos.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Problemele care trebuie să aleagă un plan pot bloca calcularea timpului
+ de execuţie sau calcularea gradului de completitudine.
+ Arborele de intenţie este aplicat pentru a modela comportamentele posibile
+ ale unui agent.
+ Nodurile arborelui înregistrează nu doar structura statică agentului, ci
+ şi informaţile din timpul execuţiei.
+ Un arbore de intenţie poate să aibă două tipuri de noduri: noduri pentru
+ stocarea planurilor şi noduri pentru stocarea scopurilor.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Modul de construire a unui arbore de intenţie este recursiv pornind de la
+ frunze spre rădăcină.
+ Informaţia este actualizată în momentul execuţiei, îndeplinirii unui scop,
+ adăugării unui nou plan sau în momentul eşuării unui plan.
+ Cu toate acestea, un agent poate să preconizeze acţiunile pe care le poate
+ executa.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename structura de intentie.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Structura de intenţie a unui agent
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:agentIntention"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+În Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig:agentRuntimeIntention"
+
+\end_inset
+
+ scopul 
+\begin_inset Quotes eld
+\end_inset
+
+Cumpără pantofi
+\begin_inset Quotes erd
+\end_inset
+
+ nu a selectat planul pe care să-l execute, dar agentul are cunoştinţă despre
+ existenţa acţiunii 
+\begin_inset Quotes eld
+\end_inset
+
+Mută-te la poziţia B
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Abilitatea unui agent de a prevede lucrurile pe care le poate realiza reprezint
+ă un beneficiu pentru alegerea unui plan în cadrul arhitecturii BDI.
+ De exemplu agentul poate alege un plan care nu generează conflicte cu planul
+ care este în execuţie, sau să evite un plan care nu îndeplineşte termenul
+ limită al scopului.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename structura intentie runtime.jpg
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Structura de intenţie în timpul execuţiei
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:agentRuntimeIntention"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Procesul de planificare
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+După încărcarea planurilor agenţii trebuie să-şi construiască arborele de
+ intenţie.
+ Actualizarea arborelui de intenţie şi ciclul de execuţie (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig:executarea activitati"
+
+\end_inset
+
+) fac parte din acelaşi fir de execuţie, acest lucru indicând faptul că
+ arborele de intenţie este tot timpul actualizat.
+ Procedura de actualizare poate fi apelată din cadrul oricări proceduri.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename executarea activitati.jpg
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Executarea activităţilor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:executarea activitati"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Procesul de selectare al intenţilor este alcătuit din patru paşi:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Agentul calculează pentru fiecare arbore de intenţie prioritatea de bază.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Agentul verifică dacă intenţia se apropie de termenul limită.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Agentul ia in considerare interacţile dintre intenţii.
+ Pentru acest pas se realizează un graf, fiecare node din graf reprezentând
+ un arbore de intenţie, iar legăturile reprezintă interacţiunile.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Agentul selectează nodul care are cea mai mare prioritate.
+\end_layout
+
+\begin_layout Chapter
+
+\lang english
+WADE
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Platforma WADE ( Workflows and Agent Development Environment ) a fost dezvoltată
+ de către compania italiană, Telecom Italia, care este unul dintre liderii
+ de piaţă din Europa în domeniul telecomunicaţilor.
+ Telecom Italia oferă 21 milioane de linii telefonice fixe şi peste 7,9
+ milioane de conexiuni la Internet, doar în Italia, la această cifră adaugându-s
+e şi cele 2,5 milioane de conexiuni Internet din Olanda şi Germania.
+ Telecom Italia este de asemenea lider pe piaţa telefoniei mobile având
+ peste 36 de milioane de clienţi.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Pentru a balansa veniturile tot mai reduse de pe urma servicilor tradiţionale
+ de telefonie, compania Telecom Italia a început să investească în servicii
+ inovative pentru a face faţă noilor cerinţe de pe piaţă.
+ Prin aceste investiţii, Telecom Italia îşi propune să facă servicile actuale
+ mai eficiente şi să reducă din costul operaţional.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Pentru a oferii şi configura noi servicii pentru clienţi şi pentru a elimina
+ defecţiunile şi erorile, Telecom Italia dispune de peste 9000 de tehnicieni
+ care interacţionează direct cu utilizatorii.
+ Acestia se lovesc cel mai des de următoarele scenarii:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+creşterea complexităţii şi dinamismului pentru activităţile de operare şi
+ mentenanţă.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+atenţia mărită asupra costurilor.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+orientarea spre eficienţă şi urmărire a nevoilor utilizatorilor.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Din scenarile de mai sus putem înţelege importanţa sistemelor de suport
+ operaţional care nu se bazează doar pe ajutarea operatorului şi a clientului,
+ ci şi pe folosirea informaţilor de la echipele tehnice pentru a îmbunătăţii
+ procesul operaţional şi pentru a oferii un răspuns cât mai rapid cererii
+ formulate de către client.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Aceste sisteme de suport operaţional fac posibilă reutilizarea cunoştiinţelor
+ individuale ale echipelor tehnice.
+ Acumularea acestor cunoştiinţe ducând la sporirea eficienţei şi eficacităţii
+ procesului operaţional şi la reducerea costurilor şi sporirea satisfacţiei
+ clienţilor.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Compania Telecom Italia încearcă să realizeze acest ţel, utilizând două
+ abordări:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+o abordare centralizată, unde cunoştinţele sunt gestionate centralizat.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+o abordare distribuită, unde cunoştinţele sunt gestionate într-o manieră
+ distribuită.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Amândouă abordările folosesc platforma WADE, care este dezvoltată pe baza
+ platformei open source JADE, care permite dezvoltarea sistemelor multi-agent
+ inteligente.
+ Totuşi, abordarea centralizată are în vedere separarea dintre proprietarul
+ cunoştinţelor şi oamenii desemnaţi pentru definirea workflow-ului.
+ În schimb, abordarea distribuită este o abordare inovatoare, în care deţinătoru
+l cunoştiinţelor îşi poate defini propriul workflow.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Cele două abordări ţintesc să răspundă la nevoi diferite şi pot fi folosite
+ în paşi diferiţi în procesul de gestionare a cunoştinţelor.
+ Telecom Italia a realizat două aplicaţii software care ilustrează perfect
+ cele două abordări: Wizard şi WeMash.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Wizard
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Abordarea centralizată a gestionării cunoştinţelor are ca ţintă automatizarea
+ activităţilor complexe pentru ca:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+un număr mai mare de oameni să poată realiza în acelaşi timp mai multe activităţ
+i.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+să îmbunătăţească autonomia inginerilor care lucrează pe teren.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+să introducă un standard şi să optimizeze modul în care se desfăşoară activităţi
+le.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Sistemul Wizard reprezintă o aplicaţie cu o misiune critică în domeniul
+ sistemului de suport operaţional.
+ Sistemul oferă o serie de funcţionalităţi pentru automatizarea activităţilor
+ de operare sau mentenanţă (O&M) desfăşurate de către angajaţii responsabili
+ cu relaţile cu clienţii sau de către tehnicienii aflaţi pe teren.
+ Cunoştinţele operaţionale legate de activităţile de O&M sunt reprezentate
+ utilizând instrumente formale.
+ Fiecare funcţionalitate, care automatizează o activitate O&M trebuie să
+ ghideze operatorii ( ex: controlul echipamentelor ulitizând o interfaţă
+ grafică ) cât şi să interacţioneze cu sistemele de suport operaţional implicate
+ în activităţile O&M ( ex: schimbarea configurării unui serviciu ).
+ Diagnosticarea şi repararea unuei conexiuni ADSL este o activitate O&M
+ complexă, pentru care Wizard oferă funcţionalitate, ghidând tehnicienii
+ aflaţi pe teren.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Deoarece Wizard este bazat pe WADE, fiecare flux de lucru este realizat
+ de un agent.
+ Mecanismul de delegare reprezintă o caracteristică definitorie a WADE,
+ care permite unui set de agenţi să execute cooperativ un proces complex.
+ Agenţi pot delega alţi agenţi pentru executarea unei sarcini specifice
+ pe baza unor condiţii evaluate în timpul execuţiei.
+ Aceste condiţii pot fi legate de abilităţile speciale ale agenţilor pentru
+ a realiza o porţiune din întregul proces.
+ Pentru a realiza acest proces de delegare Wizard se bazează pe avantajul
+ oferit de paradigma programării orientate pe agenţi.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Pentru a defini un flux de lucru pentru Wizard, dezvoltatorii se pot folosi
+ de un mediu de dezvoltare grafic, numit WOLF ( WOrkflow LiFe cycle management
+ evironmnent ).
+ WOLF reprezintă un mediu complet de gestionare a întregului ciclu de viaţă
+ a unui flux de lucru, putând fi folosit în fazele de dezvoltare, testare
+ şi de punere în folosinţă.
+ Această unealtă este foarte utilă, dar utilizatorii care o folosest trebuie
+ să aibe cunoştinţe de programare pentru a-şi defini fluxurile de lucru
+ proprii.
+ Angajaţii care se ocupă de definirea acestor fluxuri de lucru trebuie să
+ urmeze următorii paşi:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+colectarea cunoştinţelor operaţionale despre activităţile actuale O&M.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+identificarea activităţilor care trebuie automatizate.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+definirea celor mai bune practici pentru activităţile identificate.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+definirea fluxului de lucru Wizard.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+testarea fluxului de lucru.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+punerea în folosinţă a fluxului de lucru.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Datorită abordării centralizate, sistemul Wizard are următoarele avantaje:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+standardizarea şi optimizarea activităţilor O&M.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+gestionarea facilă a activităţilor cu logică complexă.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+capacitatea de a interacţiona cu modele eterogene de informaţii ( mapare
+ semantică şi sintactică ).
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+capacitatea de a interacţiona cu sisteme vechi.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+De asemenea abordarea centralizată prezintă şi unele dezavantaje, cum ar
+ fi nevoia de personal cu având cunoştinţe de programare şi faptul că este
+ nevoie de alocarea unui interval mare de timp pentru dezvoltare.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+WeMash
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+WeMash este o aplicaţie web care are ca ţintă să instruiască utilizatorii,
+ care nu au cunoştinţe de programare, să creeze aplicaţii simple.
+ Folosind WeMash, un utilizator implicat în procesul de mentenanţă şi care
+ are o nevoie particulară din partea sistemului, poate să-şi creeze propria
+ aplicaţie folosind servicile web disponibile.
+ O dată creată aplicaţia, utilizatorul o poate testa pentru a vedea dacă
+ corespunde cerinţelor şi poate adăuga informaţii despre scopul aplicaţiei
+ şi modalitatea de folosire.
+ Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:utilizareWeMash"
+
+\end_inset
+
+ prezintă scenarile de utilizare ale aplicaţiei.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename WeMash.jpg
+	width 15cm
+	height 20cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Scenariu de utilizare al aplicaţiei WeMash
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:utilizareWeMash"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+WeMash prezintă următoarele avantaje:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+aplicaţile publicate pot fi folosite şi de către alţi utilizatori.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+reduce timpul alocat efectuării unei sarcini prin automatizarea sarcini
+ care se doreşte a fi realizată.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+operatorii îşi pot realiza proprile aplicaţii fără ajutorul departamentului
+ IT.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename WeMashEngine.jpg
+	width 15cm
+	height 20cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Arhitectura aplicaţiei WeMash
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Această aplicaţie a fost realizată pentru a îndeplini unele dintre cerinţele
+ companiei Telecom Italia.
+ Aplicaţia fiind realizată ca aplicaţie web nu necesită instalarea.
+ Utilizatorii o pot accesa utilizând un browser web.
+ Operatorii îşi pot realiza proprile aplicaţii folosind o componentă vizuală.
+ De asemenea aplicaţia WeMash este integrată cu un sistem de management
+ al conţinutului, acest lucru facilitând aprobarea şi distribuirea aplicaţilor
+ deja realizate.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Cu toate că aplicaţia oferă soluţii pentru o arie largă de cerinţe din partea
+ companiei, aceasta prezintă şi unele dezavantaje, cum ar fi imposibilitatea
+ de a gestiona procese complexe şi activităţi cu logică complexă.
+ De asemenea aplicaţia nu poate gestiona modele eterogene de informaţie.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+WADE
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Sistemele Wizard şi WeMash prezentate în secţiunile anterioare, sunt orientate
+ pe de-o parte pe centralizarea şi folosirea cunoştinţelor pentru a îndruma
+ procesul operaţional, iar pe de altă parte sunt folosite şi pentru gestionarea
+ cunoştinţelor individuale.
+ Amândouă sistemele sunt realizate folosind WADE, datorită suportului oferit
+ pentru fluxurile de lucru, acestea având principalul avantaj că pot fi
+ reprezentate grafic într-o formă care poate fi uşor înţeleasă atât de experţii
+ în domeniu cât şi de către programatori.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename WADE_engine.jpg
+	width 15cm
+	height 20cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Arhitectura WADE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:arhitecturaWADE"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+WADE se bazează pe fluxurile de muncă pentru a defini logica aplicaţilor
+ sau a sistemelor.
+ Abordarea implementată de WADE încearcă să îmbine atât avantajele unei
+ reprezentări vizuale şi intuitive, cât şi avantajele oferite de folosirea
+ unui limbaj de programare, astfel încât fluxurile de lucru să poată fi
+ implementate atât de tehnicienii aflaţi pe teren cât şi de operatorii aflaţi
+ la birou.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Telecom Italia a realizat WADE prin adăugarea platformei JADE capacităţi
+ de execuţie a fluxurilor de lucru, cât şi mecanisme de gestionare a activităţil
+or distribuite.
+ De asemenea au fost introduse şi următoarele componente specifice WADE
+ ( Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:arhitecturaWADE"
+
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+procesul Boot Daemon - un proces care rulează pe fiecare maşină gazdă a
+ platformei WADE şi este responsabil de activarea containerelor pe maşina
+ pe care rulează.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Configuration Agent - un agent care rulează în containerul principal şi
+ care interacţionează cu procesul Boot Daemon şi care controlează ciclul
+ de viaţă al aplicaţiei.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Controller Agents - agenţi care au rol de control pentru fiecare container
+ din cadrul platformei, aceştia fiind responsabili pentru supervizarea activităţ
+ilor în cadrul containerului pe care îl controlează.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Workflow Engine Agents - agenţi de acest tip au capacitatea de a executa
+ propriile fluxuri de lucru.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand
+\backslash
+bibname{Bibliografie}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "bibliography"
+options "bibtotoc,plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

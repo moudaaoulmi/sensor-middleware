@@ -1,0 +1,727 @@
+#LyX 1.6.8 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass scrartcl
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Platforma WADE ( Workflows and Agent Development Environment ) a fost dezvoltată
+ de către compania italiană, Telecom Italia, care este unul dintre liderii
+ de piaţă din Europa în domeniul telecomunicaţilor.
+ Telecom Italia oferă 21 milioane de linii telefonice fixe şi peste 7,9
+ milioane de conexiuni la Internet, doar în Italia, la această cifră adaugându-s
+e şi cele 2,5 milioane de conexiuni Internet din Olanda şi Germania.
+ Telecom Italia este de asemenea lider pe piaţa telefoniei mobile având
+ peste 36 de milioane de clienţi.
+\end_layout
+
+\begin_layout Standard
+Pentru a balansa veniturile tot mai reduse de pe urma servicilor tradiţionale
+ de telefonie, compania Telecom Italia a început să investească în servicii
+ inovative pentru a face faţă noilor cerinţe de pe piaţă.
+ Prin aceste investiţii, Telecom Italia îşi propune să facă servicile actuale
+ mai eficiente şi să reducă din costul operaţional.
+\end_layout
+
+\begin_layout Standard
+Pentru a oferii şi configura noi servicii pentru clienţi şi pentru a elimina
+ defecţiunile şi erorile, Telecom Italia dispune de peste 9000 de tehnicieni
+ care interacţionează direct cu utilizatorii.
+ Acestia se lovesc cel mai des de următoarele scenarii:
+\end_layout
+
+\begin_layout Itemize
+creşterea complexităţii şi dinamismului pentru activităţile de operare şi
+ mentenanţă.
+\end_layout
+
+\begin_layout Itemize
+atenţia mărită asupra costurilor.
+\end_layout
+
+\begin_layout Itemize
+orientarea spre eficienţă şi urmărire a nevoilor utilizatorilor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Din scenarile de mai sus putem înţelege importanţa sistemelor de suport
+ operaţional care nu se bazează doar pe ajutarea operatorului şi a clientului,
+ ci şi pe folosirea informaţilor de la echipele tehnice pentru a îmbunătăţii
+ procesul operaţional şi pentru a oferii un răspuns cât mai rapid cererii
+ formulate de către client.
+\end_layout
+
+\begin_layout Standard
+Aceste sisteme de suport operaţional fac posibilă reutilizarea cunoştiinţelor
+ individuale ale echipelor tehnice.
+ Acumularea acestor cunoştiinţe ducând la sporirea eficienţei şi eficacităţii
+ procesului operaţional şi la reducerea costurilor şi sporirea satisfacţiei
+ clienţilor.
+\end_layout
+
+\begin_layout Standard
+Compania Telecom Italia încearcă să realizeze acest ţel, utilizând două
+ abordări:
+\end_layout
+
+\begin_layout Itemize
+o abordare centralizată, unde cunoştinţele sunt gestionate centralizat.
+\end_layout
+
+\begin_layout Itemize
+o abordare distribuită, unde cunoştinţele sunt gestionate într-o manieră
+ distribuită.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Amândouă abordările folosesc platforma WADE, care este dezvoltată pe baza
+ platformei open source JADE, care permite dezvoltarea sistemelor multi-agent
+ inteligente.
+ Totuşi, abordarea centralizată are în vedere separarea dintre proprietarul
+ cunoştinţelor şi oamenii desemnaţi pentru definirea workflow-ului.
+ În schimb, abordarea distribuită este o abordare inovatoare, în care deţinătoru
+l cunoştiinţelor îşi poate defini propriul workflow.
+\end_layout
+
+\begin_layout Standard
+Cele două abordări ţintesc să răspundă la nevoi diferite şi pot fi folosite
+ în paşi diferiţi în procesul de gestionare a cunoştinţelor.
+ Telecom Italia a realizat două aplicaţii software care ilustrează perfect
+ cele două abordări: Wizard şi WeMash.
+\end_layout
+
+\begin_layout Section
+Wizard
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Abordarea centralizată a gestionării cunoştinţelor are ca ţintă automatizarea
+ activităţilor complexe pentru ca:
+\end_layout
+
+\begin_layout Itemize
+un număr mai mare de oameni să poată realiza în acelaşi timp mai multe activităţ
+i.
+\end_layout
+
+\begin_layout Itemize
+să îmbunătăţească autonomia inginerilor care lucrează pe teren.
+\end_layout
+
+\begin_layout Itemize
+să introducă un standard şi să optimizeze modul în care se desfăşoară activităţi
+le.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Sistemul Wizard reprezintă o aplicaţie cu o misiune critică în domeniul
+ sistemului de suport operaţional.
+ Sistemul oferă o serie de funcţionalităţi pentru automatizarea activităţilor
+ de operare sau mentenanţă (O&M) desfăşurate de către angajaţii responsabili
+ cu relaţile cu clienţii sau de către tehnicienii aflaţi pe teren.
+ Cunoştinţele operaţionale legate de activităţile de O&M sunt reprezentate
+ utilizând instrumente formale.
+ Fiecare funcţionalitate, care automatizează o activitate O&M trebuie să
+ ghideze operatorii ( ex: controlul echipamentelor ulitizând o interfaţă
+ grafică ) cât şi să interacţioneze cu sistemele de suport operaţional implicate
+ în activităţile O&M ( ex: schimbarea configurării unui serviciu ).
+ Diagnosticarea şi repararea unuei conexiuni ADSL este o activitate O&M
+ complexă, pentru care Wizard oferă funcţionalitate, ghidând tehnicienii
+ aflaţi pe teren.
+\end_layout
+
+\begin_layout Standard
+Deoarece Wizard este bazat pe WADE, fiecare flux de lucru este realizat
+ de un agent.
+ Mecanismul de delegare reprezintă o caracteristică definitorie a WADE,
+ care permite unui set de agenţi să execute cooperativ un proces complex.
+ Agenţi pot delega alţi agenţi pentru executarea unei sarcini specifice
+ pe baza unor condiţii evaluate în timpul execuţiei.
+ Aceste condiţii pot fi legate de abilităţile speciale ale agenţilor pentru
+ a realiza o porţiune din întregul proces.
+ Pentru a realiza acest proces de delegare Wizard se bazează pe avantajul
+ oferit de paradigma programării orientate pe agenţi.
+ 
+\end_layout
+
+\begin_layout Standard
+Pentru a defini un flux de lucru pentru Wizard, dezvoltatorii se pot folosi
+ de un mediu de dezvoltare grafic, numit WOLF ( WOrkflow LiFe cycle management
+ evironmnent ).
+ WOLF reprezintă un mediu complet de gestionare a întregului ciclu de viaţă
+ a unui flux de lucru, putând fi folosit în fazele de dezvoltare, testare
+ şi de punere în folosinţă.
+ Această unealtă este foarte utilă, dar utilizatorii care o folosest trebuie
+ să aibe cunoştinţe de programare pentru a-şi defini fluxurile de lucru
+ proprii.
+ Angajaţii care se ocupă de definirea acestor fluxuri de lucru trebuie să
+ urmeze următorii paşi:
+\end_layout
+
+\begin_layout Itemize
+colectarea cunoştinţelor operaţionale despre activităţile actuale O&M.
+\end_layout
+
+\begin_layout Itemize
+identificarea activităţilor care trebuie automatizate.
+\end_layout
+
+\begin_layout Itemize
+definirea celor mai bune practici pentru activităţile identificate.
+\end_layout
+
+\begin_layout Itemize
+definirea fluxului de lucru Wizard.
+\end_layout
+
+\begin_layout Itemize
+testarea fluxului de lucru.
+\end_layout
+
+\begin_layout Itemize
+punerea în folosinţă a fluxului de lucru.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Datorită abordării centralizate, sistemul Wizard are următoarele avantaje:
+\end_layout
+
+\begin_layout Itemize
+standardizarea şi optimizarea activităţilor O&M.
+\end_layout
+
+\begin_layout Itemize
+gestionarea facilă a activităţilor cu logică complexă.
+\end_layout
+
+\begin_layout Itemize
+capacitatea de a interacţiona cu modele eterogene de informaţii ( mapare
+ semantică şi sintactică ).
+\end_layout
+
+\begin_layout Itemize
+capacitatea de a interacţiona cu sisteme vechi.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+De asemenea abordarea centralizată prezintă şi unele dezavantaje, cum ar
+ fi nevoia de personal cu având cunoştinţe de programare şi faptul că este
+ nevoie de alocarea unui interval mare de timp pentru dezvoltare.
+\end_layout
+
+\begin_layout Section
+WeMash
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+WeMash este o aplicaţie web care are ca ţintă să instruiască utilizatorii,
+ care nu au cunoştinţe de programare, să creeze aplicaţii simple.
+ Folosind WeMash, un utilizator implicat în procesul de mentenanţă şi care
+ are o nevoie particulară din partea sistemului, poate să-şi creeze propria
+ aplicaţie folosind servicile web disponibile.
+ O dată creată aplicaţia, utilizatorul o poate testa pentru a vedea dacă
+ corespunde cerinţelor şi poate adăuga informaţii despre scopul aplicaţiei
+ şi modalitatea de folosire.
+ Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:utilizareWeMash"
+
+\end_inset
+
+ prezintă scenarile de utilizare ale aplicaţiei.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename WeMash.jpg
+	width 15cm
+	height 20cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Scenariu de utilizare al aplicaţiei WeMash
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:utilizareWeMash"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+WeMash prezintă următoarele avantaje:
+\end_layout
+
+\begin_layout Itemize
+aplicaţile publicate pot fi folosite şi de către alţi utilizatori.
+\end_layout
+
+\begin_layout Itemize
+reduce timpul alocat efectuării unei sarcini prin automatizarea sarcini
+ care se doreşte a fi realizată.
+\end_layout
+
+\begin_layout Itemize
+operatorii îşi pot realiza proprile aplicaţii fără ajutorul departamentului
+ IT.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename WeMashEngine.jpg
+	width 15cm
+	height 20cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Arhitectura aplicaţiei WeMash
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Această aplicaţie a fost realizată pentru a îndeplini unele dintre cerinţele
+ companiei Telecom Italia.
+ Aplicaţia fiind realizată ca aplicaţie web nu necesită instalarea.
+ Utilizatorii o pot accesa utilizând un browser web.
+ Operatorii îşi pot realiza proprile aplicaţii folosind o componentă vizuală.
+ De asemenea aplicaţia WeMash este integrată cu un sistem de management
+ al conţinutului, acest lucru facilitând aprobarea şi distribuirea aplicaţilor
+ deja realizate.
+\end_layout
+
+\begin_layout Standard
+Cu toate că aplicaţia oferă soluţii pentru o arie largă de cerinţe din partea
+ companiei, aceasta prezintă şi unele dezavantaje, cum ar fi imposibilitatea
+ de a gestiona procese complexe şi activităţi cu logică complexă.
+ De asemenea aplicaţia nu poate gestiona modele eterogene de informaţie.
+\end_layout
+
+\begin_layout Section
+WADE
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Sistemele Wizard şi WeMash prezentate în secţiunile anterioare, sunt orientate
+ pe de-o parte pe centralizarea şi folosirea cunoştinţelor pentru a îndruma
+ procesul operaţional, iar pe de altă parte sunt folosite şi pentru gestionarea
+ cunoştinţelor individuale.
+ Amândouă sistemele sunt realizate folosind WADE, datorită suportului oferit
+ pentru fluxurile de lucru, acestea având principalul avantaj că pot fi
+ reprezentate grafic într-o formă care poate fi uşor înţeleasă atât de experţii
+ în domeniu cât şi de către programatori.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename WADE_engine.jpg
+	width 15cm
+	height 20cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Arhitectura WADE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:arhitecturaWADE"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+WADE se bazează pe fluxurile de muncă pentru a defini logica aplicaţilor
+ sau a sistemelor.
+ Abordarea implementată de WADE încearcă să îmbine atât avantajele unei
+ reprezentări vizuale şi intuitive, cât şi avantajele oferite de folosirea
+ unui limbaj de programare, astfel încât fluxurile de lucru să poată fi
+ implementate atât de tehnicienii aflaţi pe teren cât şi de operatorii aflaţi
+ la birou.
+\end_layout
+
+\begin_layout Standard
+Telecom Italia a realizat WADE prin adăugarea platformei JADE capacităţi
+ de execuţie a fluxurilor de lucru, cât şi mecanisme de gestionare a activităţil
+or distribuite.
+ De asemenea au fost introduse şi următoarele componente specifice WADE
+ ( Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:arhitecturaWADE"
+
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Itemize
+procesul Boot Daemon - un proces care rulează pe fiecare maşină gazdă a
+ platformei WADE şi este responsabil de activarea containerelor pe maşina
+ pe care rulează.
+\end_layout
+
+\begin_layout Itemize
+Configuration Agent - un agent care rulează în containerul principal şi
+ care interacţionează cu procesul Boot Daemon şi care controlează ciclul
+ de viaţă al aplicaţiei.
+\end_layout
+
+\begin_layout Itemize
+Controller Agents - agenţi care au rol de control pentru fiecare container
+ din cadrul platformei, aceştia fiind responsabili pentru supervizarea activităţ
+ilor în cadrul containerului pe care îl controlează.
+\end_layout
+
+\begin_layout Itemize
+Workflow Engine Agents - agenţi de acest tip au capacitatea de a executa
+ propriile fluxuri de lucru.
+\end_layout
+
+\end_body
+\end_document
