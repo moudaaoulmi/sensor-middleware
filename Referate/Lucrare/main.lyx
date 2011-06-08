@@ -311,11 +311,7 @@ status collapsed
 
 \end_inset
 
-http://web.info.uvt.ro/
-\begin_inset Formula $\sim$
-\end_inset
-
-numesite
+http://bogdanmanate.com/docs
 \begin_inset ERT
 status collapsed
 
@@ -337,11 +333,7 @@ status collapsed
 
 \end_inset
 
-http://web.info.uvt.ro/
-\begin_inset space ~
-\end_inset
-
-oaritoni
+http://bogdanmanate.com/docs
 \begin_inset ERT
 status collapsed
 
@@ -386,20 +378,80 @@ end{titlepage}
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Newpage newpage
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 4cm*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
 
 \series bold
 Abstract
 \end_layout
 
 \begin_layout Standard
-Here a short resume.
-\begin_inset Newline newline
-\end_inset
-
+The goal of this paper is to propose and to present an architecture for
+ an intelligent sensor data processing middleware.
+ The initial work was started on the project DEHEMS in august, last year,
+ and after I have created a small prototype I decided to create a new, improved
+ middleware.
  
+\end_layout
+
+\begin_layout Standard
+This paper is divided in four parts and it presents the knowledge that I
+ have studied in order to develop the intelligent sensor data processing
+ middleware.
+ 
+\end_layout
+
+\begin_layout Standard
+First part includes an introduction which contains a detailed timeline presentin
+g the steps that I have followed to write this paper and to develop the
+ middleware.
+\end_layout
+
+\begin_layout Standard
+The second part is named the multi-agent models for intelligent ambiental
+ systems which presents the issues that impact the stability and flexibility
+ of systems and how to handle the data uncertainty.
+ This part, also presents an agent-based system that can act on behalf of
+ the users.
+ In this part of the paper are also presented some difficult challenges
+ that a software developer must handle when he works with heterogeneous
+ devices and intelligent user interfaces.
+ Because agent-oriented software development is one of the recent contributions
+ to the field of software engineering, I have presented in this part the
+ strengths and the weakness of agent oriented systems design.
+ 
+\end_layout
+
+\begin_layout Standard
+The third part is named multi-agent architectures and presents a methodology
+ for agent-oriented analysis and design.
+ The described methodology is general, so it can be applicable to a wide
+ range of multi-agent systems.
+ This part presents the main tasks involved in the development of large
+ multi-agent systems like the process of the requirements, architecture,
+ design and the implementation of these systems.
+ This part also contains a description of the blackboard model, the same
+ model wich is used for the middleware development.
+ 
+\end_layout
+
+\begin_layout Standard
+The fourth part is named the the middleware architecture and presents the
+ intelligent sensor data processing middleware development steps.
 \begin_inset Newpage newpage
 \end_inset
 
