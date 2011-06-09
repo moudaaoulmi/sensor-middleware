@@ -1,18 +1,18 @@
 package ontology.predicates;
 
-import ontology.concepts.Sum;
+import ontology.concepts.SensorData;
 import jade.content.Predicate;
 
 public class SumComputed implements Predicate
 {
-	protected Sum sum; 
+	protected SensorData sum; 
 	
-	public Sum getSum() 
+	public SensorData getSum() 
 	{
 		return sum;
 	}
 
-	public void setSum(Sum sum) 
+	public void setSum(SensorData sum) 
 	{
 		this.sum = sum;
 	}

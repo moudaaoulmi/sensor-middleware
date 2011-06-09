@@ -2,7 +2,7 @@ package ontology.concepts;
 
 import jade.content.Concept;
 
-public class Sum implements Concept 
+public class SensorData implements Concept 
 {
 	protected int sum = 0;
 	
@@ -16,7 +16,7 @@ public class Sum implements Concept
 		this.sum = sum;
 	}
 
-	public Sum()
+	public SensorData()
 	{
 		
 	}
