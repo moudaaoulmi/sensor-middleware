@@ -24,6 +24,7 @@ public class SensorsOntology extends BeanOntology
 		{
 			add("ontology.actions");
 			add("ontology.concepts");
+			add("ontology.concepts.sensors");
 			add("ontology.predicates");
 		} 
 		catch (BeanOntologyException e) 
