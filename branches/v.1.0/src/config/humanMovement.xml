@@ -1,0 +1,23 @@
+<doorMovementModel>
+	<fieldNumber>3</fieldNumber>
+	<field>
+		<position>1</position>
+		<name>Time</name>
+		<minValue>0</minValue>
+		<maxValue>89400</maxValue>
+		<unit>S</unit>
+	</field>
+	<field>
+		<position>2</position>
+		<name>Time</name>
+		<minValue>0</minValue>
+		<maxValue>89400</maxValue>
+		<unit/>
+	<field>
+		<position>3</position>
+		<name>ID</name>
+		<minValue>0</minValue>
+		<maxValue>1000</maxValue>
+		<unit/>
+	</field>
+</doorMovementModel>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scenario>
-<scenarioEntry time='262'>
+<scenarioEntry time='0'>
 	<sensorData sensorId='17' type='light'>1</sensorData>
 <sensorData sensorId='18' type='light'>1</sensorData>
 <sensorData sensorId='19' type='light'>1</sensorData>
@@ -14,8 +14,8 @@
 <sensorData sensorId='27' type='windowMovement'>1</sensorData>
 <sensorData sensorId='28' type='windowMovement'>1</sensorData>
 </scenarioEntry>
-<scenarioEntry time='263'>
-<sensorData sensorId='1' type='doorMovement'>1</sensorData>
+<scenarioEntry time='1'>
+<sensorData sensorId='1' type='doorMovement' zone="1">1</sensorData>
 <sensorData sensorId='2' type='doorMovement'>1</sensorData>
 <sensorData sensorId='3' type='doorMovement'>1</sensorData>
 <sensorData sensorId='4' type='doorMovement'>1</sensorData>
