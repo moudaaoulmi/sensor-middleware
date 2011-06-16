@@ -38,7 +38,7 @@ public class ScenarioStarterBehaviour extends Behaviour
 	{
 		try
 		{
-			File file 					= new File( "scenario.xml" );
+			File file 					= new File( "config/scenario.xml" );
 			DocumentBuilderFactory dbf 	= DocumentBuilderFactory.newInstance();
 			DocumentBuilder db 			= dbf.newDocumentBuilder();
 			scenario 					= db.parse( file );

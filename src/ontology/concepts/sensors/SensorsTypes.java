@@ -9,4 +9,6 @@ public class SensorsTypes
 	static public final String HUMAN_MOVEMENT 	= "humanMovement";
 	static public final String DOOR_MOVEMENT 	= "doorMovement";
 	static public final String WINDOW_MOVEMENT 	= "windowMovement";
+	static public final String RFID 			= "rfid";
+	static public final String GAS 				= "gas";
 }
