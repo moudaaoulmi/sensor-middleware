@@ -1,4 +1,5 @@
-<rfidModel>
+<?xml version="1.0" encoding="UTF-8"?>
+<temperatureModel>
 	<fieldNumber>3</fieldNumber>
 	<field>
 		<position>1</position>
@@ -9,8 +10,8 @@
 	</field>
 	<field>
 		<position>2</position>
-		<name>RFID</name>
-		<minValue>0</minValue>
+		<name>Temperature</name>
+		<minValue>-50</minValue>
 		<maxValue>100</maxValue>
 		<unit/>
 	<field>
@@ -20,4 +21,4 @@
 		<maxValue>1000</maxValue>
 		<unit/>
 	</field>
-</rfidModel>
+</temperatureModel>

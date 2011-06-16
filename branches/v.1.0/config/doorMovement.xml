@@ -1,4 +1,5 @@
-<electricModel>
+<?xml version="1.0" encoding="UTF-8"?>
+<doorMovementModel>
 	<fieldNumber>3</fieldNumber>
 	<field>
 		<position>1</position>
@@ -9,10 +10,10 @@
 	</field>
 	<field>
 		<position>2</position>
-		<name>Electric</name>
+		<name>Time</name>
 		<minValue>0</minValue>
-		<maxValue>1000</maxValue>
-		<unit>W</unit>
+		<maxValue>1</maxValue>
+		<unit/>
 	<field>
 		<position>3</position>
 		<name>ID</name>
@@ -20,4 +21,4 @@
 		<maxValue>1000</maxValue>
 		<unit/>
 	</field>
-</electricModel>
+</doorMovementModel>

@@ -1,4 +1,5 @@
-<windowMovementModel>
+<?xml version="1.0" encoding="UTF-8"?>
+<electricModel>
 	<fieldNumber>3</fieldNumber>
 	<field>
 		<position>1</position>
@@ -9,10 +10,10 @@
 	</field>
 	<field>
 		<position>2</position>
-		<name>Window movement</name>
+		<name>Electric</name>
 		<minValue>0</minValue>
-		<maxValue>1</maxValue>
-		<unit/>
+		<maxValue>1000</maxValue>
+		<unit>W</unit>
 	<field>
 		<position>3</position>
 		<name>ID</name>
@@ -20,4 +21,4 @@
 		<maxValue>1000</maxValue>
 		<unit/>
 	</field>
-</windowMovementModel>
+</electricModel>

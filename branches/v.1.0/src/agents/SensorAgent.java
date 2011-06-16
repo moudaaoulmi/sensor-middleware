@@ -11,6 +11,13 @@ public class SensorAgent extends Agent
 	private Codec codec 		= new SLCodec();
 	private Ontology ontology 	= SensorsOntology.getInstace();
 	
+	
+	
+	public SensorAgent( String configFile )
+	{
+		
+	}
+	
 	public void setup()
 	{
 		
