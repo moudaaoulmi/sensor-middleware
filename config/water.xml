@@ -1,4 +1,5 @@
-<humidityModel>
+<?xml version="1.0" encoding="UTF-8"?>
+<waterModel>
 	<fieldNumber>3</fieldNumber>
 	<field>
 		<position>1</position>
@@ -9,10 +10,11 @@
 	</field>
 	<field>
 		<position>2</position>
-		<name>Humididty</name>
+		<name>Water debit</name>
 		<minValue>0</minValue>
-		<maxValue>100</maxValue>
-		<unit/>
+		<maxValue>1000</maxValue>
+		<unit>m3/h</unit>
+	</field>
 	<field>
 		<position>3</position>
 		<name>ID</name>
@@ -20,4 +22,4 @@
 		<maxValue>1000</maxValue>
 		<unit/>
 	</field>
-</humidityModel>
+</waterModel>

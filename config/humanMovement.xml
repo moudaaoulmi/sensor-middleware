@@ -1,4 +1,5 @@
-<temperatureModel>
+<?xml version="1.0" encoding="UTF-8"?>
+<doorMovementModel>
 	<fieldNumber>3</fieldNumber>
 	<field>
 		<position>1</position>
@@ -9,9 +10,9 @@
 	</field>
 	<field>
 		<position>2</position>
-		<name>Temperature</name>
-		<minValue>-50</minValue>
-		<maxValue>100</maxValue>
+		<name>Time</name>
+		<minValue>0</minValue>
+		<maxValue>89400</maxValue>
 		<unit/>
 	<field>
 		<position>3</position>
@@ -20,4 +21,4 @@
 		<maxValue>1000</maxValue>
 		<unit/>
 	</field>
-</temperatureModel>
+</doorMovementModel>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ignoreFilters>
+	<idFilter>
+		<id>2</id>
+		<id>4</id>
+	</idFilter>
+	<sensorType>
+		<type>doorMovement</type>
+	</sensorType>
+</ignoreFilters>
