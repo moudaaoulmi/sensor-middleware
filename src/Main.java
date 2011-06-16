@@ -5,6 +5,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -37,14 +38,21 @@ public class Main {
 			DocumentBuilder db 			= dbf.newDocumentBuilder();
 			filters			= db.parse( file );
 
-			NodeList nodeList = filters.getElementsByTagName("id");
+			NodeList idNodeList = filters.getElementsByTagName("id");
+			NodeList typeNodeList = filters.getElementsByTagName("type");
 			
-			for (int i = 0; i < nodeList.getLength(); i++)
+			for (int i = 0; i < idNodeList.getLength(); i++)
 			{
-				Node node = nodeList.item( i );
+				Element node = (Element) idNodeList.item( i );
 				
-				if (node.getNodeType() == Node.ELEMENT_NODE )
-					System.out.println( node.getNodeValue() );
+				System.out.println( node.getFirstChild().getNodeValue() );
+			}
+			
+			for (int i = 0; i < typeNodeList.getLength(); i++)
+			{
+				Element node = (Element) typeNodeList.item( i );
+				
+				System.out.println( node.getFirstChild().getNodeValue() );
 			}
 		}
 		catch (Exception e) 
