@@ -37,6 +37,8 @@ public class DataStreamManagerBehaviour extends CyclicBehaviour
                {
             	   if ( action instanceof SensorDataRecived )
             	   {
+            		   //  create agent and create a factory for agent behaviour according to 
+            		   // sensor type.
             		   Sensor sensor = ((SensorDataRecived) action).getSensor();
             		   System.out.println("Sensor type: "+sensor.getType());
             	   }

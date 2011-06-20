@@ -10,7 +10,7 @@
 	</field>
 	<field>
 		<position>2</position>
-		<name>Time</name>
+		<name>Movement</name>
 		<minValue>0</minValue>
 		<maxValue>1</maxValue>
 		<unit/>

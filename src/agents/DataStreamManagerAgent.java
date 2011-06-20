@@ -14,6 +14,7 @@ import org.w3c.dom.NodeList;
 
 import behaviours.DataStreamManagerBehaviour;
 import ontology.SensorsOntology;
+import ontology.concepts.sensors.Sensor;
 import jade.content.lang.Codec;
 import jade.content.lang.sl.SLCodec;
 import jade.content.onto.Ontology;
@@ -26,6 +27,10 @@ public class DataStreamManagerAgent extends Agent
 	protected List<Integer> filteredIDs;
 	protected List<String> filteredTypes;
 	
+	protected List<Sensor> sensorsDataBuffer;
+	protected List<Sensor> interpretedDataBuffer;
+	protected List<Sensor> aggregatedDataBuffer;
+	
 	private Codec codec 		= new SLCodec();
 	private Ontology ontology 	= SensorsOntology.getInstace();
 	
@@ -33,8 +38,8 @@ public class DataStreamManagerAgent extends Agent
 	{
 		sensors = new LinkedList<SensorAgent>();
 		
-		getContentManager().registerLanguage(codec);
-		getContentManager().registerOntology(ontology);
+		getContentManager().registerLanguage( codec );
+		getContentManager().registerOntology( ontology );
 		
 		try
 		{

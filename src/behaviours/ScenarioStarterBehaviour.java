@@ -17,7 +17,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import ontology.SensorsOntology;
 import ontology.actions.SensorDataRecived;
-import ontology.concepts.sensors.DummySensorsFactory;
 import ontology.concepts.sensors.ISensor;
 import ontology.concepts.sensors.Sensor;
 
@@ -25,6 +24,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import utils.DummySensorsFactory;
 
 public class ScenarioStarterBehaviour extends Behaviour
 {
