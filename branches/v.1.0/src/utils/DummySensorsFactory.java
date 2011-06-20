@@ -1,7 +1,19 @@
-package ontology.concepts.sensors;
+package utils;
 
 import java.awt.font.NumericShaper;
 import java.util.ArrayList;
+
+import ontology.concepts.sensors.DoorMovementSensor;
+import ontology.concepts.sensors.ElectricSensor;
+import ontology.concepts.sensors.GasSensor;
+import ontology.concepts.sensors.HumanMovementSensor;
+import ontology.concepts.sensors.HumiditySensor;
+import ontology.concepts.sensors.ISensor;
+import ontology.concepts.sensors.LightSensor;
+import ontology.concepts.sensors.RFIDSensor;
+import ontology.concepts.sensors.TemperatureSensor;
+import ontology.concepts.sensors.WaterSensor;
+import ontology.concepts.sensors.WindowMovementSensor;
 
 import org.omg.CORBA.INTERNAL;
 import org.w3c.dom.Element;
@@ -63,7 +75,18 @@ public class DummySensorsFactory
 		{
 			sensor = new WindowMovementSensor();
 		}
-		
+		else if ( sensorType.equals( SensorsTypes.RFID))
+		{
+			sensor = new RFIDSensor();
+		}
+		else if ( sensorType.equals( SensorsTypes.GAS))
+		{
+			sensor = new GasSensor();
+		}
+		else if ( sensorType.equals( SensorsTypes.WATER))
+		{
+			sensor = new WaterSensor();
+		}
 		sensor.setType(sensorType);
 		sensor.setIdSensor( Integer.parseInt(sensorId) );
 		sensor.setValue(value);

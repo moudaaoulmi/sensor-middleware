@@ -1,4 +1,4 @@
-package ontology.concepts.sensors;
+package utils;
 
 public class SensorsTypes 
 {
