@@ -87,6 +87,7 @@ public class DummySensorsFactory
 		{
 			sensor = new WaterSensor();
 		}
+	
 		sensor.setType(sensorType);
 		sensor.setIdSensor( Integer.parseInt(sensorId) );
 		sensor.setValue(value);

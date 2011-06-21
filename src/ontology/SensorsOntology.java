@@ -7,7 +7,7 @@ import jade.content.onto.Ontology;
 
 public class SensorsOntology extends BeanOntology 
 {
-	public static final String ONTOLOGY_NAME = "Simple-Ontology";
+	public static final String ONTOLOGY_NAME = "SensorsOntology";
 	
 	private static Ontology theInstance = new SensorsOntology(ONTOLOGY_NAME); 
 	
