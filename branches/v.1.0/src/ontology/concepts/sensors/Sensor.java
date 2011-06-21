@@ -40,7 +40,7 @@ public abstract class Sensor implements ISensor, Concept
 		return idSensor;
 	}
 	
-	public void setIdSensor( int idSensor)
+	public void setIdSensor( int idSensor )
 	{
 		this.idSensor = idSensor;
 	}

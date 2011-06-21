@@ -1,10 +1,14 @@
 package agents;
 
-import ontology.SensorsOntology;
+import java.util.LinkedList;
+import java.util.List;
+
 import jade.content.lang.Codec;
 import jade.content.lang.sl.SLCodec;
 import jade.content.onto.Ontology;
 import jade.core.Agent;
+import ontology.SensorsOntology;
+import ontology.concepts.sensors.Sensor;
 
 public class SensorAgent extends Agent
 {
@@ -23,17 +27,44 @@ public class SensorAgent extends Agent
 	protected Integer minId;
 	protected Integer maxId;
 	
+	protected List<Sensor> data;
+	
+	public List<Sensor> getData()
+	{
+		return data;
+	}
+
+
+	public void setData(List<Sensor> data)
+	{
+		this.data = data;
+	}
+
+
 	public SensorAgent( String configFile )
 	{
 		parseConfigXML();
+		
+		data = new LinkedList<Sensor>();
 	}
 	
 
 	public void setup()
 	{
-		
+		getContentManager().registerLanguage( codec );
+		getContentManager().registerOntology( ontology );
 	}
 
+	public Integer getId()
+	{
+		return idSensor;
+	}
+
+	public void setId(Integer idSensor)
+	{
+		this.idSensor = idSensor;
+	}
+	
 	protected void parseConfigXML()
 	{
 		// TODO Auto-generated method stub

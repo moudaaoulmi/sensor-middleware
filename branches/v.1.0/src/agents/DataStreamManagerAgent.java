@@ -1,24 +1,29 @@
 package agents;
 
+import jade.content.lang.Codec;
+import jade.content.lang.sl.SLCodec;
+import jade.content.onto.Ontology;
+import jade.core.Agent;
+import jade.wrapper.AgentController;
+import jade.wrapper.ContainerController;
+import jade.wrapper.ControllerException;
+import jade.wrapper.StaleProxyException;
+
 import java.io.File;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import ontology.SensorsOntology;
+import ontology.concepts.sensors.Sensor;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import behaviours.DataStreamManagerBehaviour;
-import ontology.SensorsOntology;
-import ontology.concepts.sensors.Sensor;
-import jade.content.lang.Codec;
-import jade.content.lang.sl.SLCodec;
-import jade.content.onto.Ontology;
-import jade.core.Agent;
 
 public class DataStreamManagerAgent extends Agent
 {
@@ -78,4 +83,55 @@ public class DataStreamManagerAgent extends Agent
 		addBehaviour( new DataStreamManagerBehaviour() );
 	}
 	
+	public SensorAgent getSensorAgentByID( Integer id )
+	{
+		for (SensorAgent sensorAgent : sensors)
+		{
+			if (sensorAgent.getId() == id)
+				return sensorAgent;
+		}
+		return null;
+	}
+	
+	public void addSensorAgent( SensorAgent sa )
+	{
+		ContainerController home = getContainerController();
+		AgentController agentController;
+		try
+		{
+			agentController = home.acceptNewAgent("sensorAgent"+sa.getId(), sa);
+			agentController.start();
+		} catch (StaleProxyException e1)
+		{
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		sensors.add(sa);
+	}
+	
+	public void removeSensorAgent( Integer id )
+	{
+		ContainerController home = getContainerController();
+		AgentController agentController;
+		
+		for (SensorAgent sa : sensors )
+		{
+			if ( sa.getId() == id )
+			{
+				sensors.remove(sa);
+
+				try
+				{
+					agentController = home.getAgent( sa.getLocalName() );
+					agentController.kill();
+				} 
+				catch (ControllerException e)
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
 }
