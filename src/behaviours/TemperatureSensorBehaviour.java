@@ -35,7 +35,7 @@ public class TemperatureSensorBehaviour extends CyclicBehaviour
 		{
 			content = myAgent.getContentManager().extractContent(msg);
 			Concept action = ((Action)content).getAction();
-			System.out.println("Senzorul de temperatura a primit datele");
+
 			switch (msg.getPerformative()) 
             {
                case (ACLMessage.INFORM ):
