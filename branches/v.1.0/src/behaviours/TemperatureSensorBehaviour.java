@@ -1,10 +1,5 @@
 package behaviours;
 
-import ontology.SensorsOntology;
-import ontology.actions.InterpretData;
-import ontology.actions.SensorDataRecived;
-import ontology.concepts.sensors.Sensor;
-import ontology.concepts.sensors.TemperatureSensor;
 import jade.content.Concept;
 import jade.content.ContentElement;
 import jade.content.lang.Codec;
@@ -14,9 +9,13 @@ import jade.content.onto.Ontology;
 import jade.content.onto.OntologyException;
 import jade.content.onto.UngroundedException;
 import jade.content.onto.basic.Action;
-import jade.core.behaviours.Behaviour;
+import jade.core.AID;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
+import ontology.SensorsOntology;
+import ontology.actions.InterpretData;
+import ontology.actions.StoreInterpretedData;
+import ontology.concepts.sensors.TemperatureSensor;
 
 public class TemperatureSensorBehaviour extends CyclicBehaviour
 {
@@ -61,6 +60,17 @@ public class TemperatureSensorBehaviour extends CyclicBehaviour
 			e.printStackTrace();
 		}
 	}
+	
+	protected boolean isDataValid( TemperatureSensor sensor )
+	{
+		
+		return false;
+	}
+	
+	protected String interpretDat( TemperatureSensor sensor )
+	{
+		return "cald";
+	}
 
 	protected void handleSensorData(TemperatureSensor sensor)
 	{
@@ -68,6 +78,33 @@ public class TemperatureSensorBehaviour extends CyclicBehaviour
 		System.out.println("Datele despre temperatura au fost validate");
 		//data interpretation
 		System.out.println("Datele despre temperatura au fost interpretates");
+		
+		AID receiverAID = new AID( "DataStreamManagerAgent", AID.ISLOCALNAME);
+		
+		ACLMessage message = new ACLMessage( ACLMessage.INFORM );
+		
+		message.setLanguage( codec.getName() );
+		message.setOntology( ontology.getName() );
+		message.addReceiver(receiverAID);
+		
+		StoreInterpretedData sid = new StoreInterpretedData();
+		sid.setSensor( sensor );
+		
+		try
+		{
+			myAgent.getContentManager().fillContent(message, new Action(receiverAID, sid));
+			myAgent.send( message );
+		} 
+		catch (CodecException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		catch (OntologyException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 }

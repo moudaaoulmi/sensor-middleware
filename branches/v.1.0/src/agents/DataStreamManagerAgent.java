@@ -41,7 +41,11 @@ public class DataStreamManagerAgent extends Agent
 	
 	public void setup()
 	{
-		sensors = new LinkedList<SensorAgent>();
+		sensors	= new LinkedList<SensorAgent>();
+		
+		sensorsDataBuffer 		= new LinkedList<Sensor>();
+		interpretedDataBuffer 	= new LinkedList<Sensor>();
+		aggregatedDataBuffer 	= new LinkedList<Sensor>();
 		
 		getContentManager().registerLanguage( codec );
 		getContentManager().registerOntology( ontology );
@@ -133,5 +137,15 @@ public class DataStreamManagerAgent extends Agent
 				}
 			}
 		}
+	}
+	
+	public List<Sensor> getInterpretedDataBuffer() 
+	{
+		return interpretedDataBuffer;
+	}
+
+	public List<Sensor> getAggregatedDataBuffer() 
+	{
+		return aggregatedDataBuffer;
 	}
 }

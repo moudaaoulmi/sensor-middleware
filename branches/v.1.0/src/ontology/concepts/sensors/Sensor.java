@@ -1,5 +1,8 @@
 package ontology.concepts.sensors;
 
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 import jade.content.Concept;
 
 
@@ -7,7 +10,19 @@ public abstract class Sensor implements ISensor, Concept
 {
 	protected int idSensor;
 	protected int value;
+	protected Date time;
 	
+	
+	public Date getTime() 
+	{
+		return time;
+	}
+
+	public void setTime(Date time) 
+	{
+		this.time = time;
+	}
+
 	public int getValue()
 	{
 		return value;
