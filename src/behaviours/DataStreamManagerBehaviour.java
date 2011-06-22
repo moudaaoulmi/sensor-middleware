@@ -18,6 +18,7 @@ import jade.lang.acl.ACLMessage;
 import ontology.SensorsOntology;
 import ontology.actions.InterpretData;
 import ontology.actions.SensorDataRecived;
+import ontology.actions.StoreInterpretedData;
 import ontology.concepts.sensors.ISensor;
 import ontology.concepts.sensors.Sensor;
 import utils.AgentFactory;
@@ -52,6 +53,13 @@ public class DataStreamManagerBehaviour extends CyclicBehaviour
             		   Sensor sensor = ((SensorDataRecived) action).getSensor();
             		   
             		   handleSensorDataRecived( sensor );
+            	   }
+            	   
+            	   if ( action instanceof StoreInterpretedData )
+            	   {
+            		   Sensor sensor = ((StoreInterpretedData) action).getSensor();
+            		   
+            		   handleStoreInterpretedData( sensor );
             	   }
                }
             }
@@ -117,5 +125,14 @@ public class DataStreamManagerBehaviour extends CyclicBehaviour
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	protected void handleStoreInterpretedData(Sensor sensor) 
+	{
+		// TODO Auto-generated method stub
+		DataStreamManagerAgent dsma = getDataStreamManager();
+		
+		dsma.getInterpretedDataBuffer().add(sensor);
+		
 	}
 }
