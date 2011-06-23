@@ -1,5 +1,6 @@
 package behaviours;
 
+import agents.SensorAgent;
 import jade.content.Concept;
 import jade.content.ContentElement;
 import jade.content.lang.Codec;
@@ -63,48 +64,97 @@ public class TemperatureSensorBehaviour extends CyclicBehaviour
 	
 	protected boolean isDataValid( TemperatureSensor sensor )
 	{
+		SensorAgent sa = (SensorAgent)myAgent;
+		if ( sensor.getIdSensor() < sa.getMinId() || sensor.getIdSensor() > sa.getMaxId() )
+			return false;
+		if ( sensor.getValue() < sa.getMinValue() || sensor.getValue() > sa.getMaxValue())
+			return false;
 		
-		return false;
+		return true;
 	}
 	
-	protected String interpretDat( TemperatureSensor sensor )
+	protected String interpretData( TemperatureSensor sensor )
 	{
-		return "cald";
+		if ( sensor.getValue() >  30 )
+			return "foarte cald";
+		if ( sensor.getValue() > 18 && sensor.getValue() < 30 )
+			return "cald";
+		if ( sensor.getValue() > 0 && sensor.getValue() < 18 )
+			return "frig";
+		if ( sensor.getValue() < 0 )
+			return "foarte frig";
+		return "undefined";
 	}
 
 	protected void handleSensorData(TemperatureSensor sensor)
 	{
 		//validate data
-		System.out.println("Datele despre temperatura au fost validate");
-		//data interpretation
-		System.out.println("Datele despre temperatura au fost interpretates");
+		SensorAgent sa = (SensorAgent)myAgent;
 		
-		AID receiverAID = new AID( "DataStreamManagerAgent", AID.ISLOCALNAME);
-		
-		ACLMessage message = new ACLMessage( ACLMessage.INFORM );
-		
-		message.setLanguage( codec.getName() );
-		message.setOntology( ontology.getName() );
-		message.addReceiver(receiverAID);
-		
-		StoreInterpretedData sid = new StoreInterpretedData();
-		sid.setSensor( sensor );
-		
-		try
+		if ( isDataValid(sensor) )
 		{
-			myAgent.getContentManager().fillContent(message, new Action(receiverAID, sid));
-			myAgent.send( message );
-		} 
-		catch (CodecException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
-		catch (OntologyException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			sensor.setInterpretedData( interpretData(sensor) );
+			sa.getData().add(sensor);
+			//data interpretation
+			AID receiverAID = new AID( "DataStreamManagerAgent", AID.ISLOCALNAME);
+			
+			ACLMessage message = new ACLMessage( ACLMessage.INFORM );
+			
+			message.setLanguage( codec.getName() );
+			message.setOntology( ontology.getName() );
+			message.addReceiver(receiverAID);
+			
+			StoreInterpretedData sid = new StoreInterpretedData();
+			sid.setSensor( sensor );
+			
+			try
+			{
+				myAgent.getContentManager().fillContent(message, new Action(receiverAID, sid));
+				myAgent.send( message );
+			} 
+			catch (CodecException e)
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
+			catch (OntologyException e)
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
+		else
+		{
+			// an error has occured in recived data
+			AID receiverAID = new AID( "DataStreamManagerAgent", AID.ISLOCALNAME);
+			
+			ACLMessage message = new ACLMessage( ACLMessage.INFORM );
+			
+			message.setLanguage( codec.getName() );
+			message.setOntology( ontology.getName() );
+			message.addReceiver(receiverAID);
+			
+			StoreInterpretedData sid = new StoreInterpretedData();
+			sid.setSensor( sensor );
+			
+			try
+			{
+				myAgent.getContentManager().fillContent(message, new Action(receiverAID, sid));
+				myAgent.send( message );
+			} 
+			catch (CodecException e)
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
+			catch (OntologyException e)
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		
 		
 	}
 }
