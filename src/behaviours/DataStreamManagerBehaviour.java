@@ -17,6 +17,7 @@ import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
 import ontology.SensorsOntology;
 import ontology.actions.InterpretData;
+import ontology.actions.SaveDataToDB;
 import ontology.actions.SensorDataRecived;
 import ontology.actions.StoreInterpretedData;
 import ontology.concepts.sensors.ISensor;
@@ -25,8 +26,12 @@ import utils.AgentFactory;
 
 public class DataStreamManagerBehaviour extends CyclicBehaviour
 {
+	public final long DATA_KEEPING_TIME = 30000;
+	
 	private Codec codec 		= new SLCodec();
 	private Ontology ontology 	= SensorsOntology.getInstace();
+	
+	protected long sensorsDataBufferTime = 0; // keep the sensors data in memory for 30 seconds
 	
 	@Override
 	public void action()
@@ -97,8 +102,10 @@ public class DataStreamManagerBehaviour extends CyclicBehaviour
 			dsma.addSensorAgent( sa );
 		}
 		
-		System.out.println("Sensor type: "+sensor.getType());
+		addSensorDataToBuffer( sensor );
 		
+		System.out.println("Sensor type: "+sensor.getType());
+	
 		AID receiverAID = new AID( sa.getLocalName(), AID.ISLOCALNAME);
 		
 		ACLMessage message = new ACLMessage( ACLMessage.INFORM );
@@ -127,12 +134,56 @@ public class DataStreamManagerBehaviour extends CyclicBehaviour
 		}
 	}
 	
+	protected void addSensorDataToBuffer(Sensor sensor)
+	{
+		// TODO Auto-generated method stub
+		DataStreamManagerAgent dsma = getDataStreamManager();
+		
+		if ( sensorsDataBufferTime == 0 )
+			sensorsDataBufferTime = System.currentTimeMillis();
+		
+		dsma.getSensorsDataBuffer().add(sensor);
+		
+		if ( sensorsDataBufferTime + DATA_KEEPING_TIME < System.currentTimeMillis() )
+		{
+			sensorsDataBufferTime = System.currentTimeMillis();
+			dsma.getSensorsDataBuffer().removeAll(null);
+		}
+	}
+
 	protected void handleStoreInterpretedData(Sensor sensor) 
 	{
 		// TODO Auto-generated method stub
 		DataStreamManagerAgent dsma = getDataStreamManager();
 		
 		dsma.getInterpretedDataBuffer().add(sensor);
+		
+		AID receiverAID = new AID( "DatabaseManagerAgent", AID.ISLOCALNAME);
+		
+		ACLMessage message = new ACLMessage( ACLMessage.INFORM );
+		
+		message.setLanguage( codec.getName() );
+		message.setOntology( ontology.getName() );
+		message.addReceiver(receiverAID);
+		
+		SaveDataToDB sdr = new SaveDataToDB();
+		sdr.setSql(sensor.toInsertSQL());
+		
+		try
+		{
+			myAgent.getContentManager().fillContent(message, new Action(receiverAID, sdr));
+			myAgent.send( message );
+		} 
+		catch (CodecException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		catch (OntologyException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 }

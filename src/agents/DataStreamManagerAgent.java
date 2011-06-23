@@ -148,4 +148,9 @@ public class DataStreamManagerAgent extends Agent
 	{
 		return aggregatedDataBuffer;
 	}
+
+	public List<Sensor> getSensorsDataBuffer()
+	{
+		return sensorsDataBuffer;
+	}
 }

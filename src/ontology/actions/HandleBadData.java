@@ -1,10 +1,9 @@
 package ontology.actions;
 
-import ontology.concepts.SensorData;
+import jade.content.AgentAction;
 import ontology.concepts.sensors.Sensor;
-import jade.content.Concept;
 
-public class HandleBadData implements Concept
+public class HandleBadData implements AgentAction
 {
 	protected Sensor sensor;
 	
