@@ -3,6 +3,8 @@ package ontology.concepts.sensors;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+import utils.DateUtil;
+
 import jade.content.Concept;
 
 
@@ -68,5 +70,15 @@ public abstract class Sensor implements ISensor, Concept
 	public void setIdSensor( int idSensor )
 	{
 		this.idSensor = idSensor;
+	}
+	
+	public String toInsertSQL()
+	{
+		String sql = "";
+		
+		sql = "INSERT INTO sensors_data (`idSensor`, `date`, `value`, `type`) VALUES " +
+				"('"+idSensor+"', '"+DateUtil.toMySQLDate(time)+"', '"+value+"', '"+type+"' )";
+		
+		return sql;
 	}
 }

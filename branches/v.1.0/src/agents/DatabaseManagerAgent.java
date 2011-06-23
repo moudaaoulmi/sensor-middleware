@@ -1,5 +1,6 @@
 package agents;
 
+import behaviours.DBManagerBehaviour;
 import ontology.SensorsOntology;
 import jade.content.lang.Codec;
 import jade.content.lang.sl.SLCodec;
@@ -16,6 +17,7 @@ public class DatabaseManagerAgent extends Agent
 		getContentManager().registerLanguage(codec);
 		getContentManager().registerOntology(ontology);
 		
+		addBehaviour( new DBManagerBehaviour());
 	}
 	
 }

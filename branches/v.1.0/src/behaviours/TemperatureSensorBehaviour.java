@@ -65,10 +65,10 @@ public class TemperatureSensorBehaviour extends CyclicBehaviour
 	protected boolean isDataValid( TemperatureSensor sensor )
 	{
 		SensorAgent sa = (SensorAgent)myAgent;
-		if ( sensor.getIdSensor() < sa.getMinId() || sensor.getIdSensor() > sa.getMaxId() )
-			return false;
-		if ( sensor.getValue() < sa.getMinValue() || sensor.getValue() > sa.getMaxValue())
-			return false;
+//		if ( sensor.getIdSensor() < sa.getMinId() || sensor.getIdSensor() > sa.getMaxId() )
+//			return false;
+//		if ( sensor.getValue() < sa.getMinValue() || sensor.getValue() > sa.getMaxValue())
+//			return false;
 		
 		return true;
 	}
