@@ -11,11 +11,21 @@ public abstract class Sensor implements ISensor, Concept
 	protected int idSensor;
 	protected int value;
 	protected Date time;
-	
+	protected String interpretedData;
 	
 	public Date getTime() 
 	{
 		return time;
+	}
+
+	public String getInterpretedData()
+	{
+		return interpretedData;
+	}
+
+	public void setInterpretedData(String interpretedData)
+	{
+		this.interpretedData = interpretedData;
 	}
 
 	public void setTime(Date time) 
