@@ -68,8 +68,8 @@ public class DBManagerBehaviour extends CyclicBehaviour
             	   {
             		   //  create agent and create a factory for agent behaviour according to 
             		   // sensor type.
-            		   String sql = ((SaveDataToDB) action).getSql();
-            		   dbConn.executeQuery(conn, sql);
+            		   Sensor sql = ((SaveDataToDB) action).getSql();
+            		   dbConn.executeInsertQuery( conn, sql.toInsertSQL() );
             	   }
                }
             }

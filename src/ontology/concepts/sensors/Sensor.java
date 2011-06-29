@@ -1,5 +1,7 @@
 package ontology.concepts.sensors;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -14,6 +16,14 @@ public abstract class Sensor implements ISensor, Concept
 	protected int value;
 	protected Date time;
 	protected String interpretedData;
+	
+	public Sensor()
+	{
+		Calendar currentDate 		= Calendar.getInstance();
+		Date dateNow 				= new Date( currentDate.getTimeInMillis() );
+		
+		this.time = dateNow;
+	}
 	
 	public Date getTime() 
 	{

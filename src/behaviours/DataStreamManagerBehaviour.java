@@ -167,7 +167,7 @@ public class DataStreamManagerBehaviour extends CyclicBehaviour
 		message.addReceiver(receiverAID);
 		
 		SaveDataToDB sdr = new SaveDataToDB();
-		sdr.setSql(sensor.toInsertSQL());
+		sdr.setSql(sensor);
 		
 		try
 		{
