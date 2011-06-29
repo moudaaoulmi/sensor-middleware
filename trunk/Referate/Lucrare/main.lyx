@@ -180,7 +180,7 @@ status open
  
 \series bold
 \size huge
-Modele multi agent senzitive la context
+Middleware multi agent senzitiv la context
 \begin_inset ERT
 status open
 
@@ -276,8 +276,6 @@ Prof.
  Asist.
  Drd.
  Ovidiu Aritoni
-\shape default
- 
 \end_layout
 
 \begin_layout Standard
@@ -285,7 +283,7 @@ Prof.
 
 \size large
 \emph on
-Available at:
+Disponibilă la adresa:
 \emph default
  
 \begin_inset ERT
@@ -311,7 +309,7 @@ status collapsed
 
 \end_inset
 
-http://bogdanmanate.com/docs
+http://code.google.com/p/sensor-middleware/
 \begin_inset ERT
 status collapsed
 
@@ -333,7 +331,7 @@ status collapsed
 
 \end_inset
 
-http://bogdanmanate.com/docs
+http://code.google.com/p/sensor-middleware/
 \begin_inset ERT
 status collapsed
 
@@ -474,16 +472,238 @@ LatexCommand tableofcontents
 \begin_inset Newpage newpage
 \end_inset
 
+
+\end_layout
+
+\begin_layout Part
+Introducere
+\end_layout
+
+\begin_layout Chapter*
+Introducere
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Această lucrare de dizertaţie are ca scop dezvoltarea unui software middleware
+ cu funcţii de citire, interpretare, agregare şi stocare a datele provenite
+ de la senzori care se află într-un anumit mediu.
  
-\begin_inset FloatList table
+\end_layout
 
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
 \end_inset
 
 
-\begin_inset Newpage newpage
+\begin_inset space ~
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Lucrarea este structurată în patru părţi, care sunt împărţite la rândul
+ lor în capitole, după cum urmează:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+În prima parte este prezentat scopul lucrării şi structura acesteia, cât
+ şi o scurtă prezentare a fiecărei părţi.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Partea a doua a lucrării, numită 
+\series bold
+Modele multi-agent pentru sisteme ambientale inteligente
+\series default
+ este împărţită în trei capitole.
+ Primul capitol, numit 
+\series bold
+Ingineria sistemelor ambientale inteligente
+\series default
+, prezintă principalele probleme întâlnite în dezvoltarea sistemelor ambientale
+ inteligente.
+ În acest capitol se abordează incertitudinea datelor provenite de la senzori,
+ metode de detectare şi acţiune.
+ Al doilea capitol, numit 
+\series bold
+Modele multi-agent pentru sisteme ambientale inteligente
+\series default
+, conţine o descriere generală a sistemelor multi-agent.
+ Capitolul al treilea, 
+\series bold
+Metodologii de dezvoltare a sistemelor multi-agent
+\series default
+, conţine informaţii generale despre metodologiile de dezvoltare a sistemelor
+ multi-agent şi prezintă toate etapele de dezvoltare a unei metodologi particula
+re.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Partea a treia a lucrării, numită Arhitecturi multi-agent, este împărţită,
+ de asemenea, în trei capitole: Modelul arhitectural blackboard, Agenţi
+ BDI, WADE.
+ Această parte a lucrării conţine majoritatea aspectelor teoretice care
+ stau la baza proiectării şi dezvoltării middleware-ului.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Partea a patra a lucrării, numită 
+\series bold
+Arhitectura middleware-ului
+\series default
+, prezintă arhitectura middleware-ului propriu-zis, modul de dezvoltare,
+ cât şi explicaţii privind rolul fiecărei structuri majore din arhitectură.
+ De asemenea în această ultimă parte a lucrării pe lângă modul de utilizare,
+ este prezentat şi modul în care acest middleware poate fi extins în viitor.
 \end_layout
 
 \begin_layout Part
@@ -646,8 +866,7 @@ status open
 \lang english
 \begin_inset Graphics
 	filename matchSensorToTask.jpg
-	width 15cm
-	height 20cm
+	scale 70
 
 \end_inset
 
@@ -4345,6 +4564,7 @@ status open
 \lang english
 \begin_inset Graphics
 	filename structura intentie runtime.jpg
+	scale 80
 
 \end_inset
 
@@ -5003,8 +5223,7 @@ status open
 \lang english
 \begin_inset Graphics
 	filename WeMash.jpg
-	width 15cm
-	height 20cm
+	scale 80
 
 \end_inset
 
@@ -5084,8 +5303,7 @@ status open
 \lang english
 \begin_inset Graphics
 	filename WeMashEngine.jpg
-	width 15cm
-	height 20cm
+	scale 80
 
 \end_inset
 
@@ -5214,8 +5432,6 @@ status open
 \lang english
 \begin_inset Graphics
 	filename WADE_engine.jpg
-	width 15cm
-	height 20cm
 
 \end_inset
 
@@ -5313,6 +5529,1109 @@ ilor în cadrul containerului pe care îl controlează.
 \lang english
 Workflow Engine Agents - agenţi de acest tip au capacitatea de a executa
  propriile fluxuri de lucru.
+\end_layout
+
+\begin_layout Part
+
+\lang english
+Arhitectura middleware-ului
+\end_layout
+
+\begin_layout Chapter
+
+\lang english
+Prezentare arhitectură
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Dezvoltarea acestui middleware a fost realizată pornind de la de la un prototip
+ multi-agent realizat în cadrul proiectului DEHEMS, care avea ca scop citirea
+ datelor de la senzori de curent şi stocarea lor într-o bază de date.
+ 
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Prezentarea prototipului
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Prototipul iniţial folosea agenţi pentru citire şi pentru stocare, fiecare
+ senzor fiind administrat de un agent care realiza citirea şi punea datele
+ la dispoziţia unui agent care se avea ca sarcină stocarea acestor date
+ în baza de date, dupa cum este prezentat în Figura
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:prototypeUsecase"
+
+\end_inset
+
+.
+ Agenţii de tipul SensorAgentManager aveau ca sarcină citirea şi validarea
+ datelor, care după pasul de validare erau transmise agentului care se ocupa
+ de stocarea lor.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename TheOwlSystem.jpg
+	scale 65
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:owlSystem"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Senzori OWL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Senzorii se conectau pe sursa de curent, la care sunt conectaţi consumatorii
+ pentru care se doreşte stocarea datelor referitoare la consumul de energie
+ electrică.
+ Senzorii (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:owlSystem"
+
+\end_inset
+
+ ) citesc datele referitoare la consumul de energie electrică şi transmit
+ datele către un adaptor wireless care se conectează la portul USB al unui
+ calculator pe care rulează aplicaţia.
+ Citirea datelor de pe portul serial se face cu o aplicatie server realizată
+ in C# care transmite mai departe datele pe portul 12745.
+ Aplicaţia conţine două tipuri de agenţi: SensorManagerAgent, care se ocupă
+ de citirea datelor de la aplicaţia server şi DatabaseManagerAgent care
+ se ocupă de inserarea datelor care le primeşte de la agenţii de tipul SensorMan
+agerAgent.
+ Fiecare agent de tipul DatabaseManagerAgent se ocupă de o singură bază
+ de date.
+ Figura 2 prezintă modul în care agenţii interacţionează.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename AgentUseCase.jpg
+	scale 60
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:prototypeUsecase"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Modul de funcţionare al prototipului
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+SensorManagerAgent
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Agenţii de acest tip se conecteză la adaptorul wireless folosind o aplicaţie
+ C# lansată in execuţie la iniţializarea agenţilor, care face citirea propriu-zi
+să a datelor, iar datele sunt făcute publice utilizând o conexiune pe socket.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Datele primite de la senzori au următorul format:
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\lang english
+DATA=adresă_senzor,amperi,amperi_acumulaţi,data.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+adresă_senzor - reprezintă adresa senzorului conectat la adaptorul wireless,
+ sub formă de număr întreg.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+amperi - numărul de amperi citiţi la momentul actual.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+amperi_acumulaţi - numărul de amperi acumulaţi de la pornirea aplicaţiei.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+data - momentul la care a fost facută citirea.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Acest tip de agent se inţializează cu un comportament de tipul ReadDataBehaviour.
+ Clasa care descrie acest tip de comportament moşteneşte proprietăţiile
+ clasei CyclicBehaviour, deoarece citirea datelor trebuie facută continuu.
+ Comportamentul ReadDataBehaviour agreghează datele provenite de la server
+ prin intermediul aplicaţiei server realizată în C#, iar după ce datele
+ sunt validate şi procesate acestea sunt trimise către un agent de tipul
+ DatabaseManagerAgent.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+DatabaseManagerAgent
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\lang english
+Aplicaţia instanţiază un singur agent de acest tip pentru fiecare bază de
+ date folosită.
+ Acestui tip de agent i se adaugă la iniţializare un comportament de tipul
+ SaveDataBehaviour.
+ Acest tip de comportament extinde de asemenea comportamentul de tip CyclicBehav
+iour care se ocupă de salvarea datele primite de la agenţii de tip SensorManager
+Agent.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Obiectele folosite sunt prezentate în Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:diagClasePrototip"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename AgentsClass.jpg
+	scale 50
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:diagClasePrototip"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Diagrama de clase a prototipului
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Arhitectura
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Middleware-ul foloseşte o arhitectură blackboard, rolul blackboard-ului
+ fiind luat de un agent de tipul DatastreamManagerAgent.
+ Acest tip de agent administrează toate datele care sunt folosite de middleware,
+ fiind locul de stocare temporară a bazei de cunoştiinţe.
+ Cunoştiinţele stocate în blackboard sunt actualizate constant de către
+ agenţii de tip senzor care citesc informaţii de la senzorii asignaţi (
+ Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:middlewareUsecase"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Fiecare agent de tip senzor reprezintă o sursă de cunoştiinţe pentru agentul
+ de tipul DatastreamManagerAgent.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Comunicarea între agenţi este realizată prin mesaje care conţin o ontologie
+ predefinită, care descrie obiectele cu care interacţionează sistemul.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename middlewareUseCase.jpg
+	scale 50
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:middlewareUsecase"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Modul de interacţiune al agenţilor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Middleware-ul execută trei tipuri de operaţii asupra datelor: validare,
+ interpretare, agregare ( Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:arhitectureLevel"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename arhitecture levels.jpg
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:arhitectureLevel"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Operaţii executate asupra datelor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+DatastreamManagerAgent
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Acest tip de agent stochează baza de cunoştiinţe a aplicaţiei reprezentată
+ de datele provenite de la senzori.
+ De asemenea acest tip de agent gestionează şi informaţii despre agenţii
+ de tip senzor care au fost instanţiaţi pe baza identificatorului unic al
+ senzorului.
+ Un senzor poate avea mapat doar un singur agent care este responsabil de
+ validarea datelor provenite de la la senzor, aplicarea de operatori pe
+ aceste date şi interpretarea lor.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+DatastreamManagerAgent conţine 3 atribute de tip listă care sunt folosite
+ ca depozite pentru sursele de cunoştiinţe.
+ În primul buffer agentul stochează datele provenite de la senzori fără
+ a fi prelucrate.
+ Acest buffer stochează datele pentru o periodă limitată la 30 de secunde.
+ După ce datele sunt citite de la senzori, DatastreamManagerAgent notifică
+ agenţii responsabili de gestionarea datelor, iar după ce datele au fost
+ validate şi interpretate acestea sunt stocate în al doilea buffer care
+ conţine doar datele interpretate.
+ Din al doilea buffer datele sunt preluate de un agent care se ocupă de
+ agregarea lor şi care după agregare notifică agentul DatastreamManagerAgent
+ să salveze aceste date în al treilea buffer.
+ Din acest al treilea buffer datele sunt preluate de agentul de tip DatabaseMana
+gerAgent care se ocupă de stocarea datelor într-o bază de date.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Acest tip de agent îşi încarcă la iniţializare un fişier XML (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:sensorsFilter"
+
+\end_inset
+
+) pe baza căruia poate să filtreze tipurile de senzori cu care interacţionează.
+ Filtrarea senzorilor se poate face atât după numărul de identificare unic
+ cât şi după tipul lor.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename sensorsFilter.jpg
+	scale 90
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:sensorsFilter"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Declararea filtrelor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+ScenarioAgent
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Acest agent simulează citirea datelor de la senzori.
+ Agentul ScenarioAgent poate fi înlocuit în practică cu un alt tip de agent
+ care efectuează citirea de datelor folosind folosind protocolul TCP/IP
+ (SocketManagerAgent) sau direct de la un dispozitiv conectat la maşina
+ pe care rulează middleware-ul (DeviceManagerAgent).
+ ScenarioAgent citeşte la iniţializare un fişier XML în care sunt stocate
+ datele care se presupun a fi citite de la senzori (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:scenarioEntrz"
+
+\end_inset
+
+).
+ Acest fişier conţine identificatorul unic al senzorului, tipul senzorului
+ şi identificatorul unic al zonei în care se află.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Pentru a simula cât mai realist citirea datelor, agentul de tip ScenarioAgent
+ introduce o pauză de o secundă după parcurgerea fiecarei ramure de tip
+ scenarioEntry a fişierului XML.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename scenarioEntry.jpg
+	scale 60
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:scenarioEntrz"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Exemplu de scenariu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+SensorAgent
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Acest tip de agent gestionează datele provenite de la un singur senzor ataşat
+ sistemului.
+ La nivelul acestui agent se efectuează validarea datelor citite de la senzor,
+ aplicarea anumitor operatori în funcţie de tipul senzorului şi interpretarea
+ datelor.
+ În funcţie de datele provenite, acest agent îi poate semnala agentului
+ care are rol de blackboard că datele au fost validate şi interpretate cu
+ succes sau îi poate semnala o eroare care va fi preluată apoi de ErrorDetectorA
+gent.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Pentru a permite o validare cât mai riguroasă a datelor pentru un tip specific
+ de senzor din sistem acest tip de agent îşi încarcă la iniţializare un
+ fişier XML care conţine constrângeri asupra datelor care sunt citite de
+ la senzor.
+ În Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:temperatureContraints"
+
+\end_inset
+
+ este prezentat un fişier specific senzorului de temperatură şi care conţine
+ constrângeri particulare ale acestui tip de senzor.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename temperatureConst.jpg
+	scale 80
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:temperatureContraints"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Constrângeri particulare ale senzorului de temperatură
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+DatabaseManagerAgent
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Acest tip de agent este folosit pentru stocarea datelor provenite de la
+ senzori într-o bază de date.
+ DatabaseManagerAgent stochează datele după ce acestea au fost interpretate
+ de către agenţii de tip SensorAgent, de asemenea stochează mesajele de
+ eroare semnalate de agentul de tip ErrorDetectorAgent şi rezultatele agregărilo
+r de date efectuate de către agentul DataAggregationAgent.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+În timpul execuţiei middleware-ului se lansează în execuţie o singură instanţă
+ a acestui agent, pentru a nu executa în paralel mai multe operaţii aspura
+ bazei de date.
+ Acest agent reţine datele într-o coadă de aşteptare şi le introduce în
+ baza de date în ordinea sosirii.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+DataAggregationAgent
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Acest agent reprezintă partea inteligentă a middleware-ului şi se ocupă
+ de agregarea datelor, care au fost în prealabil validate şi interpretate
+ de către agenţii de tip SensorAgent.
+ Acest agent interacţionează direct cu DatastreamManagerAgent pentru a prelua
+ datele interpretate.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Pentru a efectua agregări asupra datelor acest agent are adăugat un comportament
+ care conţine un motor de reguli JESS.
+ DataAggregationAgent încarcă în momentul iniţializări un fişier cu extensia
+ clp, care conţine regulile pe baza cărora vor fi efectuate agregări asupra
+ datelor.
+ Aceste reguli se pot modifica independent de sistem, în funcţie de contextul
+ care este urmărit.
+ Datele care sunt primite de la agentul cu rol de blackboard sunt introduse
+ ca fapte JESS.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+ErrorDetectorAgent
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Acest agent are ca rol detectarea erorilor apărute în timpul execuţiei middlewar
+e-ului.
+ Acest tip de agent poate să verifice erorile declanşate de agenţii care
+ se ocupă de citirea datelor de la senzori sau de comportamentele adăugate
+ acestora.
+ În cazul descoperirii unei erori acest agent îi comunică agentului DatastreamMa
+nagerAgent faptul că a fost semnalată o eroare, iar agentul DatastreamManagerAge
+nt dispune mai departe efectuarea unor operaţii sau salvarea erori într-o
+ tabelă de loguri pentru a putea fi tratată de către personalul care foloseşte
+ acest middleware.
+ 
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Concluzii
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Acest middleware a fost proiectat ţinându-se cont de modificabilitate şi
+ scalabilitate.
+ Datorită fişierelor XML care sunt încărcate la iniţializare de anumiţi
+ agenţi, utilizatorii pot modifica felul în care se efectuează constrăngeri
+ asupra datelor şi chiar regulile de agregare a datelor.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Datorită motorului de reguli JESS, middleware-ul prezintă un grad ridicat
+ de modificabilitate putând fi folosit pentru citirea şi agregarea datelor
+ de la senzori aflaţi în diferite medii ambientale.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Scalabilitatea este oferită de framework-ul JADE, care permite instanţierea
+ şi chiar migrarea agenţilor în containere situate pe alte sisteme decât
+ sistemul de bază, pe care rulează middleware-ul.
+ 
 \end_layout
 
 \begin_layout Standard
