@@ -1,17 +1,18 @@
 package ontology.actions;
 
+import ontology.concepts.sensors.Sensor;
 import jade.content.AgentAction;
 
 public class SaveDataToDB implements AgentAction
 {
-	protected String sql;
+	protected Sensor sql;
 
-	public String getSql()
+	public Sensor getSql()
 	{
 		return sql;
 	}
 
-	public void setSql(String sql)
+	public void setSql(Sensor sql)
 	{
 		this.sql = sql;
 	}

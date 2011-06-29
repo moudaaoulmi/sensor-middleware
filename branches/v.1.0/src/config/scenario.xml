@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scenario>
 <scenarioEntry time='0'>
-	<sensorData sensorId='17' type='light'>1</sensorData>
-<sensorData sensorId='18' type='light'>1</sensorData>
-<sensorData sensorId='19' type='light'>1</sensorData>
-<sensorData sensorId='20' type='light'>1</sensorData>
-<sensorData sensorId='21' type='temperature'>25</sensorData>
-<sensorData sensorId='22' type='temperature'>25</sensorData>
-<sensorData sensorId='23' type='temperature'>25</sensorData>
-<sensorData sensorId='24' type='temperature'>25</sensorData>
-<sensorData sensorId='25' type='windowMovement'>1</sensorData>
-<sensorData sensorId='26' type='windowMovement'>1</sensorData>
-<sensorData sensorId='27' type='windowMovement'>1</sensorData>
-<sensorData sensorId='28' type='windowMovement'>1</sensorData>
+	<sensorData sensorId='17' type='light' zoneId="1">1</sensorData>
+	<sensorData sensorId='18' type='light' zoneId="1">1</sensorData>
+	<sensorData sensorId='19' type='light' zoneId="1">1</sensorData>
+	<sensorData sensorId='20' type='light' zoneId="1">1</sensorData>
+	<sensorData sensorId='21' type='temperature' zoneId="1">25</sensorData>
+	<sensorData sensorId='22' type='temperature' zoneId="1">25</sensorData>
+	<sensorData sensorId='23' type='temperature' zoneId="1">25</sensorData>
+	<sensorData sensorId='24' type='temperature' zoneId="1">25</sensorData>
+	<sensorData sensorId='25' type='windowMovement' zoneId="1">1</sensorData>
+	<sensorData sensorId='26' type='windowMovement' zoneId="1">1</sensorData>
+	<sensorData sensorId='27' type='windowMovement' zoneId="1">1</sensorData>
+	<sensorData sensorId='28' type='windowMovement' zoneId="1">1</sensorData>
 </scenarioEntry>
 <scenarioEntry time='1'>
 <sensorData sensorId='1' type='doorMovement' zone="1">1</sensorData>
