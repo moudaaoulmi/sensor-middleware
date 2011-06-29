@@ -1,0 +1,256 @@
+#LyX 1.6.8 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset VSpace 3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Această lucrare de dizertaţie are ca scop dezvoltarea unui software middleware
+ cu funcţii de citire, interpretare, agregare şi stocare a datele provenite
+ de la senzori care se află într-un anumit mediu.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Lucrarea este structurată în patru părţi, care sunt împărţite la rândul
+ lor în capitole, după cum urmează:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+În prima parte este prezentat scopul lucrării şi structura acesteia, cât
+ şi o scurtă prezentare a fiecărei părţi.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Partea a doua a lucrării, numită 
+\series bold
+Modele multi-agent pentru sisteme ambientale inteligente
+\series default
+ este împărţită în trei capitole.
+ Primul capitol, numit 
+\series bold
+Ingineria sistemelor ambientale inteligente
+\series default
+, prezintă principalele probleme întâlnite în dezvoltarea sistemelor ambientale
+ inteligente.
+ În acest capitol se abordează incertitudinea datelor provenite de la senzori,
+ metode de detectare şi acţiune.
+ Al doilea capitol, numit 
+\series bold
+Modele multi-agent pentru sisteme ambientale inteligente
+\series default
+, conţine o descriere generală a sistemelor multi-agent.
+ Capitolul al treilea, 
+\series bold
+Metodologii de dezvoltare a sistemelor multi-agent
+\series default
+, conţine informaţii generale despre metodologiile de dezvoltare a sistemelor
+ multi-agent şi prezintă toate etapele de dezvoltare a unei metodologi particula
+re.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Partea a treia a lucrării, numită Arhitecturi multi-agent, este împărţită,
+ de asemenea, în trei capitole: Modelul arhitectural blackboard, Agenţi
+ BDI, WADE.
+ Această parte a lucrării conţine majoritatea aspectelor teoretice care
+ stau la baza proiectării şi dezvoltării middleware-ului.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Partea a patra a lucrării, numită 
+\series bold
+Arhitectura middleware-ului
+\series default
+, prezintă arhitectura middleware-ului propriu-zis, modul de dezvoltare,
+ cât şi explicaţii privind rolul fiecărei structuri majore din arhitectură.
+ De asemenea în această ultimă parte a lucrării pe lângă modul de utilizare,
+ este prezentat şi modul în care acest middleware poate fi extins în viitor.
+\end_layout
+
+\end_body
+\end_document
