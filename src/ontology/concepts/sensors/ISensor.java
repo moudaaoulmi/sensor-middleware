@@ -8,8 +8,11 @@ public interface ISensor
 	String getType();
 	void setType( String type);
 	
-	int getValue();
-	void setValue( int value );
+	double getValue();
+	void setValue( double value );
+	
+	int getZoneID();
+	void setZoneID( int zoneId );
 	
 	String generateData();
 }

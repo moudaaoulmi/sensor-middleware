@@ -1,7 +1,18 @@
 package agents;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 import jade.content.lang.Codec;
 import jade.content.lang.sl.SLCodec;
@@ -19,9 +30,9 @@ public class SensorAgent extends Agent
 	protected Integer minTime;
 	protected Integer maxTime;
 	
-	protected Integer value;
-	protected Integer minValue;
-	protected Integer maxValue;
+	protected double value;
+	protected double minValue;
+	protected double maxValue;
 	
 	protected Integer idSensor;
 	protected Integer minId;
@@ -43,7 +54,7 @@ public class SensorAgent extends Agent
 
 	public SensorAgent( String configFile )
 	{
-		parseConfigXML();
+		parseConfigXML( configFile );
 		
 		data = new LinkedList<Sensor>();
 	}
@@ -89,7 +100,7 @@ public class SensorAgent extends Agent
 	}
 
 
-	public Integer getMinValue()
+	public double getMinValue()
 	{
 		return minValue;
 	}
@@ -101,7 +112,7 @@ public class SensorAgent extends Agent
 	}
 
 
-	public Integer getMaxValue()
+	public double getMaxValue()
 	{
 		return maxValue;
 	}
@@ -136,9 +147,45 @@ public class SensorAgent extends Agent
 		this.maxId = maxId;
 	}
 	
-	protected void parseConfigXML()
+	protected void parseConfigXML( String xmlFile )
 	{
 		// TODO Auto-generated method stub
-		
+		try
+		{
+			File file 					= new File( xmlFile );
+			DocumentBuilderFactory dbf 	= DocumentBuilderFactory.newInstance();
+			DocumentBuilder db 			= dbf.newDocumentBuilder();
+			Document constraints		= db.parse( file );
+			Element node;
+			NodeList minFields = constraints.getElementsByTagName("minValue");
+			NodeList maxFields = constraints.getElementsByTagName("maxValue");
+			
+			node = (Element) minFields.item( 0 );
+			minTime = Integer.parseInt( node.getFirstChild().getNodeValue() );
+			node = (Element) maxFields.item( 0 );
+			maxTime = Integer.parseInt( node.getFirstChild().getNodeValue() );
+			node = (Element) minFields.item( 1 );
+			minValue = Integer.parseInt( node.getFirstChild().getNodeValue() );
+			node = (Element) maxFields.item( 1 );
+			maxValue = Integer.parseInt( node.getFirstChild().getNodeValue() );
+			node = (Element) minFields.item( 2 );
+			minId = Integer.parseInt( node.getFirstChild().getNodeValue() );
+			node = (Element) maxFields.item( 2 );
+			maxId = Integer.parseInt( node.getFirstChild().getNodeValue() );
+		} 
+		catch (ParserConfigurationException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SAXException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
+	
 }

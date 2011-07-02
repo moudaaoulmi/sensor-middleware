@@ -35,27 +35,35 @@ public class Main {
 		Document filters = null;
 		try
 		{
-			File file 					= new File( "config/sensorsFilter.xml" );
+			File file 					= new File( "src/config/electric.xml" );
 			DocumentBuilderFactory dbf 	= DocumentBuilderFactory.newInstance();
 			DocumentBuilder db 			= dbf.newDocumentBuilder();
-			filters			= db.parse( file );
-
-			NodeList idNodeList = filters.getElementsByTagName("id");
-			NodeList typeNodeList = filters.getElementsByTagName("type");
+			filters						= db.parse( file );
+			Node node;
 			
-			for (int i = 0; i < idNodeList.getLength(); i++)
-			{
-				Element node = (Element) idNodeList.item( i );
-				
-				System.out.println( node.getFirstChild().getNodeValue() );
-			}
+			NodeList minFields = filters.getElementsByTagName("minValue");
+			NodeList maxFields = filters.getElementsByTagName("maxValue");
 			
-			for (int i = 0; i < typeNodeList.getLength(); i++)
-			{
-				Element node = (Element) typeNodeList.item( i );
-				
-				System.out.println( node.getFirstChild().getNodeValue() );
-			}
+			
+			node = (Element) minFields.item( 0 );
+			System.out.println( Integer.parseInt( node.getFirstChild().getNodeValue() ) );
+			node = (Element) maxFields.item( 0 );
+			System.out.println( Integer.parseInt( node.getFirstChild().getNodeValue() ) );
+			node = (Element) minFields.item( 1 );
+			System.out.println( node.getFirstChild().getNodeValue() );
+			node = (Element) maxFields.item( 1 );
+			System.out.println( node.getFirstChild().getNodeValue() );
+			node = (Element) minFields.item( 2 );
+			System.out.println( node.getFirstChild().getNodeValue() );
+			node = (Element) maxFields.item( 2 );
+			System.out.println( node.getFirstChild().getNodeValue() );
+//			for (int i = 0; i < minFields.getLength(); i++)
+//			{
+//				Element node = (Element) minFields.item( i );
+//				
+//				System.out.println( node.getFirstChild().getNodeValue() );
+//			}
+			
 		}
 		catch (Exception e) 
 		{

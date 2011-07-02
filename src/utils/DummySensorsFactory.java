@@ -45,7 +45,8 @@ public class DummySensorsFactory
 		ISensor sensor 		= null;
 		String sensorType 	= el.getAttribute("type");
 		String sensorId		= el.getAttribute("sensorId");
-		int value 			= Integer.parseInt( el.getFirstChild().getNodeValue() );
+		int    zoneId		= Integer.parseInt( el.getAttribute("zoneId") );
+		double value 		= Double.parseDouble( el.getFirstChild().getNodeValue() );
 		
 		if ( sensorType.equals( SensorsTypes.DOOR_MOVEMENT) )
 		{
@@ -91,6 +92,7 @@ public class DummySensorsFactory
 		sensor.setType(sensorType);
 		sensor.setIdSensor( Integer.parseInt(sensorId) );
 		sensor.setValue(value);
+		sensor.setZoneID(zoneId);
 		
 		return sensor;
 	}
