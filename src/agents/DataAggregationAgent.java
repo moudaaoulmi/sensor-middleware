@@ -2,6 +2,8 @@ package agents;
 
 import ontology.SensorsOntology;
 import behaviours.DBManagerBehaviour;
+import behaviours.DataAggregationBehaviour;
+import behaviours.MsgListeningBehaviour;
 import jade.content.lang.Codec;
 import jade.content.lang.sl.SLCodec;
 import jade.content.onto.Ontology;
@@ -18,5 +20,8 @@ public class DataAggregationAgent extends Agent
 		getContentManager().registerOntology(ontology);
 		
 		//add here specific behaviour
+		DataAggregationBehaviour dab = new DataAggregationBehaviour(this, "jess/jess.clp");
+		addBehaviour(dab);
+		addBehaviour( new MsgListeningBehaviour(this, dab));
 	}
 }
