@@ -1,6 +1,5 @@
 package behaviours;
 
-import agents.SensorAgent;
 import jade.content.Concept;
 import jade.content.ContentElement;
 import jade.content.lang.Codec;
@@ -16,9 +15,10 @@ import jade.lang.acl.ACLMessage;
 import ontology.SensorsOntology;
 import ontology.actions.InterpretData;
 import ontology.actions.StoreInterpretedData;
-import ontology.concepts.sensors.TemperatureSensor;
+import ontology.concepts.sensors.RFIDSensor;
+import agents.SensorAgent;
 
-public class TemperatureSensorBehaviour extends CyclicBehaviour
+public class RFIDSensorBehaviour extends CyclicBehaviour
 {
 	private Codec codec 		= new SLCodec();
 	private Ontology ontology 	= SensorsOntology.getInstace();
@@ -44,7 +44,7 @@ public class TemperatureSensorBehaviour extends CyclicBehaviour
             	   {
             		   //  create agent and create a factory for agent behaviour according to 
             		   // sensor type.
-            		   TemperatureSensor sensor = (TemperatureSensor)((InterpretData) action).getSensor();
+            		   RFIDSensor sensor = (RFIDSensor)((InterpretData) action).getSensor();
             		   
             		   handleSensorData( sensor );
             	   }
@@ -62,19 +62,18 @@ public class TemperatureSensorBehaviour extends CyclicBehaviour
 		}
 	}
 	
-	protected boolean isDataValid( TemperatureSensor sensor )
+	protected boolean isDataValid( RFIDSensor sensor )
 	{
 		SensorAgent sa = (SensorAgent)myAgent;
-		
-		if ( sensor.getIdSensor() < sa.getMinId() || sensor.getIdSensor() > sa.getMaxId() )
-			return false;
-		if ( sensor.getValue() < sa.getMinValue() || sensor.getValue() > sa.getMaxValue())
-			return false;
+//		if ( sensor.getIdSensor() < sa.getMinId() || sensor.getIdSensor() > sa.getMaxId() )
+//			return false;
+//		if ( sensor.getValue() < sa.getMinValue() || sensor.getValue() > sa.getMaxValue())
+//			return false;
 		
 		return true;
 	}
 	
-	protected String interpretData( TemperatureSensor sensor )
+	protected String interpretData( RFIDSensor sensor )
 	{
 		if ( sensor.getValue() >  30 )
 			return "foarte cald";
@@ -87,7 +86,7 @@ public class TemperatureSensorBehaviour extends CyclicBehaviour
 		return "undefined";
 	}
 
-	protected void handleSensorData(TemperatureSensor sensor)
+	protected void handleSensorData(RFIDSensor sensor)
 	{
 		//validate data
 		SensorAgent sa = (SensorAgent)myAgent;

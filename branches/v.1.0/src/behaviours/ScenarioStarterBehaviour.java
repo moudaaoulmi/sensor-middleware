@@ -56,7 +56,7 @@ public class ScenarioStarterBehaviour extends Behaviour
 	public void action()
 	{
 		NodeList nodeLst = scenario.getElementsByTagName("scenarioEntry");
-		System.out.println("Information of all employees");
+		System.out.println("Scenario agent started.");
 		for (int s = 0; s < nodeLst.getLength(); s++) 
 		{
 		   // System.out.println( nodeLst.getLength() );

@@ -16,9 +16,9 @@ import jade.lang.acl.ACLMessage;
 import ontology.SensorsOntology;
 import ontology.actions.InterpretData;
 import ontology.actions.StoreInterpretedData;
-import ontology.concepts.sensors.TemperatureSensor;
+import ontology.concepts.sensors.GasSensor;
 
-public class TemperatureSensorBehaviour extends CyclicBehaviour
+public class GasSensorBehaviour extends CyclicBehaviour
 {
 	private Codec codec 		= new SLCodec();
 	private Ontology ontology 	= SensorsOntology.getInstace();
@@ -44,7 +44,7 @@ public class TemperatureSensorBehaviour extends CyclicBehaviour
             	   {
             		   //  create agent and create a factory for agent behaviour according to 
             		   // sensor type.
-            		   TemperatureSensor sensor = (TemperatureSensor)((InterpretData) action).getSensor();
+            		   GasSensor sensor = (GasSensor)((InterpretData) action).getSensor();
             		   
             		   handleSensorData( sensor );
             	   }
@@ -62,19 +62,18 @@ public class TemperatureSensorBehaviour extends CyclicBehaviour
 		}
 	}
 	
-	protected boolean isDataValid( TemperatureSensor sensor )
+	protected boolean isDataValid( GasSensor sensor )
 	{
 		SensorAgent sa = (SensorAgent)myAgent;
-		
-		if ( sensor.getIdSensor() < sa.getMinId() || sensor.getIdSensor() > sa.getMaxId() )
-			return false;
-		if ( sensor.getValue() < sa.getMinValue() || sensor.getValue() > sa.getMaxValue())
-			return false;
+//		if ( sensor.getIdSensor() < sa.getMinId() || sensor.getIdSensor() > sa.getMaxId() )
+//			return false;
+//		if ( sensor.getValue() < sa.getMinValue() || sensor.getValue() > sa.getMaxValue())
+//			return false;
 		
 		return true;
 	}
 	
-	protected String interpretData( TemperatureSensor sensor )
+	protected String interpretData( GasSensor sensor )
 	{
 		if ( sensor.getValue() >  30 )
 			return "foarte cald";
@@ -87,7 +86,7 @@ public class TemperatureSensorBehaviour extends CyclicBehaviour
 		return "undefined";
 	}
 
-	protected void handleSensorData(TemperatureSensor sensor)
+	protected void handleSensorData(GasSensor sensor)
 	{
 		//validate data
 		SensorAgent sa = (SensorAgent)myAgent;

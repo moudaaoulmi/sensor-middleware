@@ -13,8 +13,10 @@ import jade.content.Concept;
 public abstract class Sensor implements ISensor, Concept
 {
 	protected int idSensor;
-	protected int value;
+	protected double value;
 	protected Date time;
+	protected int zoneID;
+	
 	protected String interpretedData;
 	
 	public Sensor()
@@ -45,12 +47,12 @@ public abstract class Sensor implements ISensor, Concept
 		this.time = time;
 	}
 
-	public int getValue()
+	public double getValue()
 	{
 		return value;
 	}
 
-	public void setValue(int value)
+	public void setValue(double value)
 	{
 		this.value = value;
 	}
@@ -82,12 +84,22 @@ public abstract class Sensor implements ISensor, Concept
 		this.idSensor = idSensor;
 	}
 	
+	public int getZoneID()
+	{
+		return zoneID;
+	}
+
+	public void setZoneID(int zoneID)
+	{
+		this.zoneID = zoneID;
+	}
+
 	public String toInsertSQL()
 	{
 		String sql = "";
 		
-		sql = "INSERT INTO sensors_data (`idSensor`, `date`, `value`, `type`) VALUES " +
-				"('"+idSensor+"', '"+DateUtil.toMySQLDate(time)+"', '"+value+"', '"+type+"' )";
+		sql = "INSERT INTO sensors_data (`idSensor`, `date`, `value`, `type`, `zoneId`) VALUES " +
+				"('"+idSensor+"', '"+DateUtil.toMySQLDate(time)+"', '"+value+"', '"+type+"', '"+zoneID+"' )";
 		
 		return sql;
 	}

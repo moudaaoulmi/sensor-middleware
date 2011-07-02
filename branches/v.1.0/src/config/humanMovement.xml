@@ -14,6 +14,7 @@
 		<minValue>0</minValue>
 		<maxValue>89400</maxValue>
 		<unit/>
+	</field>
 	<field>
 		<position>3</position>
 		<name>ID</name>

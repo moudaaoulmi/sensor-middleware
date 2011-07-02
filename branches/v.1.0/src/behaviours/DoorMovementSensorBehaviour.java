@@ -16,9 +16,10 @@ import jade.lang.acl.ACLMessage;
 import ontology.SensorsOntology;
 import ontology.actions.InterpretData;
 import ontology.actions.StoreInterpretedData;
+import ontology.concepts.sensors.DoorMovementSensor;
 import ontology.concepts.sensors.TemperatureSensor;
 
-public class TemperatureSensorBehaviour extends CyclicBehaviour
+public class DoorMovementSensorBehaviour extends CyclicBehaviour
 {
 	private Codec codec 		= new SLCodec();
 	private Ontology ontology 	= SensorsOntology.getInstace();
@@ -44,7 +45,7 @@ public class TemperatureSensorBehaviour extends CyclicBehaviour
             	   {
             		   //  create agent and create a factory for agent behaviour according to 
             		   // sensor type.
-            		   TemperatureSensor sensor = (TemperatureSensor)((InterpretData) action).getSensor();
+            		   DoorMovementSensor sensor = (DoorMovementSensor)((InterpretData) action).getSensor();
             		   
             		   handleSensorData( sensor );
             	   }
@@ -62,19 +63,18 @@ public class TemperatureSensorBehaviour extends CyclicBehaviour
 		}
 	}
 	
-	protected boolean isDataValid( TemperatureSensor sensor )
+	protected boolean isDataValid( DoorMovementSensor sensor )
 	{
 		SensorAgent sa = (SensorAgent)myAgent;
-		
-		if ( sensor.getIdSensor() < sa.getMinId() || sensor.getIdSensor() > sa.getMaxId() )
-			return false;
-		if ( sensor.getValue() < sa.getMinValue() || sensor.getValue() > sa.getMaxValue())
-			return false;
+//		if ( sensor.getIdSensor() < sa.getMinId() || sensor.getIdSensor() > sa.getMaxId() )
+//			return false;
+//		if ( sensor.getValue() < sa.getMinValue() || sensor.getValue() > sa.getMaxValue())
+//			return false;
 		
 		return true;
 	}
 	
-	protected String interpretData( TemperatureSensor sensor )
+	protected String interpretData( DoorMovementSensor sensor )
 	{
 		if ( sensor.getValue() >  30 )
 			return "foarte cald";
@@ -87,7 +87,7 @@ public class TemperatureSensorBehaviour extends CyclicBehaviour
 		return "undefined";
 	}
 
-	protected void handleSensorData(TemperatureSensor sensor)
+	protected void handleSensorData(DoorMovementSensor sensor)
 	{
 		//validate data
 		SensorAgent sa = (SensorAgent)myAgent;
