@@ -1,5 +1,6 @@
 package behaviours;
 
+import message.JessACLMessage;
 import agents.DataStreamManagerAgent;
 import agents.SensorAgent;
 import jade.content.Concept;
@@ -16,10 +17,14 @@ import jade.core.behaviours.Behaviour;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
 import ontology.SensorsOntology;
+import ontology.actions.AggregateData;
 import ontology.actions.InterpretData;
+import ontology.actions.SaveADToDB;
 import ontology.actions.SaveDataToDB;
 import ontology.actions.SensorDataRecived;
+import ontology.actions.StoreAggregatedData;
 import ontology.actions.StoreInterpretedData;
+import ontology.concepts.AggregatedData;
 import ontology.concepts.sensors.ISensor;
 import ontology.concepts.sensors.Sensor;
 import utils.AgentFactory;
@@ -66,6 +71,13 @@ public class DataStreamManagerBehaviour extends CyclicBehaviour
             		   
             		   handleStoreInterpretedData( sensor );
             	   }
+            	   
+            	   if ( action instanceof StoreAggregatedData )
+            	   {
+            		   AggregatedData ad = (( StoreAggregatedData) action).getSensor();
+            		   
+            		   handleAggregatedData( ad );
+            	   }
                }
             }
 		} 
@@ -75,13 +87,55 @@ public class DataStreamManagerBehaviour extends CyclicBehaviour
 		}
 		catch (CodecException e) {
 			// TODO Auto-generated catch block
+			
+			// Here will receive data from migrated sensor agents and dataaggregationagent
+			System.out.println("Am primit de la JESS" + msg.getContent());
+			//e.printStackTrace();
+		} 
+		catch (OntologyException e) 
+		{
+			// TODO Auto-generated catch block
+			System.out.println("Am primit de la JESS" + msg.getContent());
+			//e.printStackTrace();
+		}
+
+	}
+
+	protected void handleAggregatedData(AggregatedData ad)
+	{
+		// TODO Auto-generated method stub
+		DataStreamManagerAgent dsma = getDataStreamManager();
+		
+		dsma.getAggregatedDataBuffer().add(ad);
+		
+		AID receiverAID = new AID( "DatabaseManagerAgent", AID.ISLOCALNAME);
+		
+		ACLMessage message = new ACLMessage( ACLMessage.INFORM );
+		
+		message.setLanguage( codec.getName() );
+		message.setOntology( ontology.getName() );
+		message.addReceiver(receiverAID);
+		
+		SaveADToDB sdr = new SaveADToDB();
+		sdr.setInfo(ad);
+		
+		
+		try
+		{
+			myAgent.getContentManager().fillContent(message, new Action(receiverAID, sdr));
+			myAgent.send( message );
+		} 
+		catch (CodecException e)
+		{
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
-		catch (OntologyException e) {
+		catch (OntologyException e)
+		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		
 	}
 
 	public DataStreamManagerAgent getDataStreamManager()
@@ -147,7 +201,7 @@ public class DataStreamManagerBehaviour extends CyclicBehaviour
 		if ( sensorsDataBufferTime + DATA_KEEPING_TIME < System.currentTimeMillis() )
 		{
 			sensorsDataBufferTime = System.currentTimeMillis();
-			dsma.getSensorsDataBuffer().removeAll(null);
+			dsma.getSensorsDataBuffer().clear();
 		}
 	}
 
@@ -169,10 +223,25 @@ public class DataStreamManagerBehaviour extends CyclicBehaviour
 		SaveDataToDB sdr = new SaveDataToDB();
 		sdr.setSql(sensor);
 		
+		AID receiverAID1 = new AID( "DataAggregationAgent", AID.ISLOCALNAME);
+		
+		ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
+	
+		msg.setLanguage( codec.getName() );
+		msg.setOntology( ontology.getName() );
+		msg.addReceiver(receiverAID1);
+		
+		AggregateData ad = new AggregateData();
+		ad.setSensor(sensor);
+		
+		
 		try
 		{
 			myAgent.getContentManager().fillContent(message, new Action(receiverAID, sdr));
 			myAgent.send( message );
+			
+			myAgent.getContentManager().fillContent(msg, new Action(receiverAID1, ad));
+			myAgent.send( msg );
 		} 
 		catch (CodecException e)
 		{

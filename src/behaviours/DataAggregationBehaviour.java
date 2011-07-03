@@ -1,5 +1,11 @@
 package behaviours;
 
+import jade.content.Concept;
+import jade.content.ContentElement;
+import jade.content.lang.Codec.CodecException;
+import jade.content.onto.OntologyException;
+import jade.content.onto.UngroundedException;
+import jade.content.onto.basic.Action;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
@@ -8,14 +14,16 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import message.JessACLMessage;
-
 import jess.Fact;
 import jess.Jesp;
 import jess.JessException;
+import jess.JessSend;
 import jess.RU;
 import jess.Rete;
 import jess.Value;
+import message.JessACLMessage;
+import ontology.actions.AggregateData;
+import ontology.concepts.sensors.ISensor;
 
 public class DataAggregationBehaviour extends CyclicBehaviour
 {
@@ -35,6 +43,8 @@ public class DataAggregationBehaviour extends CyclicBehaviour
 			Jesp jesp = new Jesp(fr, reteEngine);
 			
 			jesp.parse(false);	
+			
+			reteEngine.addUserfunction( new JessSend(myAgent));
 			
 			fr.close();
 		} 
@@ -92,31 +102,54 @@ public class DataAggregationBehaviour extends CyclicBehaviour
 		
 	}
 	
-	public boolean handleMessage( JessACLMessage message )
+	public boolean handleMessage( ACLMessage message )
 	{
-		String sfact = "(assert (test ( id 3) (content 1)))"; // the fact must be constructed from the received message
 		Fact fact = null;
-		try
+		ContentElement content;
+		try 
 		{
-			fact = new Fact("bogdan", reteEngine);
-			fact.setSlotValue("id", new Value(1, RU.INTEGER));
-			fact.setSlotValue("content", new Value(34, RU.INTEGER));
+			content = myAgent.getContentManager().extractContent(message);
+			Concept action = ((Action)content).getAction();
+			System.out.println("Am primit mesaj");
+			switch (message.getPerformative()) 
+            {
+               case (ACLMessage.INFORM):
+               {
+            	   if ( action instanceof AggregateData )
+            	   {
+            		   ISensor sensor = ((AggregateData) action).getSensor();
+            		   //System.out.println("Suma este: "+sum);
+            		   
+            		   	fact = new Fact("sensor", reteEngine);
+           				fact.setSlotValue("id", new Value(sensor.getIdSensor(), RU.INTEGER));
+           				fact.setSlotValue("value", new Value(sensor.getValue(), RU.FLOAT));
+           				fact.setSlotValue("type", new Value(sensor.getType(), RU.STRING));
+           				fact.setSlotValue("zoneId", new Value(sensor.getZoneID(), RU.INTEGER));
+           				//fact.setSlotValue("date", new Value(sensor.getType(), RU.d));
+           				//fact.setSlotValue("interpretedData", new Value(sensor., RU.STRING));
+           				return addFact(fact);
+            	   }
+               }
+            }
 		} 
-		catch (JessException e)
-		{
+		catch (UngroundedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		try
-		{
-			reteEngine.add(message);
+		catch (CodecException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		catch (OntologyException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		} catch (JessException e)
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		return addFact(fact);
+		return false;
 	}
 
 }

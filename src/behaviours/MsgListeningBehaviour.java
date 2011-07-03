@@ -20,11 +20,11 @@ public class MsgListeningBehaviour extends CyclicBehaviour
 	public void action()
 	{
 		// TODO Auto-generated method stub
-		JessACLMessage message = (JessACLMessage) myAgent.receive();
+		ACLMessage message = (ACLMessage) myAgent.receive();
 		
 		if ( message != null )
 		{
-			if ( rb.handleMessage(message) )
+			if ( rb.handleMessage( message ) )
 			{
 				//great success.
 				System.out.println("Fact was added!");

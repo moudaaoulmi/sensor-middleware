@@ -9,6 +9,9 @@ import jade.content.onto.basic.Action;
 import jade.core.AID;
 import jade.core.behaviours.Behaviour;
 import jade.lang.acl.ACLMessage;
+import jade.wrapper.AgentController;
+import jade.wrapper.ContainerController;
+import jade.wrapper.StaleProxyException;
 
 import java.io.File;
 
@@ -17,7 +20,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import ontology.SensorsOntology;
 import ontology.actions.SensorDataRecived;
-import ontology.concepts.sensors.ISensor;
 import ontology.concepts.sensors.Sensor;
 
 import org.w3c.dom.Document;
@@ -26,6 +28,10 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import utils.DummySensorsFactory;
+import agents.DataAggregationAgent;
+import agents.DataStreamManagerAgent;
+import agents.DatabaseManagerAgent;
+import agents.ErrorDetectorAgent;
 
 public class ScenarioStarterBehaviour extends Behaviour
 {
@@ -55,6 +61,39 @@ public class ScenarioStarterBehaviour extends Behaviour
 	@Override
 	public void action()
 	{
+		ContainerController cc = myAgent.getContainerController();
+		
+		AgentController datastreamManager;
+		AgentController databaseManager;
+		AgentController dataAggregationManager;
+		AgentController errorDetectorManager;
+		
+		try
+		{
+			datastreamManager = cc.createNewAgent("DataStreamManagerAgent", DataStreamManagerAgent.class.getName(), null);
+			datastreamManager.start();
+			
+			databaseManager = cc.createNewAgent("DatabaseManagerAgent", DatabaseManagerAgent.class.getName(), null);
+			databaseManager.start();
+			
+			dataAggregationManager = cc.createNewAgent("DataAggregationAgent", DataAggregationAgent.class.getName(), null);
+			dataAggregationManager.start();
+			
+			errorDetectorManager = cc.createNewAgent("ErrorDetectorAgent", ErrorDetectorAgent.class.getName(), null);
+			errorDetectorManager.start();
+			
+			Thread.sleep(2000);
+			//System.out.println("Am instantiat agentul cu numarul "+ i);
+		} catch (StaleProxyException e1)
+		{
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (InterruptedException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		NodeList nodeLst = scenario.getElementsByTagName("scenarioEntry");
 		System.out.println("Scenario agent started.");
 		for (int s = 0; s < nodeLst.getLength(); s++) 
@@ -74,14 +113,14 @@ public class ScenarioStarterBehaviour extends Behaviour
 		    		parseSensorDataNode( sensorData );
 		    	}
 		    	
-//					try
-//					{
-//						Thread.sleep(1000);
-//					} catch (InterruptedException e)
-//					{
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					}
+					try
+					{
+						Thread.sleep(3000);
+					} catch (InterruptedException e)
+					{
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 		    }
 
 		}
