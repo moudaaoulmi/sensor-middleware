@@ -3,7 +3,9 @@ package agents;
 import jade.content.lang.Codec;
 import jade.content.lang.sl.SLCodec;
 import jade.content.onto.Ontology;
+import jade.core.AID;
 import jade.core.Agent;
+import jade.core.PlatformID;
 import jade.wrapper.AgentController;
 import jade.wrapper.ContainerController;
 import jade.wrapper.ControllerException;
@@ -17,6 +19,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import ontology.SensorsOntology;
+import ontology.concepts.AggregatedData;
 import ontology.concepts.sensors.Sensor;
 
 import org.w3c.dom.Document;
@@ -34,10 +37,12 @@ public class DataStreamManagerAgent extends Agent
 	
 	protected List<Sensor> sensorsDataBuffer;
 	protected List<Sensor> interpretedDataBuffer;
-	protected List<Sensor> aggregatedDataBuffer;
+	protected List<AggregatedData> aggregatedDataBuffer;
 	
 	private Codec codec 		= new SLCodec();
 	private Ontology ontology 	= SensorsOntology.getInstace();
+	
+	static private int MAX_SENSOR_AGENTS = 100;
 	
 	public void setup()
 	{
@@ -45,7 +50,7 @@ public class DataStreamManagerAgent extends Agent
 		
 		sensorsDataBuffer 		= new LinkedList<Sensor>();
 		interpretedDataBuffer 	= new LinkedList<Sensor>();
-		aggregatedDataBuffer 	= new LinkedList<Sensor>();
+		aggregatedDataBuffer 	= new LinkedList<AggregatedData>();
 		
 		getContentManager().registerLanguage( codec );
 		getContentManager().registerOntology( ontology );
@@ -94,6 +99,7 @@ public class DataStreamManagerAgent extends Agent
 			if (sensorAgent.getId() == id)
 				return sensorAgent;
 		}
+		
 		return null;
 	}
 	
@@ -105,6 +111,16 @@ public class DataStreamManagerAgent extends Agent
 		{
 			agentController = home.acceptNewAgent("sensorAgent"+sa.getId(), sa);
 			agentController.start();
+			
+			if ( sensors.size() > MAX_SENSOR_AGENTS )
+			{
+				AID remoteAMS   = new AID("ams@192.168.0.102:1099/JADE", AID.ISGUID );
+				remoteAMS.addAddresses("http://192.168.0.102:7778/acc");
+				
+				PlatformID destination = new PlatformID( remoteAMS );
+
+				sa.doMove( destination );
+			}
 		} catch (StaleProxyException e1)
 		{
 			// TODO Auto-generated catch block
@@ -144,7 +160,7 @@ public class DataStreamManagerAgent extends Agent
 		return interpretedDataBuffer;
 	}
 
-	public List<Sensor> getAggregatedDataBuffer() 
+	public List<AggregatedData> getAggregatedDataBuffer() 
 	{
 		return aggregatedDataBuffer;
 	}

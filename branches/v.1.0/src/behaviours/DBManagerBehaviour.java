@@ -6,9 +6,11 @@ import database.DatabaseConfig;
 import database.DatabaseConnection;
 import agents.DatabaseManagerAgent;
 import ontology.SensorsOntology;
+import ontology.actions.SaveADToDB;
 import ontology.actions.SaveDataToDB;
 import ontology.actions.SensorDataRecived;
 import ontology.actions.StoreInterpretedData;
+import ontology.concepts.AggregatedData;
 import ontology.concepts.sensors.Sensor;
 import jade.content.Concept;
 import jade.content.ContentElement;
@@ -70,6 +72,14 @@ public class DBManagerBehaviour extends CyclicBehaviour
             		   // sensor type.
             		   Sensor sql = ((SaveDataToDB) action).getSql();
             		   dbConn.executeInsertQuery( conn, sql.toInsertSQL() );
+            	   }
+            	   
+            	   if ( action instanceof SaveADToDB )
+            	   {
+            		   //  create agent and create a factory for agent behaviour according to 
+            		   // sensor type.
+            		   AggregatedData ad = ((SaveADToDB) action).getInfo();
+            		   dbConn.executeInsertQuery( conn, ad.toSQLInsert() );
             	   }
                }
             }
