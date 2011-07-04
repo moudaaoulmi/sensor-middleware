@@ -24,6 +24,7 @@ import jess.Value;
 import message.JessACLMessage;
 import ontology.actions.AggregateData;
 import ontology.concepts.sensors.ISensor;
+import ontology.concepts.sensors.Sensor;
 
 public class DataAggregationBehaviour extends CyclicBehaviour
 {
@@ -117,7 +118,7 @@ public class DataAggregationBehaviour extends CyclicBehaviour
                {
             	   if ( action instanceof AggregateData )
             	   {
-            		   ISensor sensor = ((AggregateData) action).getSensor();
+            		   Sensor sensor = ((AggregateData) action).getSensor();
             		   //System.out.println("Suma este: "+sum);
             		   
             		   	fact = new Fact("sensor", reteEngine);
@@ -126,7 +127,7 @@ public class DataAggregationBehaviour extends CyclicBehaviour
            				fact.setSlotValue("type", new Value(sensor.getType(), RU.STRING));
            				fact.setSlotValue("zoneId", new Value(sensor.getZoneID(), RU.INTEGER));
            				//fact.setSlotValue("date", new Value(sensor.getType(), RU.d));
-           				//fact.setSlotValue("interpretedData", new Value(sensor., RU.STRING));
+           				fact.setSlotValue("interpretedData", new Value(sensor.getInterpretedData(), RU.STRING));
            				return addFact(fact);
             	   }
                }

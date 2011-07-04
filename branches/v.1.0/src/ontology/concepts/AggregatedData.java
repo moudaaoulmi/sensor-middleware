@@ -19,8 +19,8 @@ public class AggregatedData implements Concept
 
 	public String toSQLInsert()
 	{
-		String sql = "INSERT INTO scenarios (`scenario`) VALUES " +
-		"('"+info+"')";
+		String sql = "INSERT INTO scenarios (`scenario`, `date`) VALUES " +
+		"('"+info+"', NOW())";
 
 		return sql;
 	}

@@ -148,6 +148,9 @@ public class DataStreamManagerBehaviour extends CyclicBehaviour
 		SensorAgent sa 				= null; //AgentFactory.createAgent(sensor);
 		DataStreamManagerAgent dsma = getDataStreamManager();  
 		
+		if ( dsma.isSensorFiltered(sensor) )
+			return;
+		
 		sa = dsma.getSensorAgentByID( sensor.getIdSensor() );
 		
 		if ( sa == null )

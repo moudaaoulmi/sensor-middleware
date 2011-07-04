@@ -155,6 +155,22 @@ public class DataStreamManagerAgent extends Agent
 		}
 	}
 	
+	public boolean isSensorFiltered( Sensor sensor )
+	{
+		for (Integer id : filteredIDs)
+		{
+			if ( sensor.getIdSensor() == id )
+				return true;
+		}
+		
+		for (String type : filteredTypes)
+		{
+			if ( type.equals( sensor.getType() ) )
+				return true;
+		}
+		return false;
+	}
+	
 	public List<Sensor> getInterpretedDataBuffer() 
 	{
 		return interpretedDataBuffer;

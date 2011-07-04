@@ -30,9 +30,9 @@ public class JessSend implements Userfunction
 	{
 		// TODO Auto-generated method stub
 		
-		Value v = vv.get(1);
-		
-		ACLMessage msg = new ACLMessage( ACLMessage.INFORM );
+		Value v 		= vv.get(1);
+		String key 		= vv.get(1).stringValue(context);
+		ACLMessage msg 	= new ACLMessage( ACLMessage.INFORM );
 		AID receiverAID = new AID("DataStreamManagerAgent", AID.ISLOCALNAME);
 		
 		msg.setLanguage(codec.getName());
@@ -43,7 +43,7 @@ public class JessSend implements Userfunction
 		StoreAggregatedData sad = new StoreAggregatedData();
 		AggregatedData ad = new AggregatedData();
 		
-		ad.setInfo( v.toString() );
+		ad.setInfo( key );
 		sad.setSensor(ad);
 		
 		

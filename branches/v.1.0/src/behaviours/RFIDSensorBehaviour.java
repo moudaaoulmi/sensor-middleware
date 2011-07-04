@@ -75,15 +75,10 @@ public class RFIDSensorBehaviour extends CyclicBehaviour
 	
 	protected String interpretData( RFIDSensor sensor )
 	{
-		if ( sensor.getValue() >  30 )
-			return "foarte cald";
-		if ( sensor.getValue() > 18 && sensor.getValue() < 30 )
-			return "cald";
-		if ( sensor.getValue() > 0 && sensor.getValue() < 18 )
-			return "frig";
-		if ( sensor.getValue() < 0 )
-			return "foarte frig";
-		return "undefined";
+		if ( sensor.getValue() != 0 )
+			return "rfid id "+sensor.getValue()+" detected";
+		else
+			return "no rfid id detected";
 	}
 
 	protected void handleSensorData(RFIDSensor sensor)

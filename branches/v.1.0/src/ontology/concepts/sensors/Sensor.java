@@ -98,9 +98,8 @@ public abstract class Sensor implements ISensor, Concept
 	{
 		String sql = "";
 		
-		sql = "INSERT INTO sensors_data (`idSensor`, `date`, `value`, `type`, `zoneId`) VALUES " +
-				"('"+idSensor+"', '"+DateUtil.toMySQLDate(time)+"', '"+value+"', '"+type+"', '"+zoneID+"' )";
-		
+		sql = "INSERT INTO sensors_data (`idSensor`, `date`, `value`, `type`, `zoneId`, `interpreted_data`) VALUES " +
+				"('"+idSensor+"', '"+DateUtil.toMySQLDate(time)+"', '"+value+"', '"+type+"', '"+zoneID+"', '"+interpretedData+"' )";
 		return sql;
 	}
 }

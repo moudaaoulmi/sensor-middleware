@@ -76,7 +76,7 @@ public class TemperatureSensorBehaviour extends CyclicBehaviour
 	
 	protected String interpretData( TemperatureSensor sensor )
 	{
-		if ( sensor.getValue() >  30 )
+		if ( sensor.getValue() >  50 )
 			return "foarte cald";
 		if ( sensor.getValue() > 18 && sensor.getValue() < 30 )
 			return "cald";

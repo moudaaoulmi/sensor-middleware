@@ -75,14 +75,12 @@ public class WaterSensorBehaviour extends CyclicBehaviour
 	
 	protected String interpretData( WaterSensor sensor )
 	{
-		if ( sensor.getValue() >  30 )
-			return "foarte cald";
-		if ( sensor.getValue() > 18 && sensor.getValue() < 30 )
-			return "cald";
-		if ( sensor.getValue() > 0 && sensor.getValue() < 18 )
-			return "frig";
-		if ( sensor.getValue() < 0 )
-			return "foarte frig";
+		if ( sensor.getValue() >  100 )
+			return "consum ridicat";
+		if ( sensor.getValue() > 20 && sensor.getValue() < 100 )
+			return "consum mediu";
+		if ( sensor.getValue() > 0 && sensor.getValue() < 20 )
+			return "consum scazut";
 		return "undefined";
 	}
 
