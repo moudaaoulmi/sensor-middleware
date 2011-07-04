@@ -81,6 +81,8 @@ public class LightSensorBehaviour extends CyclicBehaviour
 			return "luminozitate medie";
 		if ( sensor.getValue() > 0 && sensor.getValue() < 20 )
 			return "luminozitate scazuta";
+		if ( sensor.getValue() == 0)
+			return "intuneric";
 		return "undefined";
 	}
 
