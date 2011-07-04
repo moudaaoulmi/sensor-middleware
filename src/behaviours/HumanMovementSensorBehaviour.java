@@ -75,15 +75,10 @@ public class HumanMovementSensorBehaviour extends CyclicBehaviour
 	
 	protected String interpretData( HumanMovementSensor sensor )
 	{
-		if ( sensor.getValue() >  30 )
-			return "foarte cald";
-		if ( sensor.getValue() > 18 && sensor.getValue() < 30 )
-			return "cald";
-		if ( sensor.getValue() > 0 && sensor.getValue() < 18 )
-			return "frig";
-		if ( sensor.getValue() < 0 )
-			return "foarte frig";
-		return "undefined";
+		if ( sensor.getValue() ==  0 )
+			return "nu exista miscare";
+		else
+			return "miscare detectata";
 	}
 
 	protected void handleSensorData(HumanMovementSensor sensor)

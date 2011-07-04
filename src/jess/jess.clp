@@ -1,21 +1,20 @@
-(deftemplate JessACLMessage
-    (declare(from-class message.JessACLMessage) ))
-
 (deftemplate sensor (slot id) (slot value) (slot type) (slot zoneId) (slot date) (slot interpretedData))
 
 
 (defrule electric-consume
-    (sensor (value ?s) (type ?t &: (eq ?t "electric")))
+    ?sensor <- (sensor (value ?s) (zoneId ?zoneId) (type ?t &: (eq ?t "electric")) (interpretedData ?id &: (eq ?id "consum ridicat")))
     =>
-    (printout t "Sensorul electric consuma " ?s)
-    (send "Sensorul electric consuma " ?s)
+    (bind ?message (str-cat "Consum ridicat de energia in zona " ?zoneId ))
+    (send ?message)
+    (retract ?sensor)
     )
 
-(defrule incomming-msg
-    (JessACLMessage (sender ?s))
-     (JessACLMessage (content ?content))
+(defrule fire-warning
+	  ?sensor1 <- (sensor (value ?s1) (zoneId ?zoneId1) (type ?t1 &: (eq ?t1 "temperature")) (interpretedData ?id1 &: (eq ?id1 "foarte cald")))
+      ?sensor2 <- (sensor (type ?t &: (eq ?t "light")) (interpretedData ?id &: (eq ?id "luminozitate ridicata")))
     =>
-    (printout t "Just received a message from " (?s getLocalName) crlf)
-    (printout t "Message content: " ?content  crlf)
-    (send "Aggregated data to be parsed")
+    (bind ?message (str-cat "Pericol de incendiu in zona " ?zoneId1 ))
+    (send ?message)
+    (retract ?sensor1)
+    (retract ?sensor2)
 )

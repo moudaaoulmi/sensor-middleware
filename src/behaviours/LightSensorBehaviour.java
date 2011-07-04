@@ -75,14 +75,12 @@ public class LightSensorBehaviour extends CyclicBehaviour
 	
 	protected String interpretData( LightSensor sensor )
 	{
-		if ( sensor.getValue() >  30 )
-			return "foarte cald";
-		if ( sensor.getValue() > 18 && sensor.getValue() < 30 )
-			return "cald";
-		if ( sensor.getValue() > 0 && sensor.getValue() < 18 )
-			return "frig";
-		if ( sensor.getValue() < 0 )
-			return "foarte frig";
+		if ( sensor.getValue() >  100 )
+			return "luminozitate ridicata";
+		if ( sensor.getValue() > 20 && sensor.getValue() < 100 )
+			return "luminozitate medie";
+		if ( sensor.getValue() > 0 && sensor.getValue() < 20 )
+			return "luminozitate scazuta";
 		return "undefined";
 	}
 
